@@ -96,7 +96,7 @@
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="about.html">About</a></li>
-                                                <li><a href="program.html">video</a></li>
+                                                <li><a href="program.html">latest causes</a></li>
                                                 <li><a href="#">Volunteer </a>
                                                     <ul class="submenu">
                                                         <li><a href="events.html">Medical Cases</a></li>
@@ -107,18 +107,10 @@
                                                     <ul class="submenu">
                                                         <li><a href="blog.html">Fullfilled donation posts</a></li>
                                                         <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="requestedblog.html">Requested Donations</a></li>
+                                                        <li><a href="requestedblog.html">requested</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a>   
-                                                </li>
-                                                <li><a href="#">Settings</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="upload.html">Upload Document</a></li>
-                                                        <li><a href="location.html">Location</a></li>
-                                                        <li><a href="subject.html">Subject</a></li>
-                                                    </ul>
-                                                </li>   
+                                                <li><a href="contact.html">Contact</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -163,6 +155,7 @@
                         <div class="blog_left_sidebar">
                             <article class="blog_item">
                                 <div class="blog_item_img">
+                                   
                                     <a href="#" class="blog_item_date">
                                         <h3>4</h3>
                                         <p>Apr</p>
@@ -172,93 +165,11 @@
                                     <a class="d-inline-block" href="#">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Cardiac Surgery</h2>
                                     </a>
-                                    <p>Patient requires open-heart surgery to repair a damaged valve</p>
-                                    <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                    <div class="additional-details" style="display: none;">
-                                        <p>Patient Name: John Doe</p>
-                                        <p>Patient Age: 67 years</p>
-                                        <p>Gender: Male</p>
-                                        <p>Weight: 83kg</p>
-                                        <p>Address: Street 258, Maadi, Cairo</p>
-                                        <p>Organization: Hospital A</p>
-                                        <p>Medical Speciality: Cardiothoracic Surgeon</p>
-                                        
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>8</h3>
-                                        <p>Jun</p>
-                                    </a>
-                                </div>
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="#">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Orthopedic Trauma</h2>
-                                    </a>
-                                    <p>Patient has sustained multiple fractures in an accident and needs surgical intervention</p>
-                                    <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                    <div class="additional-details" style="display: none;">
-                                        <p>Patient Name: Sandy Wilde</p>
-                                        <p>Patient Age: 21 years</p>
-                                        <p>Gender: Female</p>
-                                        <p>Weight: 61kg</p>
-                                        <p>Address: Street 106, Zamalek, Cairo</p>
-                                        <p>Organization: Hospital B</p>
-                                        <p>Medical Speciality: Orthopedic Surgeon</p>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>10</h3>
-                                        <p>Aug</p>
-                                    </a>
-                                </div>
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="#">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Neurological Disorder</h2>
-                                    </a>
-                                    <p>Patient is experiencing symptoms of a neurological disorder and requires diagnostic evaluation</p>
-                                    <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                    <div class="additional-details" style="display: none;">
-                                        <p>Patient Name: Erik Peter </p>
-                                        <p>Patient Age: 35 years</p>
-                                        <p>Gender: Male</p>
-                                        <p>Weight: 75kg</p>
-                                        <p>Address: Street 106, New Cairo, Cairo</p>
-                                        <p>Organization: Hospital C</p>
-                                        <p>Medical Speciality: Neurosurgeon</p>
-                                    </div>
+                                    <p>A patient requires open-heart surgery to repair a damaged valve
+                                    </p>
                                 </div>
                             </article>
                            
-                            <style>
-                                .view-details-btn {
-                                   
-                                     background-color: white;
-                                     border: none;
-                                     padding: 8px 16px;
-                                     color: #09cc7f;
-                                    cursor: pointer;
-                                }
-                            </style>
-                            
-                            <script>
-                                function toggleDetails(button) {
-                                    var detailsDiv = button.nextElementSibling;
-                            
-                                    if (detailsDiv.style.display === "none") {
-                                        detailsDiv.style.display = "block";
-                                        button.textContent = "Hide Details";
-                                    } else {
-                                        detailsDiv.style.display = "none";
-                                        button.textContent = "View Details";
-                                    }
-                                }
-                            </script>
                             <nav class="blog-pagination justify-content-center d-flex">
                                 <ul class="pagination">
                                     <li class="page-item">
@@ -304,8 +215,8 @@
                                         <li>
                                             <p>Medical Specialist</p>
                                             <select id="medical-specialist" name="medical-specialist" onchange="redirectOnChange(this)">
-                                                <option value="All">All</option>
                                                 <option value="Cardiothoracic Surgeon">Cardiothoracic Surgeon</option>
+                                                <option value="All">All</option>
                                                 <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
                                                 <option value="Neurosurgeon">Neurosurgeon</option>
                                             </select>
@@ -340,10 +251,11 @@
                                 </aside>
                                 
                                 <script>
+
                                     function redirectOnChange(select) {
                                         var selectedValue = select.value;
-                                        if (selectedValue === "Cardiothoracic Surgeon") {
-                                            window.location.href = "CardiothoracicSurgeon.html";
+                                        if (selectedValue === "All") {
+                                            window.location.href = "events.html";
                                         }
                                         if (selectedValue === "Orthopedic Surgeon") {
                                             window.location.href = "OrthopedicSurgeon.html";
@@ -352,132 +264,9 @@
                                             window.location.href = "Neurosurgeon.html";
                                         }
                                     }
-
-                                    
-                                    
+                                   
+                                
                                 </script>
-                              
-                           <!-- <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_1.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">From life was you fish...</h3>
-                                        </a>
-                                        <p>January 12, 2019</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_2.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
-                                        </a>
-                                        <p>02 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_3.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
-                                        </a>
-                                        <p>03 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_4.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
-                                        </a>
-                                        <p>01 Hours ago</p>
-                                    </div>
-                                </div>
-                            </aside>
-                            <aside class="single_sidebar_widget tag_cloud_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">project</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">love</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">technology</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">restaurant</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">life style</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">illustration</a>
-                                    </li>
-                                </ul>
-                            </aside>
-
-                            <aside class="single_sidebar_widget instagram_feeds">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Instagram Feeds</h4>
-                                <ul class="instagram_row flex-wrap">
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </aside>
-                            <aside class="single_sidebar_widget newsletter_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Newsletter</h4>
-                                <form action="#">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Subscribe</button>
-                                </form>
-                            </aside>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- Blog Area End -->
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
