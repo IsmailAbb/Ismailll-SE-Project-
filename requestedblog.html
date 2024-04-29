@@ -334,42 +334,32 @@
                                     }
                                 </style>
                                 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-                            </head>
-                            <body>
                                 <h1>Donation Items Search</h1>
                             
-                                <label for="category">Selected Category: <span id="selected-category">None</span></label>
+                                <label for="search-text">Search Text:</label>
                                 <br><br>
                                 
-                                <select id="category" onchange="updateSelectedCategory()">
-                                    <option value="clothes">Clothes</option>
-                                    <option value="toys">Toys</option>
-                                    <option value="food">Food</option>
-                                </select>
+                                <input type="text" id="search-text">
                                 <br><br>
                                 
-                                <button id="search-button" onclick="redirectToCategoryPage()">Search</button>
+                                <button id="search-button" onclick="redirectToPage()">Search</button>
                             
                                 <script>
-                                    function updateSelectedCategory() {
-                                        var selectedCategory = document.getElementById("category").value;
-                                        document.getElementById("selected-category").textContent = selectedCategory;
-                                    }
-                            
-                                    function redirectToCategoryPage() {
-                                        var category = document.getElementById("category").value;
-                            
-                                        switch (category) {
-                                            case "clothes":
-                                                window.location.href = "clothes.html";
-                                                break;
+                                    function redirectToPage() {
+                                        var searchText = document.getElementById("search-text").value.toLowerCase(); // Convert the search text to lowercase for case-insensitive comparison
+                                        
+                                        switch (searchText) {
                                             case "toys":
                                                 window.location.href = "toys.html";
+                                                break;
+                                            case "clothes":
+                                                window.location.href = "clothes.html";
                                                 break;
                                             case "food":
                                                 window.location.href = "food.html";
                                                 break;
                                             default:
+                                                alert("No matching category found for the search text: " + searchText);
                                                 break;
                                         }
                                     }
