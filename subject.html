@@ -140,6 +140,55 @@
         <!-- Header End -->
     </header>
     <main>
+        <h1>Subject and Class Selection for Teaching</h1>
+          
+    <form>
+        <label for="subject">Select the subjects you can teach:</label><br>
+        <input type="checkbox" id="subject1" name="subject1" value="Math">
+        <label for="subject1">Math</label><br>
+        <input type="checkbox" id="subject2" name="subject2" value="Science">
+        <label for="subject2">Science</label><br>
+        <input type="checkbox" id="subject3" name="subject3" value="English">
+        <label for="subject3">English</label><br>
+        <input type="checkbox" id="subject4" name="subject4" value="Other">
+        <label for="subject4">Other</label><br>
+        <!-- Add more subjects as needed -->
+        
+        <br>
+        
+        <div id="other-subject-input" style="display: none;">
+            <label for="other-subject">Specify the subject you can teach:</label>
+            <input type="text" id="other-subject" name="other-subject"><br>
+        </div>
+        
+        <br>
+        
+        <label for="num-classes">Number of pro-bono classes you can teach:</label>
+        <input type="number" id="num-classes" name="num-classes" min="0" max="100" step="1"><br>
+        
+        <label for="num-students">Number of pro-bono students you can give private tutoring to:</label>
+        <input type="number" id="num-students" name="num-students" min="0" max="100" step="1"><br>
+        
+        <br>
+        
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+        var otherCheckbox = document.getElementById("subject4");
+        var otherSubjectInput = document.getElementById("other-subject-input");
+        
+        otherCheckbox.addEventListener("change", function() {
+            if (otherCheckbox.checked) {
+                otherSubjectInput.style.display = "block";
+            } else {
+                otherSubjectInput.style.display = "none";
+            }
+        });
+    </script>
+
+
+
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">

@@ -170,47 +170,42 @@
                                     <div class="form-group mt-3">
                                         <aside class="single_sidebar_widget search_widget">
                                             <form action="#">
-                                                <div class="form-group">
-                                                    <div class="input-group mb-3">
-                                                        <input type="text" class="form-control" placeholder='Enter Document Name'
-                                                            onfocus="this.placeholder = ''"
-                                                            onblur="this.placeholder = 'Enter Document Name'">
-                                                      <div class="input-group-append">
-                                                            <button class="btns" type="button" style="background-color: green;" onclick="showAttachMessage()"><i class="ti-search"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                                <input type="file" id="file-input" style="display: none;" onchange="showSelectedFile(event)">
+                                                <button class="button button-contactForm boxed-btn" class="green-button" onclick="selectFile()">Upload</button>
+                                                <p id="selected-file"></p>
+                                                <script>
+                                                    function selectFile() {
+                                                        var fileInput = document.getElementById("file-input");
+                                                        fileInput.click();
+                                                    }
+                                            
+                                                    function showSelectedFile(event) {
+                                                        var fileInput = event.target;
+                                                        var selectedFile = fileInput.files[0];
+                                                        var selectedFileName = selectedFile.name;
+                                                        
+                                                        var selectedFileElement = document.getElementById("selected-file");
+                                                        selectedFileElement.textContent = "file uploaded: " + selectedFileName;
+                                                    }
+                                                </script>
                                                 <div id="attach-message"></div>
                                             </form>
                                         </aside>
-                            <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn" onclick="showUploadMessage()">Upload</button>
-                            </div>
-                            <script>
-                                function showUploadMessage() {
-                                    var uploadMessageElement = document.getElementById("upload-message");
-                                    uploadMessageElement.textContent = "Document uploaded!";
-                                    uploadMessageElement.style.color = "green";
-                                    uploadMessageElement.style.fontWeight = "bold";
-                                    setTimeout(function() {
-                                        uploadMessageElement.remove();}, 2000);
-                                    
-                                }
-                            
-                                function showAttachMessage() {
-                                    var attachMessageElement = document.getElementById("attach-message");
-                                    attachMessageElement.textContent = "Document attached!";
-                                    attachMessageElement.style.color = "green";
-                                    attachMessageElement.style.fontWeight = "bold";
-                                    setTimeout(function() {
-                                        attachMessageElement.remove();}, 2000);
-                                }
-                            </script>
-                            
-                            <!-- Add elements to display the messages -->
-                            <div id="upload-message"></div>
-                        </form>
-                    </div>
+                                        <div class="form-group mt-3">
+                                            <button type="submit" class="button button-contactForm boxed-btn" onclick="submitForm(event)">Submit</button>
+                                        </div>
+                                        
+                                        <script>
+                                            function submitForm(event) {
+                                                event.preventDefault(); // Prevent the default form submission behavior
+                                                
+                                                setTimeout(function() {
+                                                    location.reload(); // Refresh the page
+                                                }, 500);
+                                            }
+                                        </script>
+                                        </form>
+                                        </div>
                     <div class="col-lg-3 offset-lg-1">
                         <div class="media contact-info">
                             <span class="contact-info__icon"><i class="ti-home"></i></span>
