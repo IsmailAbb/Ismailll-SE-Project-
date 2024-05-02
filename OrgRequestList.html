@@ -57,8 +57,8 @@
                 <div class="col-xl-12 col-lg-12">
                     <div class="menu-wrapper d-flex align-items-center">
                         <div class="back-button ml-0">
-                            <a href="#" onclick="window.history.back();" class="btn header-btn"><i class="fas fa-arrow-left"></i> Back</a>
-                        </div>
+                            <a href="AdminDashBoard.html" class="btn header-btn"><i class="fas fa-arrow-left"></i> Back</a>
+                        </div>  
                         <div class="list-organization-requests ml-2">
                             <p style="font-size: 24px; font-weight: bold;">List of Organization Requests</p>
                         </div>
@@ -78,30 +78,49 @@
                 <!-- Text -->
                 <div class="col">OrgName1</div>
                 <!-- Eye symbol (view) -->
-                <div class="col-auto"><button class="btn btn-primary"><i class="fas fa-eye"></i></button></div>
+                <div class="col-auto"><button class="btn btn-primary" onclick="viewRow(this)"><i class="fas fa-eye"></i></button></div>
                 <!-- Download symbol -->
-                <div class="col-auto"><button class="btn btn-primary"><i class="fas fa-download"></i></button></div>
+                <div class="col-auto"><button class="btn btn-primary" onclick="downloadRow(this)"><i class="fas fa-download"></i></button></div>
                 <!-- Tick symbol (green) -->
-                <div class="col-auto"><button class="btn btn-success" data-toggle="modal" data-target="#acceptModal"><i class="fas fa-check"></i></button></div>
+                <div class="col-auto"><button class="btn btn-success" onclick="accept(this)" data-toggle="modal" data-target="#acceptModal"><i class="fas fa-check"></i></button></div>
                 <!-- X symbol (red) -->
-                <div class="col-auto"><button class="btn btn-danger" data-toggle="modal" data-target="#rejectModal"><i class="fas fa-times"></i></button></div>
+                <div class="col-auto"><button class="btn btn-danger" data-toggle="modal" data-target="#rejectModal" onclick="rejectRow(this)"><i class="fas fa-times"></i></button></div>
             </div>
             <!-- Row 2 -->
             <div class="row justify-content-end">
                 <!-- Text -->
                 <div class="col">OrgName2</div>
                 <!-- Eye symbol (view) -->
-                <div class="col-auto"><button class="btn btn-primary"><i class="fas fa-eye"></i></button></div>
+                <div class="col-auto"><button class="btn btn-primary" onclick="viewRow(this)"><i class="fas fa-eye"></i></button></div>
                 <!-- Download symbol -->
-                <div class="col-auto"><button class="btn btn-primary"><i class="fas fa-download"></i></button></div>
+                <div class="col-auto"><button class="btn btn-primary" onclick="downloadRow(this)"><i class="fas fa-download"></i></button></div>
                 <!-- Tick symbol (green) -->
-                <div class="col-auto"><button class="btn btn-success" data-toggle="modal" data-target="#acceptModal"><i class="fas fa-check"></i></button></div>
+                <div class="col-auto"><button class="btn btn-success" onclick="accept(this)" data-toggle="modal" data-target="#acceptModal"><i class="fas fa-check"></i></button></div>
                 <!-- X symbol (red) -->
                 <div class="col-auto"><button class="btn btn-danger" data-toggle="modal" data-target="#rejectModal" onclick="rejectRow(this)"><i class="fas fa-times"></i></button></div>
             </div>
             <!-- Add more rows as needed -->
         </div>
     </main>
+
+    <!-- Modals -->
+    <!-- PDF Viewer Modal -->
+    <div class="modal fade" id="pdfViewerModal" tabindex="-1" role="dialog" aria-labelledby="pdfViewerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfViewerModalLabel">PDF Viewer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- PDF content will be loaded here -->
+                    <embed id="pdfContent" src="" type="application/pdf" width="100%" height="600px">
+                </div>
+            </div>
+        </div>
+    </div>
     
  <!-- Accept Modal -->
 <div class="modal fade" id="acceptModal" tabindex="-1" role="dialog" aria-labelledby="acceptModalLabel" aria-hidden="true">
@@ -196,88 +215,83 @@
 
     <!-- Custom JavaScript for removing rejected rows -->
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Function to handle row removal
-            function removeRow(button) {
-                // Find the parent row element
-                var row = button.closest('div.row');
 
-                // Remove the row from the DOM
-                row.remove();
+// Function to handle view button click
+function viewRow(button) {
+    // Show the PDF viewer modal
+    $('#pdfViewerModal').modal('show');
+    $('#pdfContent').attr('src', 'blank.pdf');
+}
 
-                // Adjust the positions of remaining rows
-                adjustRowPositions();
-            }
+// Function to handle download button click
+function downloadRow(button) {
+    // Create a temporary anchor element
+    var downloadLink = document.createElement('a');
+    downloadLink.href = 'blank.pdf';
 
-            // Function to adjust the positions of remaining rows
-            function adjustRowPositions() {
-                // Select all rows
-                var rows = document.querySelectorAll('.white-box .row');
+    // Set the download attribute to specify the filename
+    downloadLink.download = 'blank1.pdf';
 
-                // Loop through each row
-                rows.forEach(function(row, index) {
-                    // Calculate the new index based on the adjusted positions
-                    var newIndex = index + 1;
+    // Append the anchor element to the document body
+    document.body.appendChild(downloadLink);
 
-                    // Set the new index as the row's ID
-                    row.id = 'row-' + newIndex;
+    // Trigger a click event on the anchor element
+    downloadLink.click();
 
-                    // Update the row's position in the DOM
-                    row.style.order = newIndex;
-                });
-            }
+    // Remove the anchor element from the document body
+    document.body.removeChild(downloadLink);
+}
 
-            // Event listener for X button click
-            document.querySelectorAll('.btn.btn-danger').forEach(function(button) {
-                button.addEventListener('click', function() {
-                    // Show the reject modal
-                    $('#rejectModal').modal('show');
+// Function to confirm accept action
+function accept(button) {
+    // Store a reference to the clicked button in a data attribute
+    $('#acceptYesBtn').data('target', button);
+    // Show the accept confirmation modal
+    $('#acceptModal').modal('show');
+}
 
-                    // Set a custom attribute to store the clicked button
-                    $('#rejectYesBtn').attr('data-button', button.outerHTML);
-                });
-            });
+// Event listener for accept confirmation modal "Yes" button
+$('#acceptYesBtn').on('click', function() {
+    // Retrieve the stored button reference
+    var button = $('#acceptYesBtn').data('target');
+    // Remove the row
+    var row = $(button).closest('.row');
+    row.remove();
+    // Close the modal
+    $('#acceptModal').modal('hide');
+});
 
-            // Event listener for tick button click
-            document.querySelectorAll('.btn.btn-success').forEach(function(button) {
-                button.addEventListener('click', function() {
-                    // Show the accept modal
-                    $('#acceptModal').modal('show');
+// Event listener for accept confirmation modal "No" button
+$('#acceptModal').on('hidden.bs.modal', function () {
+    // Clear the stored button reference
+    $('#acceptYesBtn').removeData('target');
+});  
 
-                    // Set a custom attribute to store the clicked button
-                    $('#acceptYesBtn').attr('data-button', button.outerHTML);
-                });
-            });
+// Function to confirm reject action
+function rejectRow(button) {
+    // Store a reference to the clicked button in a data attribute
+    $('#rejectYesBtn').data('target', button);
+    // Show the reject confirmation modal
+    $('#rejectModal').modal('show');
+}
 
-            // Event listener for accept modal "Yes" button
-            document.getElementById('acceptYesBtn').addEventListener('click', function() {
-                // Get the stored button HTML and convert it to a button element
-                var buttonHTML = $('#acceptYesBtn').attr('data-button');
-                var button = $(buttonHTML).get(0);
+// Event listener for reject confirmation modal "Yes" button
+$('#rejectYesBtn').on('click', function() {
+    // Retrieve the stored button reference
+    var button = $('#rejectYesBtn').data('target');
+    // Remove the row
+    var row = $(button).closest('.row');
+    row.remove();
+    // Close the modal
+    $('#rejectModal').modal('hide');
+});
 
-                // Remove the row
-                removeRow(button);
-
-                // Close the modal
-                $('#acceptModal').modal('hide');
-            });
-
-            // Event listener for reject modal "Yes" button
-            document.getElementById('rejectYesBtn').addEventListener('click', function() {
-                // Get the stored button HTML and convert it to a button element
-                var buttonHTML = $('#rejectYesBtn').attr('data-button');
-                var button = $(buttonHTML).get(0);
-
-                // Remove the row
-                removeRow(button);
-
-                // Close the modal
-                $('#rejectModal').modal('hide');
-            });
-        });
+// Event listener for reject confirmation modal "No" button
+$('#rejectModal').on('hidden.bs.modal', function () {
+    // Clear the stored button reference
+    $('#rejectYesBtn').removeData('target');
+});  
     </script>
-    
-    
     
 </body>
 </html>

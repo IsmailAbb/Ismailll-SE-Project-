@@ -31,7 +31,7 @@
 
 </head>
 <body style="overflow: visible;">
-    <!-- ? Preloader Start -->
+    <!-- Preloader Start -->
     <div id="preloader-active" style="display: none;">
         <div class="preloader d-flex align-items-center justify-content-center">
             <div class="preloader-inner position-relative">
@@ -58,9 +58,9 @@
                     <div class="menu-wrapper d-flex align-items-center">
                         <div class="back-button ml-0">
                             <a href="AdminDashBoard.html" class="btn header-btn"><i class="fas fa-arrow-left"></i> Back</a>
-                        </div>  
+                        </div> 
                         <div class="list-organization-requests ml-2">
-                            <p style="font-size: 24px; font-weight: bold;">List of Donor Requests</p>
+                            <p style="font-size: 24px; font-weight: bold;">Password Manager</p>
                         </div>
                     </div>
                 </div>
@@ -71,56 +71,25 @@
     
     <!-- header end -->
     <main>
-        <!-- White box containing rows -->
-        <div class="white-box">
-            <!-- Row 1 -->
-            <div class="row justify-content-end">
-                <!-- Text -->
-                <div class="col">DonorName1</div>
-                <!-- Eye symbol (view) -->
-                <div class="col-auto"><button class="btn btn-primary" onclick="viewRow(this)"><i class="fas fa-eye"></i></button></div>
-                <!-- Download symbol -->
-                <div class="col-auto"><button class="btn btn-primary" onclick="downloadRow(this)"><i class="fas fa-download"></i></button></div>
-                <!-- Tick symbol (green) -->
-                <div class="col-auto"><button class="btn btn-success" onclick="accept(this)" data-toggle="modal" data-target="#acceptModal"><i class="fas fa-check"></i></button></div>
-                <!-- X symbol (red) -->
-                <div class="col-auto"><button class="btn btn-danger" data-toggle="modal" data-target="#rejectModal" onclick="rejectRow(this)"><i class="fas fa-times"></i></button></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Add username and password text elements -->
+                    <div class="form-group">
+                        <p class="username">Username: username1</p>
+                    </div>
+                    <div class="form-group">
+                        <p class="password">Password: password1</p>
+                    </div>
+                                      
+                    <!-- Add a button to redirect to PasswordManager.html -->
+                    <div class="form-group">
+                        <button onclick="window.location.href = 'PasswordManager.html';" class="btn btn-primary">Change Password</button>
+                    </div>
+                </div>
             </div>
-            <!-- Row 2 -->
-            <div class="row justify-content-end">
-                <!-- Text -->
-                <div class="col">DonorName2</div>
-                <!-- Eye symbol (view) -->
-                <div class="col-auto"><button class="btn btn-primary" onclick="viewRow(this)"><i class="fas fa-eye"></i></button></div>
-                <!-- Download symbol -->
-                <div class="col-auto"><button class="btn btn-primary" onclick="downloadRow(this)"><i class="fas fa-download"></i></button></div>
-                <!-- Tick symbol (green) -->
-                <div class="col-auto"><button class="btn btn-success" onclick="accept(this)" data-toggle="modal" data-target="#acceptModal"><i class="fas fa-check"></i></button></div>
-                <!-- X symbol (red) -->
-                <div class="col-auto"><button class="btn btn-danger" data-toggle="modal" data-target="#rejectModal" onclick="rejectRow(this)"><i class="fas fa-times"></i></button></div>
-            </div>
-            <!-- Add more rows as needed -->
         </div>
     </main>
-
-    <!-- Modals -->
-    <!-- PDF Viewer Modal -->
-    <div class="modal fade" id="pdfViewerModal" tabindex="-1" role="dialog" aria-labelledby="pdfViewerModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="pdfViewerModalLabel">PDF Viewer</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- PDF content will be loaded here -->
-                    <embed id="pdfContent" src="" type="application/pdf" width="100%" height="600px">
-                </div>
-            </div>
-        </div>
-    </div>
     
  <!-- Accept Modal -->
 <div class="modal fade" id="acceptModal" tabindex="-1" role="dialog" aria-labelledby="acceptModalLabel" aria-hidden="true">
@@ -212,86 +181,53 @@
     <!-- Jquery Plugins, main Jquery -->    
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-
-    <!-- Custom JavaScript for removing rejected rows -->
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        $(document).ready(function() {
+            // Function to handle form submission
+            $('#change-password-form').submit(function(event) {
+                event.preventDefault(); // Prevent the form from submitting
 
-// Function to handle view button click
-function viewRow(button) {
-    // Show the PDF viewer modal
-    $('#pdfViewerModal').modal('show');
-    $('#pdfContent').attr('src', 'blank.pdf');
+                // Retrieve current and new passwords
+                var currentPassword = $('#current-password').val();
+                var newPassword = $('#new-password').val();
+
+                // Check if the current password is "password1"
+                if (currentPassword !== "password1") {
+                    // Show error message for incorrect current password
+                    alert("Current password was entered incorrectly");
+                    return; // Exit the function
+                }
+
+                // Check if the new password is the same as the current password
+                if (newPassword === currentPassword) {
+                    // Show error message for new password being the same as current password
+                    alert("New password cannot be the same as the current password");
+                    return; // Exit the function
+                }
+
+                // If all checks pass, show success message
+                alert("Password has been changed");
+
+                // Refresh the page
+                location.reload();
+            });
+        });
+
+// Retrieve the password from Local Storage
+var savedPassword = localStorage.getItem('password');
+
+// Default to "password1" if no password is saved yet
+if (!savedPassword) {
+    savedPassword = "password1";
 }
 
-// Function to handle download button click
-function downloadRow(button) {
-    // Create a temporary anchor element
-    var downloadLink = document.createElement('a');
-    downloadLink.href = 'blank.pdf';
+// Display the password in the Username and Password fields
+$('.username').text("Username: username1");
+$('.password').text("Password: " + savedPassword);
 
-    // Set the download attribute to specify the filename
-    downloadLink.download = 'blank1.pdf';
-
-    // Append the anchor element to the document body
-    document.body.appendChild(downloadLink);
-
-    // Trigger a click event on the anchor element
-    downloadLink.click();
-
-    // Remove the anchor element from the document body
-    document.body.removeChild(downloadLink);
-}
-
-// Function to confirm accept action
-function accept(button) {
-    // Store a reference to the clicked button in a data attribute
-    $('#acceptYesBtn').data('target', button);
-    // Show the accept confirmation modal
-    $('#acceptModal').modal('show');
-}
-
-// Event listener for accept confirmation modal "Yes" button
-$('#acceptYesBtn').on('click', function() {
-    // Retrieve the stored button reference
-    var button = $('#acceptYesBtn').data('target');
-    // Remove the row
-    var row = $(button).closest('.row');
-    row.remove();
-    // Close the modal
-    $('#acceptModal').modal('hide');
-});
-
-// Event listener for accept confirmation modal "No" button
-$('#acceptModal').on('hidden.bs.modal', function () {
-    // Clear the stored button reference
-    $('#acceptYesBtn').removeData('target');
-});  
-
-// Function to confirm reject action
-function rejectRow(button) {
-    // Store a reference to the clicked button in a data attribute
-    $('#rejectYesBtn').data('target', button);
-    // Show the reject confirmation modal
-    $('#rejectModal').modal('show');
-}
-
-// Event listener for reject confirmation modal "Yes" button
-$('#rejectYesBtn').on('click', function() {
-    // Retrieve the stored button reference
-    var button = $('#rejectYesBtn').data('target');
-    // Remove the row
-    var row = $(button).closest('.row');
-    row.remove();
-    // Close the modal
-    $('#rejectModal').modal('hide');
-});
-
-// Event listener for reject confirmation modal "No" button
-$('#rejectModal').on('hidden.bs.modal', function () {
-    // Clear the stored button reference
-    $('#rejectYesBtn').removeData('target');
-});  
     </script>
-    
+
 </body>
 </html>
