@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
+   
+
+
     <!--? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -139,6 +142,7 @@
         </div>
         <!-- Header End -->
     </header>
+ 
     <main>
         <!--? Hero Start -->
         <div class="slider-area2">
@@ -146,47 +150,90 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="hero-cap hero-cap2 pt-70 text-center">
+                            <div class="hero-cap hero-cap2 pt-70 text-center" id="BLA">
                                 <h2>Medical Cases</h2>
+                              
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+       
+             <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Medical Case Fulfilled!</strong> Thank you for your fulfillment.
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+          
         <!-- Hero End -->
         <!--? Blog Area Start-->
         <section class="blog_area section-padding">
             <div class="container">
                 <div class="row">
+                    
                     <div class="col-lg-8 mb-5 mb-lg-0">
+                     
                         <div class="blog_left_sidebar">
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>4</h3>
-                                        <p>Apr</p>
-                                    </a>
-                                </div>
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="#">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Cardiac Surgery</h2>
-                                    </a>
-                                    <p>Patient requires open-heart surgery to repair a damaged valve</p>
-                                    <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                    <div class="additional-details" style="display: none;">
-                                        <p>Patient Name: John Doe</p>
-                                        <p>Patient Age: 67 years</p>
-                                        <p>Gender: Male</p>
-                                        <p>Weight: 83kg</p>
-                                        <p>Address: Street 258, Maadi, Cairo</p>
-                                        <p>Organization: Hospital A</p>
-                                        <p>Medical Speciality: Cardiothoracic Surgeon</p>
-                                        
+
+                           
+
+
+
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+                                <style>
+                                    .map-container {
+                                        height: 200px;
+                                        width: 300px;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="#" class="blog_item_date">
+                                            <h3>4</h3>
+                                            <p>Apr</p>
+                                        </a>
                                     </div>
-                                    <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
-                                </div>
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="#">
+                                            <h2 class="blog-head" style="color: #2d2d2d;">Cardiac Surgery</h2>
+                                        </a>
+                                        <p>Patient requires open-heart surgery to repair a damaged valve</p>
+                                        <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+                                        <div class="additional-details" style="display: none;">
+                                            <p>Patient Name: John Doe</p>
+                                            <p>Patient Age: 67 years</p>
+                                            <p>Gender: Male</p>
+                                            <p>Weight: 83kg</p>
+                                            <p>Medical Speciality: Cardiothoracic Surgeon</p>
+                                            <p>Organization: Hospital A</p>
+                                            <p>Address: Street 258, Maadi, Cairo</p>
+                                            <p>Location:</p>
+                                            <div id="map1" class="map-container"></div>
+                                        </div>
+                                        <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
+                                    </div>
                                 </article>
+                            
                                 <article class="blog_item">
                                     <div class="blog_item_img">
                                         <a href="#" class="blog_item_date">
@@ -200,44 +247,102 @@
                                         </a>
                                         <p>Patient has sustained multiple fractures in an accident and needs surgical intervention</p>
                                         <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                         <div class="additional-details" style="display: none;">
+                                        <div class="additional-details" style="display: none;">
                                             <p>Patient Name: Sandy Wilde</p>
                                             <p>Patient Age: 21 years</p>
                                             <p>Gender: Female</p>
                                             <p>Weight: 61kg</p>
+                                            <p>Medical Speciality: Orthopedic Surgeon</p>
                                             <p>Address: Street 106, Zamalek, Cairo</p>
                                             <p>Organization: Hospital B</p>
-                                            <p>Medical Speciality: Orthopedic Surgeon</p>
+                                            <p>Location:</p>
+                                            <div id="map2" class="map-container"></div>
                                         </div>
-                                     <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
+                                        <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
                                     </div>
                                 </article>
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>10</h3>
-                                        <p>Aug</p>
-                                    </a>
-                                </div>
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="#">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Neurological Disorder</h2>
-                                    </a>
-                                    <p>Patient is experiencing symptoms of a neurological disorder and requires diagnostic evaluation</p>
-                                    <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                    <div class="additional-details" style="display: none;">
-                                        <p>Patient Name: Erik Peter </p>
-                                        <p>Patient Age: 35 years</p>
-                                        <p>Gender: Male</p>
-                                        <p>Weight: 75kg</p>
-                                        <p>Address: Street 106, New Cairo, Cairo</p>
-                                        <p>Organization: Hospital C</p>
-                                        <p>Medical Speciality: Neurosurgeon</p>
+                            
+                                <article class="blog_item">
+                                    <div class="blog_item_img">
+                                        <a href="#" class="blog_item_date">
+                                            <h3>10</h3>
+                                            <p>Aug</p>
+                                        </a>
                                     </div>
-                                    <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
-                                </div>
-                            </article>
-                           
+                                    <div class="blog_details">
+                                        <a class="d-inline-block" href="#">
+                                            <h2 class="blog-head" style="color: #2d2d2d;">Neurological Disorder</h2>
+                                        </a>
+                                        <p>Patient is experiencing symptoms of a neurological disorder and requires diagnostic evaluation</p>
+                                        <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+                                        <div class="additional-details" style="display: none;">
+                                            <p>Patient Name: Erik Peter</p>
+                                            <p>Patient Age: 35 years</p>
+                                            <p>Gender: Male</p>
+                                            <p>Weight: 75kg</p>
+                                            <p>Medical Speciality: Neurosurgeon</p>
+                                            <p>Organization: Hospital C</p>
+                                            <p>Address: Street 106, New Cairo, Cairo</p>
+                                            <p>Location:</p>
+                                            <div id="map3" class="map-container"></div>
+                                        </div>
+                                        <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
+                                    </div>
+                                </article>
+
+
+
+<script>
+    var mapInitialized = false;
+
+    function initMap() {
+        if (!mapInitialized) {
+            var map1 = L.map('map1').setView([29.9793,31.2539],15);
+            var map2 = L.map('map2').setView([30.0559,31.2226],15);
+            var map3 = L.map('map3').setView([30.0251,31.4751],15);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 50,
+            }).addTo(map1);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 50,
+            }).addTo(map2);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 50,
+            }).addTo(map3);
+              
+
+            var marker1 = L.marker([29.9793,31.2539], 15).addTo(map1);
+            var marker2 = L.marker([30.0559,31.2226], 15).addTo(map2);
+            var marker3 = L.marker([30.0251,31.4751], 15).addTo(map3);
+
+            marker1.on('dragend', function(event) {
+                    var position = marker.getLatLng();
+                    document.getElementById('latitude').value = position.lat;
+                    document.getElementById('longitude').value = position.lng;
+                });
+                marker2.on('dragend', function(event) {
+                    var position = marker.getLatLng();
+                    document.getElementById('latitude').value = position.lat;
+                    document.getElementById('longitude').value = position.lng;
+                });
+                marker3.on('dragend', function(event) {
+                    var position = marker.getLatLng();
+                    document.getElementById('latitude').value = position.lat;
+                    document.getElementById('longitude').value = position.lng;
+                });
+
+            mapInitialized = true;
+        }
+
+    }
+    
+</script>
+        
+                 
                             <style>
                                 .view-details-btn {
                                     text-align: right;
@@ -248,7 +353,7 @@
                                     cursor: pointer;
                                 }
                             </style>
-                                <style>
+                               <style>
                                 .Fulfill-btn {
                                     text-align: right;
                                     background-color: white;
@@ -258,7 +363,6 @@
                                     cursor: pointer;
                                 }
                             </style>
-                            
                             <script>
                                 function toggleDetails(button) {
                                     var detailsDiv = button.nextElementSibling;
@@ -266,24 +370,41 @@
                                     if (detailsDiv.style.display === "none") {
                                         detailsDiv.style.display = "block";
                                         button.textContent = "Hide Details";
+                                        initMap();
                                     } else {
                                         detailsDiv.style.display = "none";
                                         button.textContent = "View Details";
                                     }
                                 }
                             </script>
-                            
-                            <script>
-                                function displayNotification() {
-                                    var notificationHeader = "Medical Case Fulfilled";
-                                    var notificationMessage = "Thank you for your fulfillment";
-
-                                    var notification = notificationHeader + "\n\n" + notificationMessage;
+                           
+                                <style>
+                                    .alert {
+                                        display: none;
+                                        padding: 20px;
+                                        background-color: #09cc7f;
+                                        color: white;
+                                        
+                                
+                                    }
                                     
-                                    alert(notification);
-                                }
-                            </script>
-                            <nav class="blog-pagination justify-content-center d-flex">
+                                    .closebtn {
+                                        margin-left: 15px;
+                                        color: white;
+                                        font-weight: bold;
+                                        float: right;
+                                        font-size: 22px;
+                                        line-height: 20px;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                    }
+                                    
+                                    .closebtn:hover {
+                                        color: black;
+                                    }
+                                </style>
+                          
+                          <nav class="blog-pagination justify-content-center d-flex">
                                 <ul class="pagination">
                                     <li class="page-item">
                                         <a href="#" class="page-link" aria-label="Previous">
