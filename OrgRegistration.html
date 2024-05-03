@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="js sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Charity | Template</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <link rel="stylesheet" href="assets/css/progressbar_barfiller.css">
+    <link rel="stylesheet" href="assets/css/gijgo.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/animated-headline.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* Add this CSS to increase padding between form fields */
+        .form-group {
+            margin-bottom: 20px; /* Add margin to bottom */
+        }
+
+        /* Optional: Adjust padding for smaller screens */
+        @media (max-width: 576px) {
+            .form-group {
+                margin-bottom: 15px; /* Adjust margin for smaller screens */
+            }
+        }
+
+            /* Add this CSS to increase padding for file upload */
+    .file-upload-container {
+        padding: 20px; /* Adjust the padding as needed */
+    }
+
+        /* Add this CSS to increase padding for everything */
+        body {
+            padding: 20px; /* Adjust the padding as needed */
+        }
+
+            /* Add this CSS to increase the size of input fields and select dropdowns */
+/* Add this CSS to adjust the font size for dropdown options */
+.form-control option {
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+    
+    </style>
+
+    <script src="C:\Users\Ismail\Desktop\Example\Ismailll\JQuery.min.js"></script>
+    <script src="C:\Users\Ismail\Desktop\Example\Ismailll\bootstrap-5.1.3-dist\js\bootstrap.min.js"></script>
+</head>
+<body style="overflow: visible;">
+    <!-- ? Preloader Start -->
+    <div id="preloader-active" style="display: none;">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header">
+                <!-- Logo -->
+                <div class="col-xl-12 col-lg-12">
+                    <div class="logo">
+                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <!-- Back button and Donor Registration Form text -->
+                <div class="col-xl-12 col-lg-12">
+                    <div class="menu-wrapper d-flex align-items-center">
+                        <div class="back-button ml-0">
+                            <a href="#" onclick="window.history.back();" class="btn header-btn"><i class="fas fa-arrow-left"></i> Back</a>
+                        </div>
+                        <div class="donor-registration-text ml-2">
+                            <p style="font-size: 24px; font-weight: bold;">Organization Representative Registration Form</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    
+    <!-- header end -->
+    <main>
+        <style>
+            .form-control-lg {
+                font-size: 18px; /* Adjust the font size as needed */
+            }
+        </style>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>Donor Registration</h2>
+                    <form id="donor-registration-form">
+                        <div class="form-group row">
+                            <label for="donor-first-name" class="col-md-3 col-form-label">First Name</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control form-control-lg" id="donor-first-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-last-name" class="col-md-3 col-form-label">Last Name</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control form-control-lg" id="donor-last-name" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-gender" class="col-md-3 col-form-label">Gender</label>
+                            <div class="col-md-9">
+                                <select class="form-control form-control-lg" id="donor-gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-email" class="col-md-3 col-form-label">Email</label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control form-control-lg" id="donor-email" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-contact-number" class="col-md-3 col-form-label">Contact Number</label>
+                            <div class="col-md-9">
+                                <input type="tel" class="form-control form-control-lg" id="donor-contact-number" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-password" class="col-md-3 col-form-label">Password</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control form-control-lg" id="donor-password" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-address" class="col-md-3 col-form-label">Organization Name</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control form-control-lg" id="donor-address" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-org-type" class="col-md-3 col-form-label">Organization Type</label>
+                            <div class="col-md-9">
+                                <select class="form-control form-control-lg" id="donor-org-type" required>
+                                    <option value="">Select Organization Type</option>
+                                    <option value="non-profit">Non-Profit</option>
+                                    <option value="governmental">Governmental</option>
+                                    <option value="corporate">Corporate</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-area" class="col-md-3 col-form-label">Organization Address</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control form-control-lg" id="donor-area" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-governorate" class="col-md-3 col-form-label">Area</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control form-control-lg" id="donor-governorate" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="donor-governorate" class="col-md-3 col-form-label">Governorate</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control form-control-lg" id="donor-governorate" required>
+                            </div>
+                        </div>
+<!-- Google Maps API -->
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-md-6 order-md-2">
+            <div id="map" style="height: 500px; width: 500px;"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- File Upload -->
+<div class="container file-upload-container">
+    <div class="row justify-content-start">
+        <div class="col-md-6 order-md-2">
+            <h2>File Upload</h2>
+            <form id="file-upload-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="file">Select Files:</label>
+                    <input type="file" class="form-control-file" id="file" name="file" multiple required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Scroll Up -->
+    <div id="back-top" style="display: none;">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    
+    <!-- JS here -->
+
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <!-- Progress -->
+    <script src="./assets/js/jquery.barfiller.js"></script>
+    
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->    
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+   
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+    <script>
+        // Initialize Google Maps
+        function initMap() {
+            // Specify your map options
+            var mapOptions = {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            };
+
+            // Create a new map instance
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Initialize marker variable
+            var marker;
+
+            // Add event listener for map click
+            google.maps.event.addListener(map, 'click', function(event) {
+                // Remove existing marker if any
+                if (marker) {
+                    marker.setMap(null);
+                }
+
+                // Get latitude and longitude of clicked location
+                var latitude = event.latLng.lat();
+                var longitude = event.latLng.lng();
+
+                // Create a new marker at the clicked location
+                marker = new google.maps.Marker({
+                    position: { lat: latitude, lng: longitude },
+                    map: map
+                });
+
+                // Center the map on the clicked location
+                map.setCenter({ lat: latitude, lng: longitude });
+            });
+        }
+        // Function to redirect to Registered.html
+    function redirectToRegisteredPage() {
+        window.location.href = "Registered.html";
+    }
+
+    // Event listener to trigger redirection when the Register button is clicked
+    document.getElementById("donor-registration-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        redirectToRegisteredPage(); // Call the function to redirect to Registered.html
+    });
+    </script>
+
+
+</body>
+</html>
+
+

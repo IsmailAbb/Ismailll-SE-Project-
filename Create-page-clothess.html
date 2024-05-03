@@ -140,55 +140,152 @@
         <!-- Header End -->
     </header>
     <main>
-        
-        
-        <!--? Hero Start -->
-        <div class="slider-area2">
-            <div class="slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap hero-cap2 pt-70 text-center">
-                                <h2>Delivery</h2>
-                            </div>
-                        </div>
+        <section class="contact-section">
+            <div class="container">
+                <div class="d-none d-sm-block mb-5 pb-4">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Creating a new post for clothing donations:</h2>
+                     
                     </div>
+
+                    <div class="col-lg-8">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="row">
+                                <form onsubmit="return validateForm()">
+
+                                    
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                        <span id="NameError" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Enter your email ">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the type of clothes">
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the material ">
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter your age">
+
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the quantity ">
+
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="select-this">
+                                        <form id="category-form">
+
+                                            
+                                                <select name="select" id="select1" onchange="la(this.value)">
+                                                    <option value="" disabled selected hidden>Select a Season</option>
+                                                    <option value="" >Spring</option>
+                                                    <option value="">Winter</option>
+                                                    <option value="">Summer</option>
+                                                    <option value="">Autumn</option>
+                                                    
+                                                </select><br>
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <form>
+                                        <label for="gender">Select the gender:</label><br>
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male">Male</label><br>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female">Female</label><br>
+                                        <input type="radio" id="other" name="gender" value="other">
+                                        <label for="other">Other</label><br>
+                                    </form>
+                                </div>
+                                
+                                
+
+                            
+                           
+                                
+
+                                
+
+                                <div class="col-12">
+                                    <div class="form-group mt-3">
+                                        <aside class="single_sidebar_widget search_widget">
+                                            <form action="#">
+                                                <input type="file" id="file-input" style="display: none;" onchange="showSelectedFile(event)">
+                                                <button class="button button-contactForm boxed-btn" class="green-button" onclick="selectFile()">Upload</button>
+                                                <p id="selected-file"></p>
+                                                <script>
+                                                    function selectFile() {
+                                                        var fileInput = document.getElementById("file-input");
+                                                        fileInput.click();
+                                                    }
+                                            
+                                                    function showSelectedFile(event) {
+                                                        var fileInput = event.target;
+                                                        var selectedFile = fileInput.files[0];
+                                                        var selectedFileName = selectedFile.name;
+                                                        
+                                                        var selectedFileElement = document.getElementById("selected-file");
+                                                        selectedFileElement.textContent = "file uploaded: " + selectedFileName;
+                                                    }
+                                                </script>
+                                                <div id="attach-message"></div>
+                                            </form>
+                                        </aside>
+                                        <div class="form-group mt-3">
+                                            <button type="submit" class="button button-contactForm boxed-btn" onclick="submitForm(event)">Submit</button>
+                                        </div>
+                                    </form>
+                                    
+                                        
+                                        <script>
+
+                                            
+
+                                            function submitForm(event) {
+                                                event.preventDefault(); // Prevent the default form submission behavior
+                                                
+                                                setTimeout(function() {
+                                                    location.reload(); // Refresh the page
+                                                }, 500);
+                                            }
+                                            </script>
+
+
+                                            
+                                                            
+
+
+                                        </form>
+                                        </div>
+                  
                 </div>
             </div>
-        </div>
-        <!-- Hero End -->
-        <!--? Blog Area Start-->
-        <section class="blog_area section-padding">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mb-5 mb-lg-0">
-                        <div class="blog_left_sidebar">
-                           
-                            </article>
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets\img\blog\Insulin.jpg"alt="">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>4</h3>
-                                        <p>Apr</p>
-                                    </a>
-                                </div>
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="insulinDetails.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Insulin</h2>
-                                    </a>
-                                    <p>We're seeking donations to provide insulin to individuals who can't afford this crucial
-                                       medication for managing diabetes. Your support will help save lives and improve the well-being 
-                                       of those in need. 
-                                    </p>
-                                    <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i> Medical</a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
-                                    </ul>
-                                </div>
-                            </article>
-                           
-                           
+        </section>
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
@@ -239,9 +336,9 @@
                         <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
                             <div class="single-footer-caption mb-50">
                                 <div class="footer-tittle">
-                                    
+                                    <h4>Newsletter</h4>
                                     <div class="footer-pera footer-pera2">
-                                    
+                                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
                                 </div>
                                 <!-- Form -->
                                 <div class="footer-form" >

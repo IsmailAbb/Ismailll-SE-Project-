@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
+   
+
+
     <!--? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -139,6 +142,7 @@
         </div>
         <!-- Header End -->
     </header>
+ 
     <main>
         <!--? Hero Start -->
         <div class="slider-area2">
@@ -146,155 +150,236 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="hero-cap hero-cap2 pt-70 text-center">
-                                <h2>Medical Cases</h2>
+                            <div class="hero-cap hero-cap2 pt-70 text-center" id="BLA">
+                                <h2>My Profile</h2>
+                              
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+       
+             <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Profile changes saved successfully!!!</strong> Thank you for your fulfillment.
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                .edit-btn{
+                    top:50%;
+                }
+            </style>
+          
         <!-- Hero End -->
         <!--? Blog Area Start-->
         <section class="blog_area section-padding">
             <div class="container">
                 <div class="row">
+                    
                     <div class="col-lg-8 mb-5 mb-lg-0">
+                     
                         <div class="blog_left_sidebar">
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>19</h3>
-                                        <p>june</p>
-                                    </a>
-                                </div>
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="#">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Blood Request-Saudi German Hospital</h2>
-                                    </a>
+
+                           
+
+
+
+                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+                                <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+                                <style>
+                                    .map-container {
+                                        height: 200px;
+                                        width: 300px;
+                                    }
+                                </style>
+                            </head>
+                            <body>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="address">Email:</label>
+                                        <input type="text" id="address" name="address" value="Chrismicheals@gmail.com">
+                                        <span id="addressError" class="error"></span>
+                                    </div>
                                     
-                                    <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                    <div class="additional-details" style="display: none;">
-                                        <p>Patient Name: Amina Tamer</p>
-                                        <p>Blood Type: AB+</p>
-                                        <p>Hospital Name: Saudi German Hospital Cairo</p>
-                                        <p>Hospital Area: ElNozha</p>
-                                        <p>Hospital Governerate: Cairo</p>
-                                        <p>Hospital Address: Taha Hussein Rd, Huckstep, El Nozha, Cairo </p>
-
-                                        
+                                    <div class="form-group">
+                                        <label for="area">First name:</label>
+                                        <input type="text" id="area" name="area" value="Chris">
+                                        <span id="areaError" class="error"></span>
+                                    </div> </div>
+                    
+                                <div class="form-row">
+                                    
+                                    <div class="form-group">
+                                        <label for="governorate">Last name:</label>
+                                        <input type="text" id="governorate" name="governorate" value="Micheals" >
+                                        <span id="governorateError" class="error"></span>
                                     </div>
-                                    <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
-                                   
+                    
+                                    <div class="form-group">
+                                        <label for="specialty">Phone number:</label>
+                                        <input type="text" id="PN" name="specialty" value="+33 5536645" >
+                                        <span id="specialtyError" class="error"></span>
+                                    </div>
+                                    
                                 </div>
-                                </article>
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>17</h3>
-                                            <p>Jan</p>
-                                        </a>
+                    
+                                <div class="form-row">
+                    
+                                    
+                                    <div class="form-group">
+                                        <label for="password">Password:</label>
+                                        <div class="password-input">
+                                            <input type="password" id="password" name="password" value="password" >
+                                            <label class="show-password-label" for="showPassword">Show Password</label>
+                                            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                                        </div>
+                                        <span id="specialtyError" class="error"></span>
                                     </div>
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="#">
-                                            <h2 class="blog-head" style="color: #2d2d2d;">Blood Request-Cleopatra Hospital</h2>
-                                        </a>
+                                    
+                    
+                                    
+                                    <div class="form-group">
+                                        <label for="address2">Address:</label>
+                                        <input type="text" id="address2" name="address2" value="2335 Orchard View Lane, Escondido CA 92027" readonly>
+                                        <span id="address2Error" class="error"></span>
+                                    </div>
+                                </div>
+                            
+                                <br>
+                            
+                                <style>.password-input {
+                                    position: relative;
+                                }
+                                
+                                .password-input label.show-password-label {
+                                    position: absolute;
+                                    top: 90%;
+                                    transform: translateY(-80%);
+                                    left: 43%;
+                                     /* Adjust this value as needed */
+                                }
+                              
+            .form-row {
+                display: flex;
+                justify-content: space-between;
+                margin: 20px;
+            }
+    
+            .form-group {
+                flex-basis: 50%; /* Adjust as needed */
+            }
+    
+            label {
+                display: block;
+            }
+    
+            input {
+            width: 70%; /* Adjust width here */
+            margin-bottom: 5px;
+            text-align: left;
+            }
+       
+        
+                                </style>
+                                <script>
+                                    function togglePasswordVisibility() {
+                                        var passwordInput = document.getElementById("password");
+                                        var showPasswordCheckbox = document.getElementById("showPassword");
+                                
+                                        if (showPasswordCheckbox.checked) {
+                                            passwordInput.type = "text";
+                                        } else {
+                                            passwordInput.type = "password";
+                                        }
+                                    }
+                                </script>
+                                
+                                
+
+                                <style>
+                                    /* Define styles for the edit button */
+                                    .edit-btn {
+                                        background-color: #09cc7f;
+                                        color: white;
+                                        border: none;
+                                        padding: 10px 20px; /* Increase padding to make the button bigger */
+                                        border-radius: 10px;
+                                        cursor: pointer;
+                                        margin-right: 20px;
+                                        margin-left: 25px;
+                                    }
+                                </style>
+                    
+                                <script>
+                                    function redirectToPage() {
+                                        window.location.href = "Account2.html";
+                                    }
+                                </script>
+                                
+                                <style>
+                                    /* Define styles for the delete button */
+                                    .delete-btn {
+                                        /* Add your CSS styles here */
+                                        background-color: #09cc7f;
+                                    color: white;
+                                    border: none;
+                                    padding: 10px 20px; /* Increase padding to make the button bigger */
+                                    border-radius: 10px;
+                                    cursor: pointer;
+                                    margin-right: 20px;
+                                    margin-left: 25px;
                                         
-                                        <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                        <div class="additional-details" style="display: none;">
-                                            <p>Patient Name: Ismail Abbas</p>
-                                            <p>Blood Type: O+</p>
-                                            <p>Hospital Name: Cleopatra Hospital</p>
-                                            <p>Hospital Area: New Cairo</p>
-                                            <p>Hospital Governerate: Cairo</p>
-                                            <p>Hospital Address: Plot 65 Southern 90th Street, sixth floor, 5th Settlement, New Cairo, Cairo </p>
-                                          
-                                            
-                                        </div>
-                                        <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
-                                    </div>
-                                    </article>
+                                    }
+                                    .edit-btn {
+                                    background-color: #09cc7f; /* Green */
+                                    border: none;
+                                    color: white;
+                                    padding: 15px 32px;
+                                    text-align: center;
+                                    text-decoration: none;
+                                    display: inline-block;
+                                    font-size: 16px;
+                                    margin: 4px 2px;
+                                    cursor: pointer;
+                                }
 
-                                    <article class="blog_item">
-                                        <div class="blog_item_img">
-                                            <a href="#" class="blog_item_date">
-                                                <h3>16</h3>
-                                                <p>Feb</p>
-                                            </a>
-                                        </div>
-                                        <div class="blog_details">
-                                            <a class="d-inline-block" href="#">
-                                                <h2 class="blog-head" style="color: #2d2d2d;">Blood Request-Saudi German Hospital</h2>
-                                            </a>
-                                            
-                                            <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                            <div class="additional-details" style="display: none;">
-                                                <p>Patient Name: Mariam Amr</p>
-                                                <p>Blood Type: A-</p>
-                                                <p>Hospital Name: Saudi German Hospital Cairo</p>
-                                                <p>Hospital Area: ElNozha</p>
-                                                <p>Hospital Governerate: Cairo</p>
-                                                <p>Hospital Address: Taha Hussein Rd, Huckstep, El Nozha, Cairo </p>
-                                              
-                                                
-                                            </div>
-                                            <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
-                                        </div>
-                                        </article>
+                                /* Change color on hover */
+                                .edit-btn:hover {
+                                    background-color:white ;
+                                    color: #09cc7f;
+                                     /* Darker Green */
+                                }
+                                </style>
+                                <button class="edit-btn"  onclick="displayNotification();">Save Changes</button>
+                                <a href="Accontss2.html" class="edit-btn">Edit profile</a>
+                                 </form>
 
-                                        <article class="blog_item">
-                                            <div class="blog_item_img">
-                                                <a href="#" class="blog_item_date">
-                                                    <h3>27</h3>
-                                                    <p>April</p>
-                                                </a>
-                                            </div>
-                                            <div class="blog_details">
-                                                <a class="d-inline-block" href="#">
-                                                    <h2 class="blog-head" style="color: #2d2d2d;">Blood Request-Cleopatra Hospital</h2>
-                                                </a>
-                                                
-                                                <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                                <div class="additional-details" style="display: none;">
-                                                    <p>Patient Name: Yassin Tarek</p>
-                                                    <p>Blood Type: AB+</p>
-                                                    <p>Hospital Name: Cleopatra Hospital</p>
-                                                    <p>Hospital Area: New Cairo</p>
-                                                    <p>Hospital Governerate: Cairo</p>
-                                                    <p>Hospital Address: Plot 65 Southern 90th Street, sixth floor, 5th Settlement, New Cairo, Cairo </p>
-                                                  
-                                                    
-                                                </div>
-                                                <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
-                                            </div>
-                                            </article>
-                                            <article class="blog_item">
-                                                <div class="blog_item_img">
-                                                    <a href="#" class="blog_item_date">
-                                                        <h3>27</h3>
-                                                        <p>April</p>
-                                                    </a>
-                                                </div>
-                                                <div class="blog_details">
-                                                    <a class="d-inline-block" href="#">
-                                                        <h2 class="blog-head" style="color: #2d2d2d;">Blood Request-Elite Hospital</h2>
-                                                    </a>
-                                                    
-                                                    <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                                    <div class="additional-details" style="display: none;">
-                                                        <p>Patient Name: Farah</p>
-                                                        <p>Blood Type: O-</p>
-                                                        <p>Hospital Name: Elite Hospital</p>
-                                                        <p>Hospital Area: ElShorouk</p>
-                                                        <p>Hospital Governerate: Alexandria</p>
-                                                        <p>Hospital Address: Street 1, Villas Neighborhood, Ring Rd, Alexandria </p>
-                                                      
-                                                        
-                                                    </div>
-                                                    <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
-                                                </div>
-                                                </article>
+                    
 
+
+
+
+
+        
+                 
                             <style>
                                 .view-details-btn {
                                     text-align: right;
@@ -305,7 +390,7 @@
                                     cursor: pointer;
                                 }
                             </style>
-                                <style>
+                               <style>
                                 .Fulfill-btn {
                                     text-align: right;
                                     background-color: white;
@@ -315,7 +400,6 @@
                                     cursor: pointer;
                                 }
                             </style>
-                            
                             <script>
                                 function toggleDetails(button) {
                                     var detailsDiv = button.nextElementSibling;
@@ -323,24 +407,41 @@
                                     if (detailsDiv.style.display === "none") {
                                         detailsDiv.style.display = "block";
                                         button.textContent = "Hide Details";
+                                        initMap();
                                     } else {
                                         detailsDiv.style.display = "none";
                                         button.textContent = "View Details";
                                     }
                                 }
                             </script>
-                            
-                            <script>
-                                function displayNotification() {
-                                    var notificationHeader = "Medical Case Fulfilled";
-                                    var notificationMessage = "Thank you for your fulfillment";
-
-                                    var notification = notificationHeader + "\n\n" + notificationMessage;
+                           
+                                <style>
+                                    .alert {
+                                        display: none;
+                                        padding: 20px;
+                                        background-color: #09cc7f;
+                                        color: white;
+                                        
+                                
+                                    }
                                     
-                                    alert(notification);
-                                }
-                            </script>
-                            <nav class="blog-pagination justify-content-center d-flex">
+                                    .closebtn {
+                                        margin-left: 15px;
+                                        color: white;
+                                        font-weight: bold;
+                                        float: right;
+                                        font-size: 22px;
+                                        line-height: 20px;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                    }
+                                    
+                                    .closebtn:hover {
+                                        color: black;
+                                    }
+                                </style>
+                          
+                          <nav class="blog-pagination justify-content-center d-flex">
                                 <ul class="pagination">
                                     <li class="page-item">
                                         <a href="#" class="page-link" aria-label="Previous">
@@ -379,61 +480,9 @@
                                     <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
                                         type="submit">Search</button>
                                 </form>
-                                <aside class="single_sidebar_widget post_category_widget">
-                                    <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
-                                    <ul class="list cat-list">
-                                        <li>
-                                            <p>Medical Specialist</p>
-                                            <select id="medical-specialist" name="medical-specialist" onchange="redirectOnChange(this)">
-                                                <option value="All">All</option>
-                                                <option value="Cardiothoracic Surgeon">Cardiothoracic Surgeon</option>
-                                                <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
-                                                <option value="Neurosurgeon">Neurosurgeon</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Organization</p>
-                                            <select id="Organization" name="Organization">
-                                                <option value="All">All</option>
-                                                <option value="Hospital A">Hospital A</option>
-                                                <option value="Hospital B">Hospital B</option>
-                                                <option value="Hospital C">Hospital C</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Area</p>
-                                            <select id="Area" name="Area">
-                                                <option value="All">All</option>
-                                                <option value="Maadi">Maadi</option>
-                                                <option value="New Cairo">New Cairo</option>
-                                                <option value="Zamalek">Zamalek</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Governate</p>
-                                            <select id="Governate" name="Governate">
-                                                <option value="All">All</option>
-                                                <option value="Cairo">Cairo</option>
-                                                <option value="Alexandria">Alexandria</option>
-                                            </select>
-                                        </li>
-                                    </ul>
-                                </aside>
+                               
                                 
-                               <script>
-                                    function redirectOnChange(select) {
-                                        var selectedValue = select.value;
-                                        if (selectedValue === "Cardiothoracic Surgeon") {
-                                            window.location.href = "CardiothoracicSurgeon.html";
-                                        }
-                                        if (selectedValue === "Orthopedic Surgeon") {
-                                            window.location.href = "OrthopedicSurgeon.html";
-                                        }
-                                        if (selectedValue === "Neurosurgeon") {
-                                            window.location.href = "Neurosurgeon.html";
-                                        }
-                                    }
-                                 </script>
+                               
                                  
                                 <!-- <script>
                                     function redirectOnChange(select) {
