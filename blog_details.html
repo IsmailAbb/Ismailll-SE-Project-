@@ -168,7 +168,7 @@
                         </h2>
                         <ul class="blog-info-link mt-3 mb-4">
                            <li><a href="#"><i class="fa fa-user"></i> Medical </a></li>
-                           <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                           <li><a href="#"><i class="fa fa-comments"></i> Comments</a></li>
                         </ul>
                         <p class="excert">
                            The donated hospital bed measures 36 inches in width and 80 inches in length, spanning from headboard to footboard.
@@ -257,14 +257,14 @@
                      <div class="media align-items-center">
                         <img src="assets/img/blog/author.png" alt="">
                         <div class="media-body">
-                           <a href="#">
+                           <a href="Antoine.html">
                               <h4>Antoine</h4>
                            </a>
                         </div>
                      </div>
                   </div>
                   <div class="comments-area">
-                     <h4>1 Comments</h4>
+                     <h4>Comments</h4>
                      
                      <div class="comment-list" >
                         <div class="single-comment justify-content-between d-flex">
@@ -339,15 +339,19 @@
                            
                         </div>
                         <div class="form-group">
-                           <button type="submit" class="button button-contactForm btn_1 boxed-btn" onclick="showComment()">Post Comment</button>
+                           <button  class="button button-contactForm btn_1 boxed-btn" onclick="showComment()">Post Comment</button>
 
                         </div>
                         <script>
 
                         function showComment() {
-                           var commentList = document.getElementById('commentList');
-                           commentList.style.display = 'block';
-                       }
+                                 var commentList = document.getElementById('commentList');
+                                 if (commentList.style.display === 'none') {
+                                    commentList.style.display = 'block';
+                                 } else {
+                                    commentList.style.display = 'none';
+                                 }
+                              }
                         </script>
                      </form>
                   </div>
