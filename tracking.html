@@ -174,7 +174,9 @@
                                     <div class="col-lg-8 mb-5 mb-lg-0">
                                         <div class="alert" id="notification" style="display: none;">
                                             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                                            <strong>Driver has arrived at your destination</strong> 
+                                             <strong>Driver has arrived at your destination!</strong> 
+                                             Please meet driver for donation pickup. 
+                                            
                                         </div>
                                         <script>
                                             function displayNotification() {
@@ -219,8 +221,8 @@
                             </style>
 
                             
-                        
                             <article>
+                            
                                 <div class="wrapper">
                             
                                 
@@ -245,6 +247,7 @@
                                 
                                     </div>
                                 </article>
+                                
                             
     
     
@@ -356,7 +359,15 @@
     }
     </style>
 
-
+<script>
+function colorThirdBar() {
+    var thirdBar = document.querySelector(".progress-bar.third");
+    thirdBar.style.background = "#09cc7f"; // Change the background color to green
+    var thirdDot = document.querySelector(".dot.four");
+    thirdDot.style.background = "#09cc7f";
+}
+setTimeout(colorThirdBar, 10000);
+</script>
 
 
 
