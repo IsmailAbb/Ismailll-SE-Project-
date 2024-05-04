@@ -142,18 +142,36 @@
     <main>
         <section class="contact-section">
             <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Post submitted saved successfully!!!</strong> Thank you for your fulfillment.
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
                 <div class="d-none d-sm-block mb-5 pb-4">
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="contact-title">Creating a new Medical supplies post :</h2>
+                        <h2 class="contact-title">Creating a new post for Toys donations:</h2>
                      
                     </div>
 
                     <div class="col-lg-8">
                         <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                             <div class="row">
-                                <form onsubmit="return validateForm()">
+                               
 
                                     
                                 <div class="col-sm-6">
@@ -169,7 +187,7 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the age for which the toys are suitable for play">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the age for which the toys are suitable for playing">
                                     </div>
                                 </div>
 
@@ -177,11 +195,10 @@
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the quantity of the toys ">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the quantity of the toys  ">
 
                                     </div>
                                 </div>
-
                                 <div class="col-sm-6">
                                     <form>
                                         <label for="gender">Select the gender:</label><br>
@@ -200,11 +217,11 @@
 
                                             
                                                 <select name="select" id="select1" onchange="la(this.value)">
-                                                    <option value="" disabled selected hidden>Choose a Category</option>
+                                                    <option value="" disabled selected hidden>Choose a Category </option>
                                                     <option value="" >Board games</option>
-                                                    <option value="">Stuffed toys</option>
+                                                    <option value=""> Stuffed toys</option>
                                                     <option value="">Dolls</option>
-                                                    <option value="" >Sports</option>
+                                                    <option value=""> Sports</option>
                                                     <option value="">Cars</option>
                                                     <option value="">Outdoor</option>
                                                     
@@ -213,6 +230,15 @@
                                         </form>
                                     </div>
                                 </div>
+
+                                
+
+
+                                
+
+                               
+                                
+                                
 
                             
                            
@@ -246,9 +272,34 @@
                                             </form>
                                         </aside>
                                         <div class="form-group mt-3">
-                                            <button type="submit" class="button button-contactForm boxed-btn" onclick="submitForm(event)">Submit</button>
+                                            <button type="submit" class="button button-contactForm boxed-btn" onclick="displayNotification()">Submit</button>
                                         </div>
                                     </form>
+                                    <style> .alert {
+                                        display: none;
+                                        padding: 20px;
+                                        background-color: #09cc7f;
+                                        color: white;
+                                        
+                                
+                                    }
+                                    
+                                    .closebtn {
+                                        margin-left: 15px;
+                                        color: white;
+                                        font-weight: bold;
+                                        float: right;
+                                        font-size: 22px;
+                                        line-height: 20px;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                    }
+                                    
+                                    .closebtn:hover {
+                                        color: black;
+                                    }
+                                </style>
+                          </style>
                                     
                                         
                                         <script>

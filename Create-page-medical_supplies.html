@@ -142,18 +142,36 @@
     <main>
         <section class="contact-section">
             <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Profile changes saved successfully!!!</strong> Thank you for your fulfillment.
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
                 <div class="d-none d-sm-block mb-5 pb-4">
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="contact-title">Creating a new Medical supplies post :</h2>
+                        <h2 class="contact-title">Creating a new post for medical supplies donations:</h2>
                      
                     </div>
 
                     <div class="col-lg-8">
                         <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                             <div class="row">
-                                <form onsubmit="return validateForm()">
+                               
 
                                     
                                 <div class="col-sm-6">
@@ -169,23 +187,26 @@
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the use of the medical supply">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the use of the medical supplies">
                                     </div>
                                 </div>
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the device type">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the device type ">
 
                                     </div>
                                 </div>
+                               
+                                
 
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the quantity of medical supply ">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the quantity  ">
 
                                     </div>
                                 </div>
+                                
 
                                 <div class="col-sm-6">
                                     <div class="select-this">
@@ -193,16 +214,26 @@
 
                                             
                                                 <select name="select" id="select1" onchange="la(this.value)">
-                                                    <option value="" disabled selected hidden>Choose a type</option>
+                                                    <option value="" disabled selected hidden>Choose a type </option>
                                                     <option value="" >medical supplies</option>
                                                     <option value="">medical equipment</option>
                                                     <option value="">medication</option>
+                                                    
                                                     
                                                 </select><br>
                                             
                                         </form>
                                     </div>
                                 </div>
+
+                                
+
+
+                                
+
+                               
+                                
+                                
 
                             
                            
@@ -236,9 +267,34 @@
                                             </form>
                                         </aside>
                                         <div class="form-group mt-3">
-                                            <button type="submit" class="button button-contactForm boxed-btn" onclick="submitForm(event)">Submit</button>
+                                            <button type="submit" class="button button-contactForm boxed-btn" onclick="displayNotification()">Submit</button>
                                         </div>
                                     </form>
+                                    <style> .alert {
+                                        display: none;
+                                        padding: 20px;
+                                        background-color: #09cc7f;
+                                        color: white;
+                                        
+                                
+                                    }
+                                    
+                                    .closebtn {
+                                        margin-left: 15px;
+                                        color: white;
+                                        font-weight: bold;
+                                        float: right;
+                                        font-size: 22px;
+                                        line-height: 20px;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                    }
+                                    
+                                    .closebtn:hover {
+                                        color: black;
+                                    }
+                                </style>
+                          </style>
                                     
                                         
                                         <script>
