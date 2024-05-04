@@ -140,151 +140,287 @@
         <!-- Header End -->
     </header>
     <main>
-        <title>Clinic Location Specification</title>
-        <style>
-            .error {
-                color: red;
-                display: block;
-                margin-top: 5px;
-            }
-        </style>
-        <style>
-            #map {
-                height: 400px;
-                margin-bottom: 10px;
-            }
-        </style>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
-
-        <h1>Clinic Location Specification</h1>
         
-        <form onsubmit="return validateForm()">
-            <label for="address">Clinic Address:</label>
-            <input type="text" id="address" name="address"><br>
-            <span id="addressError" class="error"></span>
-            
-            <label for="area">Area:</label>
-            <input type="text" id="area" name="area"><br>
-            <span id="areaError" class="error"></span>
-            
-            <label for="governorate">Governorate:</label>
-            <input type="text" id="governorate" name="governorate"><br>
-            <span id="governorateError" class="error"></span>
-            
-            <label for="specialty">Specialty:</label>
-            <input type="text" id="specialty" name="specialty"><br>
-            <span id="specialtyError" class="error"></span>
-            
-            <label for="num-cases">Number of pro-bono cases you can take on:</label>
-            <input type="number" id="num-cases" name="num-cases" min="0" max="100" step="1"><br>
-            <span id="numCasesError" class="error"></span>
-            
-            <br>
-            
-            <div id="map"></div>
-            
-            <br>
-            
-            <input type="submit" value="Submit">
-        </form>
         
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
-        <script>
-        // Initialize Google Maps
-        function initMap() {
-            // Specify your map options
-            var mapOptions = {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8
-            };
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70 text-center">
+                                <h2>requested Donation posts</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+        <!--? Blog Area Start-->
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\notebooks.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="#">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Note Books</h2>
+                                    </a>
+                                    <p>We're looking for Note Books so children can have something to take notes on
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Books</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\novels.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="#">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Novels</h2>
+                                    </a>
+                                    <p>We're looking for Novels so children can spend their free time reading books
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Books</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            </article>
+                            <nav class="blog-pagination justify-content-center d-flex">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" aria-label="Previous">
+                                            <i class="ti-angle-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link">1</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a href="#" class="page-link">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" aria-label="Next">
+                                            <i class="ti-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog_right_sidebar">
+                            <aside class="single_sidebar_widget search_widget">
+                                <title>Donation Items Search</title>
+                                <style>
+                                    #search-button {
+                                        background-color: lightgreen;
+                                        color: white;
+                                        padding: 10px 20px;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                </style>
+                                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                            </head>
+                            <body>
+                                <h1>Donation Items Search</h1>
+                            
+                                <label for="search-text">Search Text:</label>
+                                <br><br>
+                                
+                                <input type="text" id="search-text">
+                                <br><br>
+                                
+                                <button id="search-button" onclick="redirectToPage()">Search</button>
+                            
+                                <script>
+                                    function redirectToPage() {
+                                        var searchText = document.getElementById("search-text").value.toLowerCase(); // Convert the search text to lowercase for case-insensitive comparison
+                                        
+                                        switch (searchText) {
+                                            case "toys":
+                                                window.location.href = "toys.html";
+                                                break;
+                                            case "clothes":
+                                                window.location.href = "clothes.html";
+                                                break;
+                                            case "food":
+                                                window.location.href = "food.html";
+                                                break;
+                                            case "school supplies":
+                                                window.location.href = "schoolsupplies.html";
+                                                break;
+                                            case "blood donations":
+                                                window.location.href = "BloodDonations.html";
+                                                break;
+                                            case "medical supplies":
+                                                window.location.href = "MedicalSuppliesFilter.html";
+                                                break;
+                                            default:
+                                                alert("No matching category found for the search text: " + searchText);
+                                                break;
+                                        }
+                                    }
+                                </script>
+                            </aside>
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Categories</h4>
+                                <ul class="list cat-list">
+                                    <li>
+                                        <a href="books.html" class="d-flex">
+                                            <p>Books</p>
+                                            <p>(2)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="stationary.html" class="d-flex">
+                                            <p>Stationary</p>
+                                            <p>(3)</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <aside class="single_sidebar_widget popular_post_widget">
+                                <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_1.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">From life was you fish...</h3>
+                                        </a>
+                                        <p>January 12, 2019</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_2.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
+                                        </a>
+                                        <p>02 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_3.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
+                                        </a>
+                                        <p>03 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_4.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
+                                        </a>
+                                        <p>01 Hours ago</p>
+                                    </div>
+                                </div>
+                            </aside>
+                            <aside class="single_sidebar_widget tag_cloud_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
+                                <ul class="list">
+                                    <li>
+                                        <a href="#">project</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">love</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">technology</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">travel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">restaurant</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">life style</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">illustration</a>
+                                    </li>
+                                </ul>
+                            </aside>
 
-            // Create a new map instance
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-
-            // Initialize marker variable
-            var marker;
-
-            // Add event listener for map click
-            google.maps.event.addListener(map, 'click', function(event) {
-                // Remove existing marker if any
-                if (marker) {
-                    marker.setMap(null);
-                }
-
-                // Get latitude and longitude of clicked location
-                var latitude = event.latLng.lat();
-                var longitude = event.latLng.lng();
-
-                // Create a new marker at the clicked location
-                marker = new google.maps.Marker({
-                    position: { lat: latitude, lng: longitude },
-                    map: map
-                });
-
-                // Center the map on the clicked location
-                map.setCenter({ lat: latitude, lng: longitude });
-            });   
-        }      
-            function validateForm() {
-                var address = document.getElementById("address").value;
-                var area = document.getElementById("area").value;
-                var governorate = document.getElementById("governorate").value;
-                var specialty = document.getElementById("specialty").value;
-                var numCases = document.getElementById("num-cases").value;
-                
-                var addressError = document.getElementById("addressError");
-                var areaError = document.getElementById("areaError");
-                var governorateError = document.getElementById("governorateError");
-                var specialtyError = document.getElementById("specialtyError");
-                var numCasesError = document.getElementById("numCasesError");
-                
-                var isValid = true;
-                
-                if (address === "") {
-                    addressError.textContent = "Please enter the clinic address.";
-                    isValid = false;
-                } else {
-                    addressError.textContent = "";
-                }
-                
-                if (area === "") {
-                    areaError.textContent = "Please enter the area.";
-                    isValid = false;
-                } else {
-                    areaError.textContent = "";
-                }
-                
-                if (governorate === "") {
-                    governorateError.textContent = "Please enter the governorate.";
-                    isValid = false;
-                } else {
-                    governorateError.textContent = "";
-                }
-                
-                if (specialty === "") {
-                    specialtyError.textContent = "Please enter the specialty.";
-                    isValid = false;
-                } else {
-                    specialtyError.textContent = "";
-                }
-                
-                if (numCases === "") {
-                    numCasesError.textContent = "Please enter the number of pro-bono cases.";
-                    isValid = false;
-                } else {
-                    numCasesError.textContent = "";
-                }
-                
-                return isValid;
-            }
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', initMap);
-        </script>
-        <section class="contact-section">
-        <div class="container">
-
-</section>
+                            <aside class="single_sidebar_widget instagram_feeds">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Instagram Feeds</h4>
+                                <ul class="instagram_row flex-wrap">
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <aside class="single_sidebar_widget newsletter_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Newsletter</h4>
+                                <form action="#">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+                                    </div>
+                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                        type="submit">Subscribe</button>
+                                </form>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Area End -->
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
