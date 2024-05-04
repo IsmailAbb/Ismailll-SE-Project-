@@ -194,6 +194,55 @@ Resala's activities include providing food aid, clothing, and shelter to those i
                   </div>
                   <div class="navigation-top">
                      <div class="d-sm-flex justify-content-between text-center">
+                        <div class="comments-area">
+                           <h4>Address of Resala </h4>
+                           <div class="container">
+                              <div class="row justify-content-start">
+                                  <div class="col-md-6 order-md-2">
+                                      <div id="map" style="height: 500px; width: 500px;"></div>
+                                  </div>
+                              </div>
+                          </div>
+                         
+                          <script>
+                           // Initialize Google Maps
+                           function initMap() {
+                               // Specify the coordinates for 2 Zaki Rostom, Al Mintaqah as Sādisah, Nasr City
+                               var zakiRostom = { lat: 30.0515, lng: 31.3412 };
+                       
+                               // Specify your map options
+                               var mapOptions = {
+                                   center: zakiRostom, // Center the map on 2 Zaki Rostom
+                                   zoom: 15 // Adjust zoom level as needed
+                               };
+                       
+                               // Create a new map instance
+                               var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                       
+                               // Create a marker for 2 Zaki Rostom
+                               var marker = new google.maps.Marker({
+                                   position: zakiRostom,
+                                   map: map,
+                                   title: '2 Zaki Rostom, Al Mintaqah as Sādisah, Nasr City' // Tooltip text when marker is hovered
+                               });
+                       
+                               // Add an event listener to display the title when marker is hovered
+                               marker.addListener('mouseover', function() {
+                                   infowindow.open(map, marker);
+                               });
+                               
+                               // Create an info window for the marker
+                               var infowindow = new google.maps.InfoWindow({
+                                   content: '2 Zaki Rostom, Al Mintaqah as Sādisah, Nasr City'
+                               });
+                           }
+                       </script>
+                    
+                       
+                          <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
+                          <script async defer src="https://maps.googleapis.com/maps/api/js?key= AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                          
+                       
                        
                         <div class="col-sm-4 text-center my-2 my-sm-0">
                            <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
