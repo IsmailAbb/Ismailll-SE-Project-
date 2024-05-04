@@ -154,7 +154,7 @@
                 margin-bottom: 10px;
             }
         </style>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
 
         <h1>Clinic Location Specification</h1>
         
@@ -188,25 +188,43 @@
             <input type="submit" value="Submit">
         </form>
         
-        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
         <script>
-            function initMap() {
-                var map = L.map('map').setView([0, 0], 15);
-                
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-                    maxZoom: 18,
-                }).addTo(map);
-                
-                var marker = L.marker([0, 0], { draggable: true }).addTo(map);
-                
-                marker.on('dragend', function(event) {
-                    var position = marker.getLatLng();
-                    document.getElementById('latitude').value = position.lat;
-                    document.getElementById('longitude').value = position.lng;
+        // Initialize Google Maps
+        function initMap() {
+            // Specify your map options
+            var mapOptions = {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            };
+
+            // Create a new map instance
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Initialize marker variable
+            var marker;
+
+            // Add event listener for map click
+            google.maps.event.addListener(map, 'click', function(event) {
+                // Remove existing marker if any
+                if (marker) {
+                    marker.setMap(null);
+                }
+
+                // Get latitude and longitude of clicked location
+                var latitude = event.latLng.lat();
+                var longitude = event.latLng.lng();
+
+                // Create a new marker at the clicked location
+                marker = new google.maps.Marker({
+                    position: { lat: latitude, lng: longitude },
+                    map: map
                 });
-            }
-            
+
+                // Center the map on the clicked location
+                map.setCenter({ lat: latitude, lng: longitude });
+            });   
+        }      
             function validateForm() {
                 var address = document.getElementById("address").value;
                 var area = document.getElementById("area").value;
@@ -265,6 +283,7 @@
         </script>
         <section class="contact-section">
         <div class="container">
+
 </section>
     </main>
     <footer>
