@@ -152,6 +152,23 @@
                                 <input type="text" class="form-control form-control-lg" id="donor-governorate" required>
                             </div>
                         </div>
+                        <div class="form-group row">
+                            <label for="donor-governorate" class="col-md-3 col-form-label">Governorate</label>
+                            <div class="col-md-9">
+                                <input type="text" class="form-control form-control-lg" id="donor-governorate" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="volunteer-role" class="col-md-3 col-form-label">Volunteer Role</label>
+                            <div class="col-md-9">
+                                <select class="form-control form-control-lg" id="volunteer-role" required>
+                                    <option value="">Select Volunteer Role</option>
+                                    <option value="regular-donor">Regular Donor</option>
+                                    <option value="teacher">Teacher</option>
+                                    <option value="doctor">Doctor</option>
+                                </select>
+                            </div>
+                        </div>                        
                         <button type="submit" class="btn btn-primary">Register</button>
                     </form>
                 </div>
@@ -160,48 +177,6 @@
         
     </main>
     
-    <!-- Accept Modal -->
-    <div class="modal fade" id="acceptModal" tabindex="-1" role="dialog" aria-labelledby="acceptModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="acceptModalLabel">Accept Confirmation</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to accept?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                    <button id="acceptYesBtn" type="button" class="btn btn-success">Yes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Reject Modal -->
-    <div class="modal fade" id="rejectModal" tabindex="-1" role="dialog" aria-labelledby="rejectModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="rejectModalLabel">Reject Confirmation</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to reject?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                    <button id="rejectYesBtn" type="button" class="btn btn-danger">Yes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Scroll Up -->
     <div id="back-top" style="display: none;">
@@ -251,5 +226,19 @@
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
    
+    <script>
+        // Function to redirect to Registered.html
+        function redirectToRegisteredPage() {
+            window.location.href = "Registered.html";
+        }
+    
+        // Event listener to trigger redirection when the Register button is clicked
+        document.getElementById("donor-registration-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            redirectToRegisteredPage(); // Call the function to redirect to Registered.html
+        });
+    </script>
+    
+
 </body>
 </html>

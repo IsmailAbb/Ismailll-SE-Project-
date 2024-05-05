@@ -37,6 +37,24 @@
                 margin-bottom: 15px; /* Adjust margin for smaller screens */
             }
         }
+
+            /* Add this CSS to increase padding for file upload */
+    .file-upload-container {
+        padding: 20px; /* Adjust the padding as needed */
+    }
+
+        /* Add this CSS to increase padding for everything */
+        body {
+            padding: 20px; /* Adjust the padding as needed */
+        }
+
+            /* Add this CSS to increase the size of input fields and select dropdowns */
+/* Add this CSS to adjust the font size for dropdown options */
+.form-control option {
+    font-size: 16px; /* Adjust the font size as needed */
+}
+
+    
     </style>
 
     <script src="C:\Users\Ismail\Desktop\Example\Ismailll\JQuery.min.js"></script>
@@ -72,7 +90,7 @@
                             <a href="#" onclick="window.history.back();" class="btn header-btn"><i class="fas fa-arrow-left"></i> Back</a>
                         </div>
                         <div class="donor-registration-text ml-2">
-                            <p style="font-size: 24px; font-weight: bold;">Donor Registration Form</p>
+                            <p style="font-size: 24px; font-weight: bold;">Organization Representative Registration Form</p>
                         </div>
                     </div>
                 </div>
@@ -141,9 +159,9 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="donor-gender" class="col-md-3 col-form-label">Organization Type</label>
+                            <label for="donor-org-type" class="col-md-3 col-form-label">Organization Type</label>
                             <div class="col-md-9">
-                                <select class="form-control form-control-lg" id="donor-gender" required>
+                                <select class="form-control form-control-lg" id="donor-org-type" required>
                                     <option value="">Select Organization Type</option>
                                     <option value="non-profit">Non-Profit</option>
                                     <option value="governmental">Governmental</option>
@@ -169,62 +187,43 @@
                                 <input type="text" class="form-control form-control-lg" id="donor-governorate" required>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Register</button>
+<!-- Google Maps API -->
+<div class="container">
+    <div class="row justify-content-start">
+        <div class="col-md-6 order-md-2">
+            <div id="map" style="height: 500px; width: 500px;"></div>
+        </div>
+    </div>
+</div>
+
+
+<!-- File Upload -->
+<div class="container file-upload-container">
+    <div class="row justify-content-start">
+        <div class="col-md-6 order-md-2">
+            <h2>File Upload</h2>
+            <form id="file-upload-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="file">Select Files:</label>
+                    <input type="file" class="form-control-file" id="file" name="file" multiple required>
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
                     </form>
                 </div>
             </div>
         </div>
         
     </main>
-    
-    <!-- Accept Modal -->
-    <div class="modal fade" id="acceptModal" tabindex="-1" role="dialog" aria-labelledby="acceptModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="acceptModalLabel">Accept Confirmation</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to accept?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                    <button id="acceptYesBtn" type="button" class="btn btn-success">Yes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Reject Modal -->
-    <div class="modal fade" id="rejectModal" tabindex="-1" role="dialog" aria-labelledby="rejectModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="rejectModalLabel">Reject Confirmation</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Are you sure you want to reject?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
-                    <button id="rejectYesBtn" type="button" class="btn btn-danger">Yes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- Scroll Up -->
     <div id="back-top" style="display: none;">
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
-
+    
     <!-- JS here -->
 
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -263,11 +262,64 @@
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/mail-script.js"></script>
     <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     
     <!-- Jquery Plugins, main Jquery -->    
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+    <script>
+        // Initialize Google Maps
+        function initMap() {
+            // Specify your map options
+            var mapOptions = {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            };
+
+            // Create a new map instance
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Initialize marker variable
+            var marker;
+
+            // Add event listener for map click
+            google.maps.event.addListener(map, 'click', function(event) {
+                // Remove existing marker if any
+                if (marker) {
+                    marker.setMap(null);
+                }
+
+                // Get latitude and longitude of clicked location
+                var latitude = event.latLng.lat();
+                var longitude = event.latLng.lng();
+
+                // Create a new marker at the clicked location
+                marker = new google.maps.Marker({
+                    position: { lat: latitude, lng: longitude },
+                    map: map
+                });
+
+                // Center the map on the clicked location
+                map.setCenter({ lat: latitude, lng: longitude });
+            });
+        }
+        // Function to redirect to Registered.html
+    function redirectToRegisteredPage() {
+        window.location.href = "Registered.html";
+    }
+
+    // Event listener to trigger redirection when the Register button is clicked
+    document.getElementById("donor-registration-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        redirectToRegisteredPage(); // Call the function to redirect to Registered.html
+    });
+    </script>
+
+
 </body>
 </html>
 

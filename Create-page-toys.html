@@ -74,7 +74,6 @@
                                     <ul class="contact-now">     
                                         <li><a href="#">Subscribe Now</a></li>
                                     </ul>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -97,7 +96,7 @@
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="about.html">About</a></li>
-                                                <li><a href="program.html">video</a></li>
+                                                <li><a href="program.html">Organizations</a></li>
                                                 <li><a href="#">Volunteer </a>
                                                     <ul class="submenu">
                                                         <li><a href="events.html">Medical Cases</a></li>
@@ -141,258 +140,192 @@
         <!-- Header End -->
     </header>
     <main>
-        <title>My Account</title>
-        <style>
-            .error {
-                color: red;
-                display: block;
-                margin-top: 5px;
-            }
-        </style>
-        <style>
-            #map {
-                height: 400px;
-                margin-bottom: 10px;
-            }
-        </style>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
-
-        
-
-        <h2 style="text-decoration: underline;"><strong> My Profile:</strong></h2><br>
-
-
-        <style>
-            .form-row {
-                display: flex;
-                justify-content: space-between;
-                margin: 20px;
-            }
-    
-            .form-group {
-                flex-basis: 50%; /* Adjust as needed */
-            }
-    
-            label {
-                display: block;
-            }
-    
-            input {
-            width: 60%; /* Adjust width here */
-            margin-bottom: 5px;
-            text-align: left;
-            }
-        </style>
-        
-
-
-        
-        <form onsubmit="return validateForm()">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="address">Email:</label>
-                    <input type="text" id="address" name="address" value="Chrismicheals@gmail.com">
-                    <span id="addressError" class="error"></span>
-                </div>
-                
-                <div class="form-group">
-                    <label for="area">First name:</label>
-                    <input type="text" id="area" name="area" value="Chris">
-                    <span id="areaError" class="error"></span>
-                </div> </div>
-
-            <div class="form-row">
-                
-                <div class="form-group">
-                    <label for="governorate">Last name:</label>
-                    <input type="text" id="governorate" name="governorate" value="Micheals">
-                    <span id="governorateError" class="error"></span>
-                </div>
-            
-    
-                <div class="form-group">
-                    <label for="specialty">Phone number:</label>
-                    <input type="text" id="specialty" name="specialty" value="+33 5536645">
-
-
-
-                    <span id="specialtyError" class="error"></span>
-                </div>
-            </div>
-
-            <div class="form-row">
-
-                
-                <div class="form-group">
-                    <div class="password-input">
-                        <input type="password" id="password" name="password" value="password" readonly>
-                        <label class="show-password-label" for="showPassword">Show Password</label>
-                        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
-                    </div>
-                    <span id="specialtyError" class="error"></span>
-                </div>
-
-                
-                <div class="form-group">
-                    <label for="address2">Address:</label>
-                    <input type="text" id="address2" name="address2">
-                    <span id="address2Error" class="error"></span>
-                </div>
-            </div>
-        
-            <br>
-            <style>.password-input {
-                position: relative;
-            }
-            
-            .password-input label.show-password-label {
-                position: absolute;
-                top: 80%;
-                transform: translateY(-60%);
-                left: 33%;
-                 /* Adjust this value as needed */
-            }
-            </style>
-
-            <script>
-                function togglePasswordVisibility() {
-                    var passwordInput = document.getElementById("password");
-                    var showPasswordCheckbox = document.getElementById("showPassword");
-            
-                    if (showPasswordCheckbox.checked) {
-                        passwordInput.type = "text";
-                    } else {
-                        passwordInput.type = "password";
-                    }
-                }
-            </script>
-
-
-            <button class="delete-btn" onclick="deletePost(this)">Edit profile</button>
-                                    <style>
-                                        /* Define styles for the delete button */
-                                        .delete-btn {
-                                            /* Add your CSS styles here */
-                                            background-color: #09cc7f;
-                                            color: white;
-                                            border: none;
-                                            padding: 10px 20px; /* Increase padding to make the button bigger */
-                                            border-radius: 10px;
-                                            cursor: pointer;
-                                            position: relative;
-                                            float:left;
-                                            margin-right: 20px;
-                                            margin-left: 25px;
-                                            
-                                        }
-                                    </style>
-
-
-            
-
-            <button class="delete-btn" onclick="deletePost(this)">Delete profile</button>
-                                    <style>
-                                        /* Define styles for the delete button */
-                                        .delete-btn {
-                                            /* Add your CSS styles here */
-                                            background-color: #09cc7f;
-                                            color: white;
-                                            border: none;
-                                            padding: 10px 20px; /* Increase padding to make the button bigger */
-                                            border-radius: 10px;
-                                            cursor: pointer;
-                                            position: relative;
-                                            float:left;
-                                            
-                                        }
-                                    </style>
-
-            
-            
-            
-            
-          
-        </form>
-        
-        
-        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-        <script>
-            function initMap() {
-                var map = L.map('map').setView([0, 0], 15);
-                
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-                    maxZoom: 18,
-                }).addTo(map);
-                
-                var marker = L.marker([0, 0], { draggable: true }).addTo(map);
-                
-                marker.on('dragend', function(event) {
-                    var position = marker.getLatLng();
-                    document.getElementById('latitude').value = position.lat;
-                    document.getElementById('longitude').value = position.lng;
-                });
-            }
-            
-            function validateForm() {
-                var address = document.getElementById("address").value;
-                var area = document.getElementById("area").value;
-                var governorate = document.getElementById("governorate").value;
-                var specialty = document.getElementById("specialty").value;
-                var numCases = document.getElementById("num-cases").value;
-                
-                var addressError = document.getElementById("addressError");
-                var areaError = document.getElementById("areaError");
-                var governorateError = document.getElementById("governorateError");
-                var specialtyError = document.getElementById("specialtyError");
-                var numCasesError = document.getElementById("numCasesError");
-                
-                var isValid = true;
-                
-                if (address === "") {
-                    addressError.textContent = "Please enter the clinic address.";
-                    isValid = false;
-                } else {
-                    addressError.textContent = "";
-                }
-                
-                if (area === "") {
-                    areaError.textContent = "Please enter the area.";
-                    isValid = false;
-                } else {
-                    areaError.textContent = "";
-                }
-                
-                if (governorate === "") {
-                    governorateError.textContent = "Please enter the governorate.";
-                    isValid = false;
-                } else {
-                    governorateError.textContent = "";
-                }
-                
-                if (specialty === "") {
-                    specialtyError.textContent = "Please enter the specialty.";
-                    isValid = false;
-                } else {
-                    specialtyError.textContent = "";
-                }
-                
-                if (numCases === "") {
-                    numCasesError.textContent = "Please enter the number of pro-bono cases.";
-                    isValid = false;
-                } else {
-                    numCasesError.textContent = "";
-                }
-                
-                return isValid;
-            }
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', initMap);
-        </script>
         <section class="contact-section">
-        <div class="container">
-</section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Post submitted saved successfully!!!</strong> Thank you for your fulfillment.
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="d-none d-sm-block mb-5 pb-4">
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="contact-title">Creating a new post for Toys donations:</h2>
+                     
+                    </div>
+
+                    <div class="col-lg-8">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="row">
+                               
+
+                                    
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                        <span id="NameError" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Enter your email ">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the age for which the toys are suitable for playing">
+                                    </div>
+                                </div>
+
+                                
+
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the quantity of the toys  ">
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <form>
+                                        <label for="gender">Select the gender:</label><br>
+                                        <input type="radio" id="male" name="gender" value="male">
+                                        <label for="male">Male</label><br>
+                                        <input type="radio" id="female" name="gender" value="female">
+                                        <label for="female">Female</label><br>
+                                        <input type="radio" id="other" name="gender" value="other">
+                                        <label for="other">Other</label><br>
+                                    </form>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="select-this">
+                                        <form id="category-form">
+
+                                            
+                                                <select name="select" id="select1" onchange="la(this.value)">
+                                                    <option value="" disabled selected hidden>Choose a Category </option>
+                                                    <option value="" >Board games</option>
+                                                    <option value=""> Stuffed toys</option>
+                                                    <option value="">Dolls</option>
+                                                    <option value=""> Sports</option>
+                                                    <option value="">Cars</option>
+                                                    <option value="">Outdoor</option>
+                                                    
+                                                </select><br>
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+
+                                
+
+
+                                
+
+                               
+                                
+                                
+
+                            
+                           
+                                
+
+                                
+
+                                <div class="col-12">
+                                    <div class="form-group mt-3">
+                                        <aside class="single_sidebar_widget search_widget">
+                                            <form action="#">
+                                                <input type="file" id="file-input" style="display: none;" onchange="showSelectedFile(event)">
+                                                <button class="button button-contactForm boxed-btn" class="green-button" onclick="selectFile()">Upload</button>
+                                                <p id="selected-file"></p>
+                                                <script>
+                                                    function selectFile() {
+                                                        var fileInput = document.getElementById("file-input");
+                                                        fileInput.click();
+                                                    }
+                                            
+                                                    function showSelectedFile(event) {
+                                                        var fileInput = event.target;
+                                                        var selectedFile = fileInput.files[0];
+                                                        var selectedFileName = selectedFile.name;
+                                                        
+                                                        var selectedFileElement = document.getElementById("selected-file");
+                                                        selectedFileElement.textContent = "file uploaded: " + selectedFileName;
+                                                    }
+                                                </script>
+                                                <div id="attach-message"></div>
+                                            </form>
+                                        </aside>
+                                        <div class="form-group mt-3">
+                                            <button type="submit" class="button button-contactForm boxed-btn" onclick="displayNotification()">Submit</button>
+                                        </div>
+                                    </form>
+                                    <style> .alert {
+                                        display: none;
+                                        padding: 20px;
+                                        background-color: #09cc7f;
+                                        color: white;
+                                        
+                                
+                                    }
+                                    
+                                    .closebtn {
+                                        margin-left: 15px;
+                                        color: white;
+                                        font-weight: bold;
+                                        float: right;
+                                        font-size: 22px;
+                                        line-height: 20px;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                    }
+                                    
+                                    .closebtn:hover {
+                                        color: black;
+                                    }
+                                </style>
+                          </style>
+                                    
+                                        
+                                        <script>
+
+                                            
+
+                                            function submitForm(event) {
+                                                event.preventDefault(); // Prevent the default form submission behavior
+                                                
+                                                setTimeout(function() {
+                                                    location.reload(); // Refresh the page
+                                                }, 500);
+                                            }
+                                            </script>
+
+
+                                            
+                                                            
+
+
+                                        </form>
+                                        </div>
+                  
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
