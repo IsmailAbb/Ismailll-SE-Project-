@@ -191,7 +191,6 @@
             text-align: left;
             }
         </style>
-
         
 
 
@@ -199,7 +198,7 @@
         <form onsubmit="return validateForm()">
             <div class="form-row">
                 <div class="form-group">
-                    <h3 for="address">Please select the organizations type where you would like to see:</h3>
+                    <h3 for="address">Please select the governorate where you would like to view organizations:</h3>
                         
                                 
 
@@ -208,11 +207,11 @@
 
                             
                                 <select name="select" id="select1" onchange="la(this.value)">
-                                    <option value="" disabled selected hidden>Organization types:</option>
-                                    <option value="Health-donor.html" >Healthcare organizations</option>
-                                    <option value="program.html" >non-profit organization (NPO)</option>
-                                    
-                                    <option value="Food-fDonor.html">Food banks</option>
+                                    <option value="" disabled selected hidden>Governorate</option>
+                                    <option value="RegisteredOrgs.html" >Cairo</option>
+                                    <option value="RegisteredOrgs.html">Alexandria</option>
+                                    <option value="Aswan-f.html">Aswan</option>
+                                    <option value="Alexandria-f.html">Ismalia</option>
                                     
                                 </select>
                             
@@ -375,7 +374,9 @@
                 return isValid;
             }
         </script>
-        
+        <script>
+            document.addEventListener('DOMContentLoaded', initMap);
+        </script>
         <section class="contact-section">
         <div class="container">
 </section>
