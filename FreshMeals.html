@@ -74,7 +74,6 @@
                                     <ul class="contact-now">     
                                         <li><a href="#">Subscribe Now</a></li>
                                     </ul>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -97,7 +96,7 @@
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="about.html">About</a></li>
-                                                <li><a href="program.html">Organizations</a></li>
+                                                <li><a href="program.html">video</a></li>
                                                 <li><a href="#">Volunteer </a>
                                                     <ul class="submenu">
                                                         <li><a href="events.html">Medical Cases</a></li>
@@ -141,244 +140,265 @@
         <!-- Header End -->
     </header>
     <main>
-        <title> Create a new post</title>
-        <style>
-            .error {
-                color: red;
-                display: block;
-                margin-top: 5px;
-            }
-        </style>
-        <style>
-            #map {
-                height: 400px;
-                margin-bottom: 10px;
-            }
-        </style>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
-
-       
-
-        
-
-        <style>
-            .hero-cap {
-                        color: #072366;
-            font-size: 60px;
-            font-weight: 800;
-            text-transform: capitalize;
-            line-height: 1;
-}
-            
-           
-            .form-row {
-                display: flex;
-                justify-content: space-between;
-                margin: 30px;
-            }
-    
-            .form-group {
-                flex-basis: 50%; /* Adjust as needed */
-            }
-    
-            label {
-                display: block;
-            }
-    
-            input {
-            width: 60%; /* Adjust width here */
-            margin-bottom: 5px;
-            text-align: left;
-            }
-        </style>
-
-        
-
-
-        
-        <form onsubmit="return validateForm()">
-            <div class="form-row">
-                <div class="form-group">
-                    <h3 for="address">Please select the organizations type where you would like to see:</h3>
-                        
-                                
-
-                    <div class="select-this">
-                        <form id="category-form">
-
-                            
-                                <select name="select" id="select1" onchange="la(this.value)">
-                                    <option value="" disabled selected hidden>Organization types:</option>
-                                    <option value="Health-donor.html" >Healthcare organizations</option>
-                                    <option value="program.html" >non-profit organization (NPO)</option>
-                                    
-                                    <option value="Food-fDonor.html">Food banks</option>
-                                    
-                                </select>
-                            
-                        </form>
-                    </div>
-
-                                    <script>
-                                        function la(src){
-                                            window.location=src;
-                                        }
-                                    </script>
-
-                </div>
-                
-                
-
-                
-              
-          
-
-
-                <div class="col-12">
-                    <div class="form-group mt-3">
-                       
-                        
-                        </form>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70 text-center">
+                                <h2>Food Donation Requests (Fresh Meals)</h2>
+                            </div>
                         </div>
-                
-
-                
-                
+                    </div>
+                </div>
             </div>
-        
-            <br>
-            <style>.password-input {
-                position: relative;
-            }
-            
-            .password-input label.show-password-label {
-                position: absolute;
-                top: 80%;
-                transform: translateY(-60%);
-                left: 33%;
-                 /* Adjust this value as needed */
-            }
-            </style>
+        </div>
+        <!-- Hero End -->
+        <!--? Blog Area Start-->
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+                            
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\saladkits.jpeg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="SaladKits.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Pre-packaged Salad Kits</h2>
+                                    </a>
+                                    <p>Ready-to-eat salad kits that include fresh lettuce, vegetables, and a dressing. 
+                                        These convenient meal options provide individuals with a healthy and balanced meal 
+                                        on the go, packed with essential nutrients.
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Students</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 02 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\sandwiches.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Sandwiches.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;"> Fresh Sandwiches</h2>
+                                    </a>
+                                    <p>freshly made sandwiches with different fillings like turkey, ham, cheese, and 
+                                        vegetables. This donation ensures that individuals have access to a satisfying 
+                                        and nourishing meal without the need for extensive preparation.
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Students</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            
 
-            <script>
-                function togglePasswordVisibility() {
-                    var passwordInput = document.getElementById("password");
-                    var showPasswordCheckbox = document.getElementById("showPassword");
-            
-                    if (showPasswordCheckbox.checked) {
-                        passwordInput.type = "text";
-                    } else {
-                        passwordInput.type = "password";
-                    }
-                }
-            </script>
+                            <nav class="blog-pagination justify-content-center d-flex">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" aria-label="Previous">
+                                            <i class="ti-angle-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link">1</a>
+                                    </li>
+                                    <li class="page-item active">
+                                        <a href="#" class="page-link">2</a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" aria-label="Next">
+                                            <i class="ti-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="blog_right_sidebar">
+                            <!--<aside class="single_sidebar_widget search_widget">
+                                <form action="#">
+                                    <div class="form-group">
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder='Search Keyword'
+                                                onfocus="this.placeholder = ''"
+                                                onblur="this.placeholder = 'Search Keyword'">
+                                            <div class="input-group-append">
+                                                <button class="btns" type="button"><i class="ti-search"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                        type="submit">Search</button>
+                                </form>
+                            </aside>-->
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Filter Food Donations by Category</h4>
+                                <ul class="list cat-list">
+                                    <li>
+                                        <a href="FruitsAndVegetables.html" class="d-flex">
+                                            <p>Fruits and Vegetables</p>
+                                            <p>(7)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="CannedFoods.html" class="d-flex">
+                                            <p>Canned Goods</p>
+                                            <p>(3)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FreshMeals.html" class="d-flex">
+                                            <p>Fresh Meals</p>
+                                            <p>(2)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BakedGoods.html" class="d-flex">
+                                            <p>Baked Goods</p>
+                                            <p>(3)</p>
+                                        </a>
+                                    </li>
+                    
+                                </ul>
+                            </aside>
+                            <!--<aside class="single_sidebar_widget popular_post_widget">
+                                <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_1.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">From life was you fish...</h3>
+                                        </a>
+                                        <p>January 12, 2019</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_2.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
+                                        </a>
+                                        <p>02 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_3.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
+                                        </a>
+                                        <p>03 Hours ago</p>
+                                    </div>
+                                </div>
+                                <div class="media post_item">
+                                    <img src="assets/img/post/post_4.png" alt="post">
+                                    <div class="media-body">
+                                        <a href="blog_details.html">
+                                            <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
+                                        </a>
+                                        <p>01 Hours ago</p>
+                                    </div>
+                                </div>
+                            </aside>-->
+                            <!--<aside class="single_sidebar_widget tag_cloud_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
+                                <ul class="list">
+                                    <li>
+                                        <a href="#">project</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">love</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">technology</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">travel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">restaurant</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">life style</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">design</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">illustration</a>
+                                    </li>
+                                </ul>
+                            </aside>-->
 
-            
-
-           
-
-            
-
-
-                                    
-
-
-            
-
-            
-
-           
-
-
-
-
-            
-        </form>
-
-        <script>
-            function redirectToPage(button) {
-                // Replace "destination.html" with the URL of the page you want to redirect to
-                window.location.href = "Account2.html";
-            }
-        </script>
-        
-        
-        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-        <script>
-            function initMap() {
-                var map = L.map('map').setView([0, 0], 15);
-                
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-                    maxZoom: 18,
-                }).addTo(map);
-                
-                var marker = L.marker([0, 0], { draggable: true }).addTo(map);
-                
-                marker.on('dragend', function(event) {
-                    var position = marker.getLatLng();
-                    document.getElementById('latitude').value = position.lat;
-                    document.getElementById('longitude').value = position.lng;
-                });
-            }
-            
-            function validateForm() {
-                var address = document.getElementById("address").value;
-                var area = document.getElementById("area").value;
-                var governorate = document.getElementById("governorate").value;
-                var specialty = document.getElementById("specialty").value;
-                var numCases = document.getElementById("num-cases").value;
-                
-                var addressError = document.getElementById("addressError");
-                var areaError = document.getElementById("areaError");
-                var governorateError = document.getElementById("governorateError");
-                var specialtyError = document.getElementById("specialtyError");
-                var numCasesError = document.getElementById("numCasesError");
-                
-                var isValid = true;
-                
-                if (address === "") {
-                    addressError.textContent = "Please enter the clinic address.";
-                    isValid = false;
-                } else {
-                    addressError.textContent = "";
-                }
-                
-                if (area === "") {
-                    areaError.textContent = "Please enter the area.";
-                    isValid = false;
-                } else {
-                    areaError.textContent = "";
-                }
-                
-                if (governorate === "") {
-                    governorateError.textContent = "Please enter the governorate.";
-                    isValid = false;
-                } else {
-                    governorateError.textContent = "";
-                }
-                
-                if (specialty === "") {
-                    specialtyError.textContent = "Please enter the specialty.";
-                    isValid = false;
-                } else {
-                    specialtyError.textContent = "";
-                }
-                
-                if (numCases === "") {
-                    numCasesError.textContent = "Please enter the number of pro-bono cases.";
-                    isValid = false;
-                } else {
-                    numCasesError.textContent = "";
-                }
-                
-                return isValid;
-            }
-        </script>
-        
-        <section class="contact-section">
-        <div class="container">
-</section>
+                            <!--<aside class="single_sidebar_widget instagram_feeds">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Instagram Feeds</h4>
+                                <ul class="instagram_row flex-wrap">
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
+                                        </a>
+                                    </li>
+                                </ul>
+                            </aside>-->
+                            <!--<aside class="single_sidebar_widget newsletter_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Newsletter</h4>
+                                <form action="#">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" onfocus="this.placeholder = ''"
+                                            onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
+                                    </div>
+                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                        type="submit">Subscribe</button>
+                                </form>
+                            </aside>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Area End -->
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
@@ -525,37 +545,6 @@
       <!-- Jquery Plugins, main Jquery -->	
       <script src="./assets/js/plugins.js"></script>
       <script src="./assets/js/main.js"></script>
-      <script>
-            function redirectToPage() {
-                    var selectElement = document.getElementById("select1");
-                    var selectedOption = selectElement.options[selectElement.selectedIndex].value;
-
-                    // Redirect based on the selected option
-                    switch (selectedOption) {
-                        case "Clothes":
-                            window.location.href = "newPost-clothes.html";
-                            break;
-                        case "Toys":
-                            window.location.href = "newPost-toys.html";
-                            break;
-                        case "Food":
-                            window.location.href = "newPost-food.html";
-                            break;
-                        case "Medical supplies":
-                            window.location.href = "newPost-medical-supplies.html";
-                            break;
-                        case "School supplies":
-                            window.location.href = "newPost-school-supplies.html";
-                            break;
-                        case "Blood donations":
-                            window.location.href = "newPost-blood-donations.html";
-                            break;
-                        default:
-                            // Default action if no option is selected
-                            break;
-                    }}</script>
-
-
      
     </body>
 </html>
