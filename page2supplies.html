@@ -24,9 +24,6 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
-   
-
-
     <!--? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -142,306 +139,138 @@
         </div>
         <!-- Header End -->
     </header>
- 
     <main>
+        
+        
         <!--? Hero Start -->
         <div class="slider-area2">
             <div class="slider-height2 d-flex align-items-center">
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="hero-cap hero-cap2 pt-70 text-center" id="BLA">
-                                <h2>My Profile</h2>
-                              
+                            <div class="hero-cap hero-cap2 pt-70 text-center">
+                                <h2>requested Donation posts</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-       
-             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mb-5 mb-lg-0">
-                        <div class="alert" id="notification">
-                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
-                            <strong>Profile changes saved successfully!!!</strong> Thank you for your fulfillment.
-                        </div>
-                        <script>
-                            function displayNotification() {
-                                var notification = document.getElementById("notification");
-                                notification.style.display = "block"; // Show the alert
-                                var BLA = document.getElementById("BLA");
-                                BLA.scrollIntoView({ behavior: 'smooth' });
-                            }
-                        </script>
-                    </div>
-                </div>
-            </div>
-            
-            <style>
-                .edit-btn{
-                    top:50%;
-                }
-            </style>
-          
         <!-- Hero End -->
         <!--? Blog Area Start-->
         <section class="blog_area section-padding">
             <div class="container">
                 <div class="row">
-                    
                     <div class="col-lg-8 mb-5 mb-lg-0">
-                     
                         <div class="blog_left_sidebar">
-
-                           
-
-
-
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-                                <style>
-                                    .map-container {
-                                        height: 200px;
-                                        width: 300px;
-                                    }
-                                </style>
-                            </head>
-                            <body>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="address">Email:</label>
-                                        <input type="text" id="address" name="address" value="Chrismicheals@gmail.com">
-                                        <span id="addressError" class="error"></span>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="area">First name:</label>
-                                        <input type="text" id="area" name="area" value="Chris">
-                                        <span id="areaError" class="error"></span>
-                                    </div> </div>
-                    
-                                <div class="form-row">
-                                    
-                                    <div class="form-group">
-                                        <label for="governorate">Last name:</label>
-                                        <input type="text" id="governorate" name="governorate" value="Micheals" >
-                                        <span id="governorateError" class="error"></span>
-                                    </div>
-                    
-                                    <div class="form-group">
-                                        <label for="specialty">Phone number:</label>
-                                        <input type="text" id="PN" name="specialty" value="+33 5536645" >
-                                        <span id="specialtyError" class="error"></span>
-                                    </div>
-                                    
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book1.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
                                 </div>
-                    
-                                <div class="form-row">
-                    
-                                    
-                                    <div class="form-group">
-                                        <label for="password">Password:</label>
-                                        <div class="password-input">
-                                            <input type="password" id="password" name="password" value="password" >
-                                            <label class="show-password-label" for="showPassword">Show Password</label>
-                                            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
-                                        </div>
-                                        <span id="specialtyError" class="error"></span>
-                                    </div>
-                                    
-                    
-                                    
-                                    <div class="form-group">
-                                        <label for="address2">Address:</label>
-                                        <input type="text" id="address2" name="address2" value="2335 Orchard View Lane, Escondido CA 92027" readonly>
-                                        <span id="address2Error" class="error"></span>
-                                    </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book1Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Soul (Written by: Lisa Gardner)</h2>
+                                    </a>
+                                    <!--<p>Notebooks for students to help them organise their notes while studying, 
+                                       or for journaling and jotting down important personal information.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Students</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 02 Comments</a></li>
+                                    </ul>
                                 </div>
-                            
-                                <br>
-                            
-                                <style>.password-input {
-                                    position: relative;
-                                }
-                                
-                                .password-input label.show-password-label {
-                                    position: absolute;
-                                    top: 90%;
-                                    transform: translateY(-80%);
-                                    left: 43%;
-                                     /* Adjust this value as needed */
-                                }
-                              
-            .form-row {
-                display: flex;
-                justify-content: space-between;
-                margin: 20px;
-            }
-    
-            .form-group {
-                flex-basis: 50%; /* Adjust as needed */
-            }
-    
-            label {
-                display: block;
-            }
-    
-            input {
-            width: 70%; /* Adjust width here */
-            margin-bottom: 5px;
-            text-align: left;
-            }
-       
-        
-                                </style>
-                                <script>
-                                    function togglePasswordVisibility() {
-                                        var passwordInput = document.getElementById("password");
-                                        var showPasswordCheckbox = document.getElementById("showPassword");
-                                
-                                        if (showPasswordCheckbox.checked) {
-                                            passwordInput.type = "text";
-                                        } else {
-                                            passwordInput.type = "password";
-                                        }
-                                    }
-                                </script>
-                                
-                                
-
-                                <style>
-                                    /* Define styles for the edit button */
-                                    .edit-btn {
-                                        background-color: #09cc7f;
-                                        color: white;
-                                        border: none;
-                                        padding: 10px 20px; /* Increase padding to make the button bigger */
-                                        border-radius: 10px;
-                                        cursor: pointer;
-                                        margin-right: 20px;
-                                        margin-left: 25px;
-                                    }
-                                </style>
-                    
-                                <script>
-                                    function redirectToPage() {
-                                        window.location.href = "Account2.html";
-                                    }
-                                </script>
-                                
-                                <style>
-                                    /* Define styles for the delete button */
-                                    .delete-btn {
-                                        /* Add your CSS styles here */
-                                        background-color: #09cc7f;
-                                    color: white;
-                                    border: none;
-                                    padding: 10px 20px; /* Increase padding to make the button bigger */
-                                    border-radius: 10px;
-                                    cursor: pointer;
-                                    margin-right: 20px;
-                                    margin-left: 25px;
-                                        
-                                    }
-                                    .edit-btn {
-                                    background-color: #09cc7f; /* Green */
-                                    border: none;
-                                    color: white;
-                                    padding: 15px 32px;
-                                    text-align: center;
-                                    text-decoration: none;
-                                    display: inline-block;
-                                    font-size: 16px;
-                                    margin: 4px 2px;
-                                    cursor: pointer;
-                                }
-
-                                /* Change color on hover */
-                                .edit-btn:hover {
-                                    background-color:white ;
-                                    color: #09cc7f;
-                                     /* Darker Green */
-                                }
-                                </style>
-                                <button class="edit-btn"  onclick="displayNotification();">Save Changes</button>
-                                <a href="Accontss2.html" class="edit-btn">Edit profile</a>
-                                 </form>
-
-                    
-
-
-
-
-
-        
-                 
-                            <style>
-                                .view-details-btn {
-                                    text-align: right;
-                                     background-color: white;
-                                     border: none;
-                                     padding: 8px 16px;
-                                     color: #09cc7f;
-                                    cursor: pointer;
-                                }
-                            </style>
-                               <style>
-                                .Fulfill-btn {
-                                    text-align: right;
-                                    background-color: white;
-                                     border: none;
-                                     padding: 8px 16px;
-                                     color: #09cc7f;
-                                    cursor: pointer;
-                                }
-                            </style>
-                            <script>
-                                function toggleDetails(button) {
-                                    var detailsDiv = button.nextElementSibling;
-                            
-                                    if (detailsDiv.style.display === "none") {
-                                        detailsDiv.style.display = "block";
-                                        button.textContent = "Hide Details";
-                                        initMap();
-                                    } else {
-                                        detailsDiv.style.display = "none";
-                                        button.textContent = "View Details";
-                                    }
-                                }
-                            </script>
-                           
-                                <style>
-                                    .alert {
-                                        display: none;
-                                        padding: 20px;
-                                        background-color: #09cc7f;
-                                        color: white;
-                                        
-                                
-                                    }
-                                    
-                                    .closebtn {
-                                        margin-left: 15px;
-                                        color: white;
-                                        font-weight: bold;
-                                        float: right;
-                                        font-size: 22px;
-                                        line-height: 20px;
-                                        cursor: pointer;
-                                        transition: 0.3s;
-                                    }
-                                    
-                                    .closebtn:hover {
-                                        color: black;
-                                    }
-                                </style>
-                          
-                          <nav class="blog-pagination justify-content-center d-flex">
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book2.png"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>7</h3>
+                                        <p>June</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book2Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Don't Look Back (Written by:  Jennifer L. Armentrout)</h2>
+                                    </a>
+                                    <!--<p>Students use may use these for taking notes, schoolwork or personal use. 
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Students</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comment</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book3.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>25</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book3Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Tides (Written by:  Anita Shreve)</h2>
+                                    </a>
+                                    <!--<p>These basic calculators are mostly needed to assist students in primary 
+                                        and middle school to perform simple calculations efficiently and learn how 
+                                        to use the tool. 
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Students</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comment</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book4.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book4Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Tess of the Road (Written by: Rachel Hartman)</h2>
+                                    </a>
+                                    <!--<p>Your donation of scientific calculators can make a significant impact 
+                                        on highschool students, and undergraduates by enabling them to tackle complex 
+                                        mathematical problems and scientific calculations effectively. 
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Students</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book5.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book5Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Maybe Now (Written by: Colleen Hoover)</h2>
+                                    </a>
+                                    <!--<p>Your donation of sticky notes helps students in organizing their work/studies. 
+                                        They use them for; bookmarking pages, writing down reminders, adding notes onto 
+                                        pages, etc. 
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> No one Commented yet</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <nav class="blog-pagination justify-content-center d-flex">
                                 <ul class="pagination">
                                     <li class="page-item">
                                         <a href="#" class="page-link" aria-label="Previous">
@@ -452,7 +281,7 @@
                                         <a href="#" class="page-link">1</a>
                                     </li>
                                     <li class="page-item active">
-                                        <a href="#" class="page-link">2</a>
+                                        <a href="page2supplies.html" class="page-link">2</a>
                                     </li>
                                     <li class="page-item">
                                         <a href="#" class="page-link" aria-label="Next">
@@ -466,86 +295,77 @@
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                             <aside class="single_sidebar_widget search_widget">
-                                <form action="#">
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder='Search Keyword'
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Search Keyword'">
-                                            <div class="input-group-append">
-                                                <button class="btns" type="button"><i class="ti-search"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
-                                </form>
-                               
+                                <title>Donation Items Search</title>
+                                <style>
+                                    #search-button {
+                                        background-color: lightgreen;
+                                        color: white;
+                                        padding: 10px 20px;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                </style>
+                                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                            </head>
+                            <body>
+                                <h1>Donation Items Search</h1>
+                            
+                                <label for="search-text">Search Text:</label>
+                                <br><br>
                                 
-                               
-                                 
-                                <!-- <script>
-                                    function redirectOnChange(select) {
-                                      var selectedValue = select.value;
-                                      var articles = document.getElementsByClassName("blog_item");
-                                      var cardiacSurgery = document.getElementById("Cardiac Surgery");
-                                  
-                                      if (selectedValue === "Cardiothoracic Surgeon") {
-                                        for (var i = 1; i < articles.length; i++) {
-                                          if (articles[i].id === "Cardiac Surgery") {
-                                            articles[i].style.display = "block";
-                                          } else {
-                                            articles[i].style.display = "none";
-                                          }
+                                <input type="text" id="search-text">
+                                <br><br>
+                                
+                                <button id="search-button" onclick="redirectToPage()">Search</button>
+                            
+                                <script>
+                                    function redirectToPage() {
+                                        var searchText = document.getElementById("search-text").value.toLowerCase(); // Convert the search text to lowercase for case-insensitive comparison
+                                        
+                                        switch (searchText) {
+                                            case "toys":
+                                                window.location.href = "toys.html";
+                                                break;
+                                            case "clothes":
+                                                window.location.href = "clothes.html";
+                                                break;
+                                            case "food":
+                                                window.location.href = "food.html";
+                                                break;
+                                            case "school supplies":
+                                                window.location.href = "schoolsupplies.html";
+                                                break;
+                                            case "blood donations":
+                                                window.location.href = "BloodDonations.html";
+                                                break;
+                                            case "medical supplies":
+                                                window.location.href = "MedicalSuppliesFilter.html";
+                                                break;
+                                            default:
+                                                alert("No matching category found for the search text: " + searchText);
+                                                break;
                                         }
-                                      }
-                                      if(selectedValue === "Orthopedic Surgeon") {
-                                        for (var i = 1; i < articles.length; i++) {
-                                         if (articles[i].id === "Orthopedic Trauma") {
-                                           articles[i].style.display = "block";
-                                        } else {
-                                          articles[i].style.display = "none";
-                                        }
-                                         
-                                       
-                                      }
-                                      
-                                    } else {
-                                      for (var i = 1; i < articles.length; i++) {
-                                          articles[i].style.display = "block";
-                                       }
                                     }
-                                    if (orthopedicSurgery) {
-                                       orthopedicSurgery.style.display = "block";
-                                    }
-                                }
-                                  </script>-->
-                                   <!--<script>
-                                    function redirectOnChange(select) {
-                                      var selectedValue = select.value;
-                                      var articless = document.getElementsByClassName("blog_item");
-                                      var orthopedicSurgery = document.getElementById("Orthopedic Trauma");
-                                  
-                                      if (selectedValue === "Orthopedic Surgeon") {
-                                        for (var i = 1; i < articless.length; i++) {
-                                         if (articless[i].id === "Orthopedic Trauma") {
-                                           articless[i].style.display = "block";
-                                        } else {
-                                          articless[i].style.display = "none";
-                                        }
-                                       }
-                                    } else {
-                                      for (var i = 1; i < articles.length; i++) {
-                                          articles[i].style.display = "block";
-                                       }
-                                    }
-                                    if (orthopedicSurgery) {
-                                       orthopedicSurgery.style.display = "block";
-                                    }
-
-                                 }
-                                </script>-->
-                           <!-- <aside class="single_sidebar_widget popular_post_widget">
+                                </script>
+                            </aside>
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Categories</h4>
+                                <ul class="list cat-list">
+                                    <li>
+                                        <a href="books.html" class="d-flex">
+                                            <p>Books</p>
+                                            <p>(2)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="stationary.html" class="d-flex">
+                                            <p>Stationary</p>
+                                            <p>(3)</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </aside>
+                            <aside class="single_sidebar_widget popular_post_widget">
                                 <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
                                 <div class="media post_item">
                                     <img src="assets/img/post/post_1.png" alt="post">
@@ -664,7 +484,7 @@
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- Blog Area End -->
     </main>
     <footer>
@@ -750,7 +570,7 @@
                             <div class="col-xl-10 col-lg-9 ">
                                 <div class="footer-copy-right">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- <!--  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>

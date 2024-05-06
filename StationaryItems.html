@@ -124,7 +124,7 @@
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <a href="categories.html" class="btn header-btn">Donate</a>
                                     </div>
                                 </div>
                             </div> 
@@ -300,9 +300,6 @@
                                     <li class="page-item">
                                         <a href="#" class="page-link">1</a>
                                     </li>
-                                    <li class="page-item active">
-                                        <a href="#" class="page-link">2</a>
-                                    </li>
                                     <li class="page-item">
                                         <a href="#" class="page-link" aria-label="Next">
                                             <i class="ti-angle-right"></i>
@@ -314,6 +311,77 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
+                            <aside class="single_sidebar_widget search_widget">
+                                <title>Donation Items Search</title>
+                                <style>
+                                    #search-button {
+                                        background-color: lightgreen;
+                                        color: white;
+                                        padding: 10px 20px;
+                                        border: none;
+                                        cursor: pointer;
+                                    }
+                                </style>
+                                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+                            </head>
+                            <body>
+                                <h1>Donation Items Search</h1>
+                            
+                                <label for="search-text">Search Text:</label>
+                                <br><br>
+                                
+                                <input type="text" id="search-text">
+                                <br><br>
+                                
+                                <button id="search-button" onclick="redirectToPage()">Search</button>
+                            
+                                <script>
+                                    function redirectToPage() {
+                                        var searchText = document.getElementById("search-text").value.toLowerCase(); // Convert the search text to lowercase for case-insensitive comparison
+                                        
+                                        switch (searchText) {
+                                            case "toys":
+                                                window.location.href = "toys.html";
+                                                break;
+                                            case "clothes":
+                                                window.location.href = "clothes.html";
+                                                break;
+                                            case "food":
+                                                window.location.href = "food.html";
+                                                break;
+                                            case "school supplies":
+                                                window.location.href = "schoolsupplies.html";
+                                                break;
+                                            case "blood donations":
+                                                window.location.href = "BloodDonations.html";
+                                                break;
+                                            case "medical supplies":
+                                                window.location.href = "MedicalSuppliesFilter.html";
+                                                break;
+                                            default:
+                                                alert("No matching category found for the search text: " + searchText);
+                                                break;
+                                        }
+                                    }
+                                </script>
+                            </aside>
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Categories</h4>
+                                <ul class="list cat-list">
+                                    <li>
+                                        <a href="BookDonations.html" class="d-flex">
+                                            <p>Books</p>
+                                            <p>(5)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="StationaryItems.html" class="d-flex">
+                                            <p>Stationary</p>
+                                            <p>(6)</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </aside>
                             <!--<aside class="single_sidebar_widget search_widget">
                                 <form action="#">
                                     <div class="form-group">
