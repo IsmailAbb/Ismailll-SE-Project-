@@ -97,7 +97,7 @@
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.html">Home</a></li>
                                                 <li><a href="about.html">About</a></li>
-                                                <li><a href="program.html">video</a></li>
+                                                <li><a href="program.html">Organizations</a></li>
                                                 <li><a href="#">Volunteer </a>
                                                     <ul class="submenu">
                                                         <li><a href="events.html">Medical Cases</a></li>
@@ -125,7 +125,7 @@
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <a href="categories.html" class="btn header-btn">Donate</a>
                                     </div>
                                 </div>
                             </div> 
@@ -141,7 +141,7 @@
         <!-- Header End -->
     </header>
     <main>
-        <title>My Account</title>
+        <title> Create a new post</title>
         <style>
             .error {
                 color: red;
@@ -157,16 +157,24 @@
         </style>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
 
+       
+
         
 
-        <h2 style="text-decoration: underline;"><strong> My Profile:</strong></h2><br>
-
-
         <style>
+            .hero-cap {
+                        color: #072366;
+            font-size: 60px;
+            font-weight: 800;
+            text-transform: capitalize;
+            line-height: 1;
+}
+            
+           
             .form-row {
                 display: flex;
                 justify-content: space-between;
-                margin: 20px;
+                margin: 30px;
             }
     
             .form-group {
@@ -190,53 +198,51 @@
         <form onsubmit="return validateForm()">
             <div class="form-row">
                 <div class="form-group">
-                    <label for="address">Email:</label>
-                    <input type="text" id="address" name="address" value="Chrismicheals@gmail.com">
-                    <span id="addressError" class="error"></span>
-                </div>
-                
-                <div class="form-group">
-                    <label for="area">First name:</label>
-                    <input type="text" id="area" name="area" value="Chris">
-                    <span id="areaError" class="error"></span>
-                </div> </div>
+                    <h3 for="address">Please select the area where you would like to view organizations:</h3>
+                        
+                                
 
-            <div class="form-row">
-                
-                <div class="form-group">
-                    <label for="governorate">Last name:</label>
-                    <input type="text" id="governorate" name="governorate" value="Micheals" >
-                    <span id="governorateError" class="error"></span>
-                </div>
+                    <div class="select-this">
+                        <form id="category-form">
 
-                <div class="form-group">
-                    <label for="specialty">Phone number:</label>
-                    <input type="text" id="PN" name="specialty" value="+33 5536645">
-                    <span id="specialtyError" class="error"></span>
-                </div>
-                
-            </div>
-
-            <div class="form-row">
-
-                
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <div class="password-input">
-                        <input type="password" id="password" name="password" value="password">
-                        <label class="show-password-label" for="showPassword">Show Password</label>
-                        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                            
+                                <select name="select" id="select1" onchange="la(this.value)">
+                                    <option value="" disabled selected hidden>Areas</option>
+                                    
+                                    <option value="New-cairo-f.html">New cairo</option>
+                                    <option value="RegisteredOrgs.html">Heliopolis</option>
+                                    <option value="Alexandria-f.html">Zamalek</option>
+                                    
+                                </select>
+                            
+                        </form>
                     </div>
-                    <span id="specialtyError" class="error"></span>
+
+                                    <script>
+                                        function la(src){
+                                            window.location=src;
+                                        }
+                                    </script>
+
                 </div>
+                
                 
 
                 
-                <div class="form-group">
-                    <label for="address2">Address:</label>
-                    <input type="text" id="address2" name="address2" value="2335 Orchard View Lane, Escondido CA 92027" >
-                    <span id="address2Error" class="error"></span>
-                </div>
+              
+          
+
+
+                <div class="col-12">
+                    <div class="form-group mt-3">
+                       
+                        
+                        </form>
+                        </div>
+                
+
+                
+                
             </div>
         
             <br>
@@ -268,32 +274,9 @@
 
             
 
-            <a href="Account2.html" class="edit-btn">Edit profile</a>
+           
 
-            <style>
-                /* Define styles for the edit button */
-                .edit-btn {
-                    background-color: #09cc7f;
-                    color: white;
-                    border: none;
-                    padding: 10px 20px; /* Increase padding to make the button bigger */
-                    border-radius: 10px;
-                    cursor: pointer;
-                    margin-right: 20px;
-                    margin-left: 25px;
-                }
-            </style>
-
-            <script>      
-                function redirectToPage() {
-                    window.location.href = "Account2.html";
-                }
-            </script>
-
-
-
-
-
+            
 
 
                                     
@@ -301,40 +284,7 @@
 
             
 
-            <button class="delete-btn" onclick="deletePost(this)">Delete profile</button>
-                                    <style>
-                                        /* Define styles for the delete button */
-                                        .delete-btn {
-                                            /* Add your CSS styles here */
-                                            background-color: #09cc7f;
-                                        color: white;
-                                        border: none;
-                                        padding: 10px 20px; /* Increase padding to make the button bigger */
-                                        border-radius: 10px;
-                                        cursor: pointer;
-                                        margin-right: 20px;
-                                        margin-left: 25px;
-                                            
-                                        }
-                                    </style>
-
             
-<a href="Account3.html" class="edit-btn">Edit profile</a>
-        <style>
-            /* Define styles for the delete button */
-            .delete-btn {
-                /* Add your CSS styles here */
-                background-color: #09cc7f;
-                    color: white;
-                    border: none;
-                    padding: 10px 20px; /* Increase padding to make the button bigger */
-                    border-radius: 10px;
-                    cursor: pointer;
-                    margin-right: 20px;
-                    margin-left: 25px;
-                        
-            }
-        </style>
 
            
 
@@ -576,11 +526,37 @@
       <!-- Jquery Plugins, main Jquery -->	
       <script src="./assets/js/plugins.js"></script>
       <script src="./assets/js/main.js"></script>
+      <script>
+            function redirectToPage() {
+                    var selectElement = document.getElementById("select1");
+                    var selectedOption = selectElement.options[selectElement.selectedIndex].value;
+
+                    // Redirect based on the selected option
+                    switch (selectedOption) {
+                        case "Clothes":
+                            window.location.href = "newPost-clothes.html";
+                            break;
+                        case "Toys":
+                            window.location.href = "newPost-toys.html";
+                            break;
+                        case "Food":
+                            window.location.href = "newPost-food.html";
+                            break;
+                        case "Medical supplies":
+                            window.location.href = "newPost-medical-supplies.html";
+                            break;
+                        case "School supplies":
+                            window.location.href = "newPost-school-supplies.html";
+                            break;
+                        case "Blood donations":
+                            window.location.href = "newPost-blood-donations.html";
+                            break;
+                        default:
+                            // Default action if no option is selected
+                            break;
+                    }}</script>
 
 
-      
-    
-    
      
     </body>
 </html>

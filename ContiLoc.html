@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+
 </head>
 <body>
     <!--? Preloader Start -->
@@ -74,7 +76,6 @@
                                     <ul class="contact-now">     
                                         <li><a href="#">Subscribe Now</a></li>
                                     </ul>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -83,10 +84,17 @@
                 <div class="header-bottom  header-sticky">
                     <div class="container-fluid">
                         <div class="row align-items-center">
+                            
+                     
                             <!-- Logo -->
                             <div class="col-xl-2 col-lg-2">
+                                <div class="menu-wrapper d-flex align-items-center">
+                                <div class="back-button ml-0">
+                                    <a href="BloodDonations.html" class="btn header-btn"><i class="fas fa-arrow-left"></i> Back</a>
+                                </div> 
                                 <div class="logo">
                                     <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                                </div>
                                 </div>
                             </div>
                             <div class="col-xl-10 col-lg-10">
@@ -96,8 +104,8 @@
                                         <nav>
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="program.html">video</a></li>
+                                              
+                                               
                                                 <li><a href="#">Volunteer </a>
                                                     <ul class="submenu">
                                                         <li><a href="events.html">Medical Cases</a></li>
@@ -125,7 +133,7 @@
                                     </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="contact.html" class="btn header-btn">Donate</a>
+                                        <a href="categories.html" class="btn header-btn">Donate</a>
                                     </div>
                                 </div>
                             </div> 
@@ -141,271 +149,75 @@
         <!-- Header End -->
     </header>
     <main>
-        <title>My Account</title>
-        <style>
-            .error {
-                color: red;
-                display: block;
-                margin-top: 5px;
-            }
-        </style>
-        <style>
-            #map {
-                height: 400px;
-                margin-bottom: 10px;
-            }
-        </style>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css" />
-
-        
-
-        <h2 style="text-decoration: underline;"><strong> My Profile:</strong></h2><br>
-
-
-        <style>
-            .form-row {
-                display: flex;
-                justify-content: space-between;
-                margin: 20px;
-            }
-    
-            .form-group {
-                flex-basis: 50%; /* Adjust as needed */
-            }
-    
-            label {
-                display: block;
-            }
-    
-            input {
-            width: 60%; /* Adjust width here */
-            margin-bottom: 5px;
-            text-align: left;
-            }
-        </style>
-        
-
-
-        
-        <form onsubmit="return validateForm()">
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="address">Email:</label>
-                    <input type="text" id="address" name="address" value="Chrismicheals@gmail.com"readonly>
-                    <span id="addressError" class="error"></span>
-                </div>
-                
-                <div class="form-group">
-                    <label for="area">First name:</label>
-                    <input type="text" id="area" name="area" value="Chris"readonly>
-                    <span id="areaError" class="error"></span>
-                </div> </div>
-
-            <div class="form-row">
-                
-                <div class="form-group">
-                    <label for="governorate">Last name:</label>
-                    <input type="text" id="governorate" name="governorate" value="Micheals" readonly>
-                    <span id="governorateError" class="error"></span>
-                </div>
-
-                <div class="form-group">
-                    <label for="specialty">Phone number:</label>
-                    <input type="text" id="PN" name="specialty" value="+33 5536645" readonly>
-                    <span id="specialtyError" class="error"></span>
-                </div>
-                
-            </div>
-
-            <div class="form-row">
-
-                
-                <div class="form-group">
-                    <label for="password">Password:</label>
-                    <div class="password-input">
-                        <input type="password" id="password" name="password" value="password" readonly>
-                        <label class="show-password-label" for="showPassword">Show Password</label>
-                        <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70 text-center">
+                                <h2>Continental School Location</h2>
+                            </div>
+                        </div>
                     </div>
-                    <span id="specialtyError" class="error"></span>
-                </div>
-                
-
-                
-                <div class="form-group">
-                    <label for="address2">Address:</label>
-                    <input type="text" id="address2" name="address2" value="2335 Orchard View Lane, Escondido CA 92027" readonly>
-                    <span id="address2Error" class="error"></span>
                 </div>
             </div>
-        
-            <br>
-            <style>.password-input {
-                position: relative;
-            }
-            
-            .password-input label.show-password-label {
-                position: absolute;
-                top: 80%;
-                transform: translateY(-60%);
-                left: 33%;
-                 /* Adjust this value as needed */
-            }
-            </style>
+        </div>
+        <!-- Hero End -->
+        <!--? Blog Area Start-->
 
-            <script>
-                function togglePasswordVisibility() {
-                    var passwordInput = document.getElementById("password");
-                    var showPasswordCheckbox = document.getElementById("showPassword");
-            
-                    if (showPasswordCheckbox.checked) {
-                        passwordInput.type = "text";
-                    } else {
-                        passwordInput.type = "password";
-                    }
-                }
-            </script>
+<!-- Google Maps API -->
+<div class="container">
+    <div class="row justify-content-center">
+       
+            <div id="map"></div>
+       
+    </div>
+</div>
 
-            
+<!-- Move the script tag to the end of the HTML body -->
+<script>
+    // Initialize Google Maps
+    function initMap() {
+        // Specify your map options
+        var mapOptions = {
+            center: { lat: 30.0931, lng: 31.3298 }, 
+            zoom: 8
+        };
 
-            <a href="Account2.html" class="edit-btn">Edit profile</a>
+        // Create a new map instance
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
 
-            <style>
-                /* Define styles for the edit button */
-                .edit-btn {
-                    background-color: #09cc7f;
-                    color: white;
-                    border: none;
-                    padding: 10px 20px; /* Increase padding to make the button bigger */
-                    border-radius: 10px;
-                    cursor: pointer;
-                    margin-right: 20px;
-                    margin-left: 25px;
-                }
-            </style>
+        // Define the coordinates for the marker
+        var markerCoordinates = { lat: 30.0931, lng: 31.3298 }; 
 
-            <script>
-                function redirectToPage() {
-                    window.location.href = "Account2.html";
-                }
-            </script>
+        // Create a new marker at the specified coordinates
+        var marker = new google.maps.Marker({
+            position: markerCoordinates,
+            map: map
+        });
 
-                                    
+        // Center the map on the marker's coordinates
+        map.setCenter(markerCoordinates);
+    }
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
 
+<style>
+    #map-container {
+        display: inline-block;
+        margin-right: auto;
+        max-width: 2000px;
+    }
 
-            
-
-            <button class="delete-btn" onclick="deletePost(this)">Delete profile</button>
-                                    <style>
-                                        /* Define styles for the delete button */
-                                        .delete-btn {
-                                            /* Add your CSS styles here */
-                                            background-color: #09cc7f;
-                                        color: white;
-                                        border: none;
-                                        padding: 10px 20px; /* Increase padding to make the button bigger */
-                                        border-radius: 10px;
-                                        cursor: pointer;
-                                        margin-right: 20px;
-                                        margin-left: 25px;
-                                            
-                                        }
-                                    </style>
-
-           
-
-
-
-
-            
-        </form>
-
-        <script>
-            function redirectToPage(button) {
-                // Replace "destination.html" with the URL of the page you want to redirect to
-                window.location.href = "Account2.html";
-            }
-        </script>
-        
-        
-        <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
-        <script>
-            function initMap() {
-                var map = L.map('map').setView([0, 0], 15);
-                
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-                    maxZoom: 18,
-                }).addTo(map);
-                
-                var marker = L.marker([0, 0], { draggable: true }).addTo(map);
-                
-                marker.on('dragend', function(event) {
-                    var position = marker.getLatLng();
-                    document.getElementById('latitude').value = position.lat;
-                    document.getElementById('longitude').value = position.lng;
-                });
-            }
-            
-            function validateForm() {
-                var address = document.getElementById("address").value;
-                var area = document.getElementById("area").value;
-                var governorate = document.getElementById("governorate").value;
-                var specialty = document.getElementById("specialty").value;
-                var numCases = document.getElementById("num-cases").value;
-                
-                var addressError = document.getElementById("addressError");
-                var areaError = document.getElementById("areaError");
-                var governorateError = document.getElementById("governorateError");
-                var specialtyError = document.getElementById("specialtyError");
-                var numCasesError = document.getElementById("numCasesError");
-                
-                var isValid = true;
-                
-                if (address === "") {
-                    addressError.textContent = "Please enter the clinic address.";
-                    isValid = false;
-                } else {
-                    addressError.textContent = "";
-                }
-                
-                if (area === "") {
-                    areaError.textContent = "Please enter the area.";
-                    isValid = false;
-                } else {
-                    areaError.textContent = "";
-                }
-                
-                if (governorate === "") {
-                    governorateError.textContent = "Please enter the governorate.";
-                    isValid = false;
-                } else {
-                    governorateError.textContent = "";
-                }
-                
-                if (specialty === "") {
-                    specialtyError.textContent = "Please enter the specialty.";
-                    isValid = false;
-                } else {
-                    specialtyError.textContent = "";
-                }
-                
-                if (numCases === "") {
-                    numCasesError.textContent = "Please enter the number of pro-bono cases.";
-                    isValid = false;
-                } else {
-                    numCasesError.textContent = "";
-                }
-                
-                return isValid;
-            }
-        </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', initMap);
-        </script>
-        <section class="contact-section">
-        <div class="container">
-</section>
+    #map {
+        width: 2000px;
+        height: 500px;
+    }
+</style>
+                                 
+                              
+        <!-- Blog Area End -->
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
@@ -490,7 +302,7 @@
                             <div class="col-xl-10 col-lg-9 ">
                                 <div class="footer-copy-right">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+ <!--  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>
@@ -553,5 +365,7 @@
       <script src="./assets/js/plugins.js"></script>
       <script src="./assets/js/main.js"></script>
      
+
+
     </body>
 </html>

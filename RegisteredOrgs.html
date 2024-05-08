@@ -10,6 +10,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
+    
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/slicknav.css">
@@ -45,27 +46,71 @@
     <!-- Preloader Start -->
     <header>
         <!-- Header Start -->
-        <div class="header-area">
-            <div class="main-header">
+               <div class="header-area">
+                    <div class="main-header">
+                        <div class="main-menu d-none d-lg-block">
+                            <nav>
+                                <ul id="navigation">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fas fa-filter"></i> Filter the Organizations by:
+                                          
+                                    
+
+                                        </a>
+                                     
+                                        <ul class="submenu">
+                                            <li>
+                                                <a href="Area.html">Area</a>
+                                            </li>
+                                            <li><a href="Governorate.html">Governorate</a></li>
+                                            <li><a href="Org-Type.html">Organization Type</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        
+           
+
+
+                  <style>
+                    .sub-submenu {
+                        position: absolute;
+                        top: 0;
+                        left: 100%; /* Position the sub-submenu to the right of the parent */
+                    }
+
+                    .main-menu {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                        }
+                </style>
                 <!-- Logo -->
-                <div class="col-xl-12 col-lg-12">
+              <div class="col-xl-12 col-lg-12">
                     <div class="logo">
                         <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
                     </div>
                 </div>
                 <!-- Back button and List Organization Requests text -->
-                <div class="col-xl-12 col-lg-12">
-                    <div class="menu-wrapper d-flex align-items-center">
-                        <div class="back-button ml-0">
-                            <a href="AdminDashBoard.html" class="btn header-btn"><i class="fas fa-arrow-left"></i> Back</a>
-                        </div>                        
-                        <div class="list-organization-requests ml-2">
-                            <p style="font-size: 24px; font-weight: bold;">List of Registered Organizations</p>
-                        </div>
-                    </div>
+              
+        <div class="col-xl-12 col-lg-12">
+            <div class="menu-wrapper d-flex align-items-center">
+                <div class="back-button ml-0">
+                    <a href="AdminDashBoard.html" class="btn header-btn"><i class="fas fa-arrow-left"></i> Back</a>
                 </div>
-            </div>
+                
+                <div class="list-organization-requests ml-2">
+                    <p style="font-size: 24px; font-weight: bold;">List of Registered Organizations</p>
+                </div>
+                
+               
         </div>
+
+
+
+
         <!-- Header End -->
     </header>
     
@@ -76,18 +121,49 @@
             <!-- Row 1 -->
             <div class="row justify-content-end">
                 <!-- Text -->
-                <div class="col">OrgName1</div>
+                <div class="col">Egyptian food bank</div>
+                <!-- View button -->
+                <div class="col-auto"><button class="btn btn-primary" onclick="redirectToDetailsPage(this)"><i class="fas fa-info-circle"></i></button></div>
                 <!-- View button -->
                 <div class="col-auto"><button class="btn btn-primary" onclick="viewRow(this)"><i class="fas fa-eye"></i></button></div>
                 <!-- Download button -->
                 <div class="col-auto"><button class="btn btn-primary" onclick="downloadRow(this)"><i class="fas fa-download"></i></button></div>
                 <!-- Delete button -->
                 <div class="col-auto"><button class="btn btn-danger" onclick="confirmDelete(this)"><i class="fas fa-trash"></i></button></div>
-            </div>
+            </div><br>
              <!-- Row 2 -->
              <div class="row justify-content-end">
                 <!-- Text -->
-                <div class="col">OrgName2</div>
+                <div class="col">Magdy yacoub foundation</div>
+                 <!-- View button -->
+                 <div class="col-auto"><button class="btn btn-primary" onclick="redirectToDetailsPage2(this)"><i class="fas fa-info-circle"></i></button></div>
+                <!-- View button -->
+                <div class="col-auto"><button class="btn btn-primary" onclick="viewRow(this)"><i class="fas fa-eye"></i></button></div>
+                <!-- Download button -->
+                <div class="col-auto"><button class="btn btn-primary" onclick="downloadRow(this)"><i class="fas fa-download"></i></button></div>
+                <!-- Delete button -->
+                <div class="col-auto"><button class="btn btn-danger" onclick="confirmDelete(this)"><i class="fas fa-trash"></i></button></div>
+            </div><br>
+            <!-- Row 3 -->
+            <div class="row justify-content-end">
+                <!-- Text -->
+                <div class="col">Children's Cancer Hospital Egypt</div>
+                 <!-- View button -->
+                 <div class="col-auto"><button class="btn btn-primary" onclick="redirectToDetailsPage3(this)"><i class="fas fa-info-circle"></i></button></div>
+                <!-- View button -->
+                <div class="col-auto"><button class="btn btn-primary" onclick="viewRow(this)"><i class="fas fa-eye"></i></button></div>
+                <!-- Download button -->
+                <div class="col-auto"><button class="btn btn-primary" onclick="downloadRow(this)"><i class="fas fa-download"></i></button></div>
+                <!-- Delete button -->
+                <div class="col-auto"><button class="btn btn-danger" onclick="confirmDelete(this)"><i class="fas fa-trash"></i></button></div>
+            </div><br>
+
+            <!-- Row 4 -->
+            <div class="row justify-content-end">
+                <!-- Text -->
+                <div class="col">Resala Charity Organization</div>
+                 <!-- View button -->
+                 <div class="col-auto"><button class="btn btn-primary" onclick="redirectToDetailsPage4(this)"><i class="fas fa-info-circle"></i></button></div>
                 <!-- View button -->
                 <div class="col-auto"><button class="btn btn-primary" onclick="viewRow(this)"><i class="fas fa-eye"></i></button></div>
                 <!-- Download button -->
@@ -147,51 +223,67 @@
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
-    <!-- JS here -->
-
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- JS here-->
+    
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script> 
     <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>  
     <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script> 
     <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+    <script src="./assets/js/jquery.slicknav.min.js"></script> 
 
     <!-- Jquery Slick , Owl-Carousel Plugins -->
     <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script> 
     <!-- One Page, Animated-HeadLin -->
     <script src="./assets/js/wow.min.js"></script>
     <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script> 
 
     <!-- Date Picker -->
-    <script src="./assets/js/gijgo.min.js"></script>
+    <script src="./assets/js/gijgo.min.js"></script> 
     <!-- Nice-select, sticky -->
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script> 
     <script src="./assets/js/jquery.sticky.js"></script>
     <!-- Progress -->
-    <script src="./assets/js/jquery.barfiller.js"></script>
+   <script src="./assets/js/jquery.barfiller.js"></script> 
     
     <!-- counter , waypoint,Hover Direction -->
     <script src="./assets/js/jquery.counterup.min.js"></script>
     <script src="./assets/js/waypoints.min.js"></script>
     <script src="./assets/js/jquery.countdown.min.js"></script>
-    <script src="./assets/js/hover-direction-snake.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script> 
 
     <!-- contact js -->
     <script src="./assets/js/contact.js"></script>
     <script src="./assets/js/jquery.form.js"></script>
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script> 
     
-    <!-- Jquery Plugins, main Jquery -->    
+    <!-- Jquery Plugins, main Jquery -->  
     <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/main.js"></script> 
 
     <!-- Custom JavaScript for removing rejected rows -->
     <script>
+ function redirectToDetailsPage(button) {
+        // Replace "your_details_page.html" with the actual URL of the details page
+        window.location.href = "Org1.html";
+    }
+    function redirectToDetailsPage2(button) {
+        // Replace "your_details_page.html" with the actual URL of the details page
+        window.location.href = "Org2.html";
+    }
+    function redirectToDetailsPage3(button) {
+        // Replace "your_details_page.html" with the actual URL of the details page
+        window.location.href = "Org3.html";
+    }
+    function redirectToDetailsPage4(button) {
+        // Replace "your_details_page.html" with the actual URL of the details page
+        window.location.href = "Org4.html";
+    }
  // Function to handle view button click
  function viewRow(button) {
     // Show the PDF viewer modal
@@ -243,5 +335,8 @@ $('#deleteConfirmationModal').on('hidden.bs.modal', function () {
 });
 
     </script>
+    
+    
+
 </body>
 </html>
