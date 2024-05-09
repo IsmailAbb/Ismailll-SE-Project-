@@ -146,6 +146,29 @@
                     <div class="col-lg-8 mb-5 mb-lg-0">
                         <div class="alert" id="notification">
                             <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Profile changes saved successfully!!!</strong> Thank you for your fulfillment.
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="contact-title"><strong><u>My Profile:</u></strong></h1>
+
+                     
+                    </div>
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
                             <strong>Post submitted saved successfully!!!</strong> Thank you for your fulfillment.
                         </div>
                         <script>
@@ -163,66 +186,100 @@
                 <div class="d-none d-sm-block mb-5 pb-4">
                 </div>
                 <div class="row">
-                    <div class="col-12">
-                        <h2 class="contact-title">Creating a new post for Food donations:</h2>
-                     
-                    </div>
+                    
+                    
 
                     <div class="col-lg-8">
                         <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                             <div class="row">
-                                <form onsubmit="return validateForm()">
+                               
 
                                     
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter the name of the organization">
+                                        <p>First name:</p>
+                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" value="Chris " readonly>
                                         <span id="NameError" class="error"></span>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Enter your email ">
+                                        <p>Last name:</p>
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" value="Michaels" readonly>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
+                                    <p> Email address:</p>
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the food name">
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" value="Chrismicheals@gmail.com"readonly>
                                     </div>
                                 </div>
-
+                                
                                 <div class="col-sm-6">
+                                    <p>Phone number:</p>
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the weight in KG ">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" value="+33 5536645" readonly>
 
                                     </div>
                                 </div>
                                 
+                                
 
+                                <div class="col-sm-6">
+                                    <p>Password:</p>
+                                    
+                                    <div class="form-group">
+                                       
+                                        <div class="password-input" style="margin-top: 10px;">
+                                            <input class="form-control" type="password" id="password" name="password" onfocus="this.placeholder = ''" value="password" readonly >
+                                            <label class="show-password-label" for="showPassword">Show Password</label><br>
+                                            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                                        </div>
+                                        <span id="specialtyError" class="error"></span>
+                                    </div>
+                                </div>
+                                <style>.password-input {
+                                    position: relative;
+                                }
+                                
+                                .password-input label.show-password-label {
+                                    position: absolute;
+                                    top: 90%;
+                                    transform: translateY(-70%);
+                                    left: 5%;
+                                     /* Adjust this value as needed */
+                                }</style>
+                                 <script>
+                                    function togglePasswordVisibility() {
+                                        var passwordInput = document.getElementById("password");
+                                        var showPasswordCheckbox = document.getElementById("showPassword");
+                                
+                                        if (showPasswordCheckbox.checked) {
+                                            passwordInput.type = "text";
+                                        } else {
+                                            passwordInput.type = "password";
+                                        }
+                                    }
+                                </script>
+                                
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Profession'" placeholder="Enter the quantity  ">
+                                        <p>Address:</p>
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''"  value="2335 Orchard View Lane, Escondido CA 92027" readonly>
 
                                     </div>
                                 </div>
 
-                                <div class="col-sm-6">
-                                    <div class="select-this">
-                                        <form id="category-form">
+                                
+                                
+                                
 
-                                            
-                                                <select name="select" id="select1" onchange="la(this.value)">
-                                                    <option value="" disabled selected hidden>Type of food</option>
-                                                    <option value="" >Fruits and vegetables</option>
-                                                    <option value="">Canned food</option>
-                                                    <option value="">Fresh meals</option>
-                                                    <option value="">Baked food</option>
-                                                    
-                                                </select><br>
-                                            
-                                        </form>
-                                    </div>
-                                </div>
+                                
+
+                                
+
+
+                                
 
                                
                                 
@@ -239,7 +296,7 @@
                                         <aside class="single_sidebar_widget search_widget">
                                             <form action="#">
                                                 <input type="file" id="file-input" style="display: none;" onchange="showSelectedFile(event)">
-                                                <button class="button button-contactForm boxed-btn" class="green-button" onclick="selectFile()">Upload</button>
+                                                
                                                 <p id="selected-file"></p>
                                                 <script>
                                                     function selectFile() {
@@ -260,9 +317,22 @@
                                             </form>
                                         </aside>
                                         <div class="form-group mt-3">
-                                            <button type="submit" class="button button-contactForm boxed-btn" onclick="displayNotification()">Submit</button>
+                                            <button type="submit" class="button button-contactForm boxed-btn" style="margin-right: 20px;" onclick="redirectPage()">Edit profile</button>
+                                            
+                                            <button type="submit" class="button button-contactForm boxed-btn"  onclick="displayNotification();">Save changes</button>
                                         </div>
                                     </form>
+                                    <script>function redirectPage() {
+                                        
+                                        var inputs = document.getElementsByTagName("input");
+                                        for (var i = 0; i < inputs.length; i++) {
+                                            inputs[i].removeAttribute("readonly");
+                                        }
+                                    
+                                    }
+
+                                    
+                                    </script>
                                     <style> .alert {
                                         display: none;
                                         padding: 20px;

@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <head>
-    </head>
+</head>
 </head>
 <body>
     <!--? Preloader Start -->
@@ -52,30 +52,13 @@
                                     </ul>
                                     <div class="header-social">    
                                         <ul>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            
                                             <li><a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="header-info-right d-flex align-items-center">
-                                    <div class="select-this">
-                                        <form action="#">
-                                            <div class="select-itms">
-                                                <select name="select" id="select1">
-                                                    <option value="">English</option>
-                                                    <option value="">Bangla</option>
-                                                    <option value="">Arabic</option>
-                                                    <option value="">Hindi</option>
-                                                </select>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <ul class="contact-now">     
-                                        <li><a href="#">Subscribe Now</a></li>
-                                    </ul>
-                                </div>
+                              
                             </div>
                         </div>
                     </div>
@@ -178,7 +161,7 @@
                                         </div>
                                         <script>
 
-function displayNotification() {
+                                                function displayNotification() {
                                                 var notification = document.getElementById("notification");
                                                 notification.style.display = "block"; // Show the alert
                                                 var BLA = document.getElementById("BLA");
@@ -186,7 +169,7 @@ function displayNotification() {
                                             }
                             
                                             // Call displayNotification function after 10 seconds
-                                            setTimeout(displayNotification, 10000);
+                                            setTimeout(displayNotification, 15000);
                                         </script>
                                     </div>
                                 </div>
@@ -216,33 +199,84 @@ function displayNotification() {
                                     color: black;
                                 }
                             </style>
+
+
+
+
+
+
+
                             <article>
+                            <div class="wrapper">
 
-                                <div class="wrapper">
 
-
+                        
+                                <div class="margin-area">
+                                   
+                                  <div class="dot one">1</div>
+                                  <div class="dot two">2</div>
+                                  <div class="dot three">3</div>
+                                  <div class="dot four">4</div>
+                                  <div class="progress-bar first"></div>
+                                  <div class="progress-bar second"></div>
+                                  <div class="progress-bar third"></div>
+                                  <div class="message message-1">Order Processed<div>
+                                  <div class="message message-2">Searching for Driver<div>
+                                  <div class="message message-3">Driver Enroute<div>
+                                  <div class="message message-4">Driver Arrived<div>
+                                   
+                                </div>
+                                <div class="status" id="statuss" style="display: none;">Looking for a driver</div>
+                                <div class="status" id="status" style="display: none;">Your driver for today is Ahmed</div>
+                                <div class="status code" id="statusCode" style="display: none;">Expected arrival: <span id="arrivalTime"></span></div>
                             
-                                    <div class="margin-area">
-                                       
-                                      <div class="dot one">1</div>
-                                      <div class="dot two">2</div>
-                                      <div class="dot three">3</div>
-                                      <div class="dot four">4</div>
-                                      <div class="progress-bar first"></div>
-                                      <div class="progress-bar second"></div>
-                                      <div class="progress-bar third"></div>
-                                      <div class="message message-1">Order Processed<div>
-                                      <div class="message message-2">Searching for Driver<div>
-                                      <div class="message message-3">Driver Enroute<div>
-                                      <div class="message message-4">Driver Arrived<div>
-                                    </div>
-                                    <div class="status">Your driver for today is Ahmed</div>
-                                    <div class="status code">Expected arrival: <a href="#">11:00 am</a>
-                                    </div>
 
-                                    </div>
-                                </article>
+                                </div>
+                            </article>
+                            <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                setTimeout(function() {
+                                  var arrivalTime = getParameterByName("arrivalTime");
+                                  if (arrivalTime) {
+                                    document.getElementById("arrivalTime").textContent = arrivalTime;
+                                    document.getElementById("statusCode").style.display = "block";
+                                  }
+                                }, 10000); // Delay the execution of the code inside the function by 10 seconds (10,000 milliseconds)
+                              });
+                              
+                              function getParameterByName(name) {
+                                name = name.replace(/[\[\]]/g, "\\$&");
+                                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                                  results = regex.exec(window.location.href);
+                                if (!results || !results[2]) return null;
+                                return decodeURIComponent(results[2].replace(/\+/g, " "));
+                              }
+                            </script>
 
+<script>
+                           
+                        
+    function showStatuss() {
+        
+        document.getElementById("statuss").style.display = "block";
+       
+    }
+    setTimeout(showStatuss, 5000);
+</script>
+                         
+                       
+                            <script>
+                           
+                        
+                                function showStatus() {
+                                    document.getElementById("statuss").style.display = "none";
+                                    document.getElementById("status").style.display = "block";
+                                    document.getElementById("statusCode").style.display = "block";
+                                }
+                                setTimeout(showStatus, 10000);
+                            </script>
+                       
+                    
 
                                 <style>
                                     .wrapper {
@@ -274,11 +308,11 @@ function displayNotification() {
                                   }
                                   &.two {
                                     left: 380px;
-                                    background: #09cc7f;
+                                    background: #bbb;
                                   }
                                   &.three {
                                     left: 590px;
-                                    background:  #09cc7f;
+                                    background: #bbb;
                                     color: white;
                                     
                                   }
@@ -296,11 +330,11 @@ function displayNotification() {
                                   left: 23%;
                                   background: #bbb;
                                   &.first {
-                                    background: #09cc7f;
+                                    
                                   }
                                   &.second {
                                     left: 50%;
-                                    background: #09cc7f;
+                                   
                                   }
                                   &.third {
                                     left: 76%;
@@ -351,11 +385,31 @@ function displayNotification() {
                                   }
                                 }
                                 </style>
+<script>
+    function colorFirstBar() {
+        var firstBar = document.querySelector(".progress-bar.first");
+        firstBar.style.background = "#09cc7f"; // Change the background color to green
+        var firstDot = document.querySelector(".dot.two");
+        firstDot.style.background = "#09cc7f";
+    }
+    setTimeout(colorFirstBar, 5000);
+    </script>
 
 
 
+
+
+<script>
+    function colorSecondBar() {
+        var secondBar = document.querySelector(".progress-bar.second");
+        secondBar.style.background = "#09cc7f"; // Change the background color to green
+        var secondDot = document.querySelector(".dot.three");
+        secondDot.style.background = "#09cc7f";
+    }
+    setTimeout(colorSecondBar, 10000);
+    </script>
     
-    
+
 
 <script>
 function colorThirdBar() {
@@ -364,13 +418,13 @@ function colorThirdBar() {
     var thirdDot = document.querySelector(".dot.four");
     thirdDot.style.background = "#09cc7f";
 }
-setTimeout(colorThirdBar, 10000);
+setTimeout(colorThirdBar, 15000);
 </script>
 
 
 
-</main>
-<footer>
+ </main>
+    <footer>
     <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
         <!-- Footer Top-->
         <div class="footer-area footer-padding">
@@ -452,17 +506,14 @@ setTimeout(colorThirdBar, 10000);
                     <div class="row d-flex justify-content-between align-items-center">
                         <div class="col-xl-10 col-lg-9 ">
                             <div class="footer-copy-right">
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                               
                             </div>
                         </div>
                         <div class="col-xl-2 col-lg-3">
                             <div class="footer-social f-right">
-                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                
                                 <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fas fa-globe"></i></a>
-                                <a href="#"><i class="fab fa-behance"></i></a>
+                              
                             </div>
                         </div>
                     </div>
@@ -470,51 +521,51 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             </div>
         </div>
     </div>
-</footer>
-<!-- Scroll Up -->
-<div id="back-top" >
+  </footer>
+ <!-- Scroll Up -->
+  <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-</div>
-  <!-- JS here -->
+  </div>
+         <!-- JS here -->
 
-  <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-  <!-- Jquery, Popper, Bootstrap -->
-  <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="./assets/js/popper.min.js"></script>
-  <script src="./assets/js/bootstrap.min.js"></script>
-  <!-- Jquery Mobile Menu -->
-  <script src="./assets/js/jquery.slicknav.min.js"></script>
+      <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+      <!-- Jquery, Popper, Bootstrap -->
+      <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+      <script src="./assets/js/popper.min.js"></script>
+      <script src="./assets/js/bootstrap.min.js"></script>
+      <!-- Jquery Mobile Menu -->
+      <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-  <!-- Jquery Slick , Owl-Carousel Plugins -->
-  <script src="./assets/js/owl.carousel.min.js"></script>
-  <script src="./assets/js/slick.min.js"></script>
-  <!-- One Page, Animated-HeadLin -->
-  <script src="./assets/js/wow.min.js"></script>
-  <script src="./assets/js/animated.headline.js"></script>
-  <script src="./assets/js/jquery.magnific-popup.js"></script>
+      <!-- Jquery Slick , Owl-Carousel Plugins -->
+      <script src="./assets/js/owl.carousel.min.js"></script>
+      <script src="./assets/js/slick.min.js"></script>
+      <!-- One Page, Animated-HeadLin -->
+      <script src="./assets/js/wow.min.js"></script>
+      <script src="./assets/js/animated.headline.js"></script>
+      <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-  <!-- Date Picker -->
-  <script src="./assets/js/gijgo.min.js"></script>
-  <!-- Nice-select, sticky -->
-  <script src="./assets/js/jquery.nice-select.min.js"></script>
-  <script src="./assets/js/jquery.sticky.js"></script>
-  
-  <!-- counter , waypoint,Hover Direction -->
-  <script src="./assets/js/jquery.counterup.min.js"></script>
-  <script src="./assets/js/waypoints.min.js"></script>
-  <script src="./assets/js/jquery.countdown.min.js"></script>
-  <script src="./assets/js/hover-direction-snake.min.js"></script>
+      <!-- Date Picker -->
+      <script src="./assets/js/gijgo.min.js"></script>
+      <!-- Nice-select, sticky -->
+      <script src="./assets/js/jquery.nice-select.min.js"></script>
+      <script src="./assets/js/jquery.sticky.js"></script>
+      
+      <!-- counter , waypoint,Hover Direction -->
+      <script src="./assets/js/jquery.counterup.min.js"></script>
+      <script src="./assets/js/waypoints.min.js"></script>
+      <script src="./assets/js/jquery.countdown.min.js"></script>
+      <script src="./assets/js/hover-direction-snake.min.js"></script>
 
-  <!-- contact js -->
-  <script src="./assets/js/contact.js"></script>
-  <script src="./assets/js/jquery.form.js"></script>
-  <script src="./assets/js/jquery.validate.min.js"></script>
-  <script src="./assets/js/mail-script.js"></script>
-  <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-  
-  <!-- Jquery Plugins, main Jquery -->	
-  <script src="./assets/js/plugins.js"></script>
-  <script src="./assets/js/main.js"></script>
- 
-</body>
-</html>                           
+      <!-- contact js -->
+      <script src="./assets/js/contact.js"></script>
+      <script src="./assets/js/jquery.form.js"></script>
+      <script src="./assets/js/jquery.validate.min.js"></script>
+      <script src="./assets/js/mail-script.js"></script>
+      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+      
+      <!-- Jquery Plugins, main Jquery -->	
+      <script src="./assets/js/plugins.js"></script>
+      <script src="./assets/js/main.js"></script>
+     
+    </body>
+</html>

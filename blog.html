@@ -269,6 +269,15 @@
                                             float:right;
                                         }
                                     </style>
+                                     <script>
+                                        function deletePost(button) {
+                                            // Get the parent element of the post you want to delete
+                                            var postElement = button.closest('.blog_item');
+                                            
+                                            // Remove the post element from the DOM
+                                            postElement.remove();
+                                        }
+                                    </script>
                                 </div>
 
                             </article>

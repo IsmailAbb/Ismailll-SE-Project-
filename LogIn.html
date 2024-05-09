@@ -309,137 +309,9 @@
             </div>
         </div>
         <!-- Header End -->
-    </header>
+
     <!-- header end -->
-    <main>
-        <!-- slider Area Start-->
-        
-        <!-- slider Area End-->
-        
-        <!-- Login Section -->
-        <section class="login-section">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="login-wrapper">
-                            <!-- Header -->
-                            <div class="login-header text-center">
-                                <h2>Go Ahead and Log In</h2>
-                                <p>You are a/an</p>
-                                <div class="login-buttons">
-                                    <button class="btn btn-primary" onclick="toggleButtonColor(this)">Admin</button>
-                                    <button class="btn btn-primary" onclick="toggleButtonColor(this)">Organization Representative</button>
-                                    <button class="btn btn-primary" onclick="toggleButtonColor(this)">Donor</button>
-                                </div>
-                            </div>
-                            <!-- Login Box -->
-                            <div class="login-box">
-                                <form id="loginForm">
-                                    <div class="form-group">
-                                        <label for="username">Username/Email</label>
-                                        <input type="text" class="form-control" id="username" placeholder="Enter username or email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Password">
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-block">Log In</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        
-        <!-- End of Login Section -->
-    </main>
-
-    <footer>
-    <footer>
-        <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png" style="background-image: url(&quot;assets/img/gallery/footer_bg.png&quot;);">
-            <!-- Footer Top-->
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="single-footer-caption mb-30">
-                                <div class="footer-tittle">
-                                    <div class="footer-logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Contact Info</h4>
-                                    <ul>
-                                        <li>
-                                            <p>Address :Your address goes here, your demo address.</p>
-                                        </li>
-                                        <li><a href="#">Phone : +8880 44338899</a></li>
-                                        <li><a href="#">Email : info@colorlib.com</a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Important Link</h4>
-                                    <ul>
-                                        <li><a href="#"> View Project</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Proparties</a></li>
-                                        <li><a href="#">Support</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Newsletter</h4>
-                                    <div class="footer-pera footer-pera2">
-                                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
-                                </div>
-                                <!-- Form -->
-                                <div class="footer-form">
-                                    <div id="mc_embed_signup">
-                                        <form target="_blank" action="#" method="post" class="subscribe_form relative mail_part">
-                                            <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address" class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '" required="" type="email">
-                                            <div class="form-icon">
-                                                <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm"><img src="assets/img/gallery/form.png" alt=""></button>
-                                            </div>
-                                            <div class="mt-10 info"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Footer bottom -->
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="footer-copy-right">
-                                <p> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Footer End-->
-    </footer>
-    <!-- Footer End-->
 
     <!-- JS here -->
     <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -503,9 +375,14 @@
             if (userType === 'Admin' && username === 'username1' && enteredPassword === 'password1') {
                 // Redirect to the Admin Dashboard page
                 window.location.href = 'AdminDashBoard.html';
-            } else if ((userType === 'Organization Representative' || userType === 'Donor') && username === email && enteredPassword === password) {
+            } 
+            else if ((userType === 'Donor' ) && username === email && enteredPassword === password) {
                 // Redirect to the index.html page for Organization Representative or Donor
                 window.location.href = 'index.html';
+            }
+            else if ((userType === 'Organization Representative' ) && username === email && enteredPassword === password) {
+                // Redirect to the index.html page for Organization Representative or Donor
+                window.location.href = 'index-Org.html';
             } else {
                 // If credentials are incorrect, show an alert
                 alert('Incorrect username or password. Please try again.');
