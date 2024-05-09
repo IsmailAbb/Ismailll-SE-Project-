@@ -46,17 +46,15 @@
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left d-flex">
                                     <ul>     
-
-                                            <a href="index.html" class="back-link">
-                                                <span style="color: #2d2d2d;" class="back-icon">&larr;</span> Back
-                                            </a>     
+                                        <li>Phone: +99 (0) 101 0000 888</li>
+                                        <li>Email: noreply@yourdomain.com</li>
                                     </ul>
                                     <div class="header-social">    
                                         <ul>
-                                            <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                             <li><a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li> <a href="https://mail.google.com/mail/u/0/"><i class="fab fa-google-plus-g"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                            <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -124,7 +122,6 @@
                                             </ul>
                                         </nav>
                                     </div>
-
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
                                         <a href="categories.html" class="btn header-btn">Donate</a>
@@ -143,252 +140,271 @@
         <!-- Header End -->
     </header>
     <main>
-            <!-- Head content here -->
-            <style>
-                .categories-wrapper {
-                    display:-moz-grid-line;
-                    justify-content: center;
-                    align-items: center;
-                    height: 90vh;
-                }
-                
-                .category {
-                    margin-bottom: 20px;
-                    text-align: center;
-                }
-                
-                .category a {
-                    display: block;
-                    padding: 20px;
-                    font-size: 24px;
-                    background-color: #f0f0f0;
-                    color: #000000;
-                    text-decoration: none;
-                    transition: background-color 0.3s ease;
-                }
-                
-                .category a:hover {
-                    background-color: #dddddd;
-                }
-            </style>
-</head>
-<body>
-    <!-- Content -->
-    <div class="categories-wrapper">
-        
-        <div class="category">
-            
-            <a href="clothes.html">Clothes</a>
-        </div>
-        <div class="category">
-            <a href="toys.html">Toys</a>
-        </div>
-        <div class="category">
-            <a href="food.html">Food</a>
-        </div>
-        <div class="category">
-            <a href="MedicalSuppliesFilter.html">Medical Supplies</a>
-        </div>
-        <div class="category">
-            <a href="schoolsupplies.html">School Supplies</a>
-        </div>
-        <div class="category">
-            <a href="BloodDonations.html">Blood Donations</a>
-        </div>
-    </div>
-
-
-        <!-- <style>
-            .hero-links {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                text-align: center;
-            }
-            
-            .hero-links li {
-                margin-bottom: 10px;
-            }
-            
-            .hero-links li a {
-                color: #000000;
-                text-decoration: none;
-            }
-        </style>
-<div class="container">
-    <div class="row">
-        <div class="col-xl-12">
-            <div class="hero-cap hero-cap2 pt-70 text-center">
-
-                <ul class="hero-links">
-                    <li><a href="#">View Project</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Testimonial</a></li>
-                    <li><a href="#">Properties</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div> -->
-        
-        
-        <!-- <div class="service-area section-padding30">
+        <section class="contact-section">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-6 col-lg-7 col-md-10 col-sm-10">
-
-                        <div class="section-tittle text-center mb-80">
-                            <h2>Donation categories</h2>
-                            <div class="category-container">
-                                <div class="category-item" onclick="redirectToCategory('clothes.html')">Clothes</div>
-                                <div class="category-item" onclick="redirectToCategory('toys.html')">Toys</div>
-                                <div class="category-item" onclick="redirectToCategory('food.html')">Food</div>
-                                <div class="category-item" onclick="redirectToCategory('medical-supplies.html')">Medical Supplies</div>
-                                <div class="category-item" onclick="redirectToCategory('school-supplies.html')">School Supplies</div>
-                                <div class="category-item" onclick="redirectToCategory('blood-donations.html')">Blood Donations</div>
-                                
-                            </div>
-                            <script>
-                                function redirectToCategory(category) {
-                                    window.location.href = category;
-                                }
-                            </script>
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Profile changes saved successfully!!!</strong> Thank you for your fulfillment.
                         </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
                     </div>
                 </div>
-            </div> -->
-        <!-- <title>Category Selection for Donation</title> 
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
-            
-            .container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                height: 100vh;
-            }
-            
-            .category-form {
-                background-color: #f4f4f4;
-                border-radius: 5px;
-                padding: 20px;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                text-align: center;
-            }
-            
-            h1 {
-                margin-bottom: 20px;
-            }
-            
-            label {
-                display: block;
-                margin-bottom: 10px;
-            }
-            
-            select {
-                padding: 10px;
-                border-radius: 5px;
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            
-            input[type="submit"] {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                width: 100%; /* Added to make the button full width */
-            }
-            
-            .category-display {
-                margin-top: 20px;
-                font-weight: bold;
-            }
-            
-            .form-container {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .form-container form {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                width: 100%; /* Added to make the form full width */
-            }
-        </style>
-    </head>
-    <body> -->
-        <!-- <div class="container">
-            <div class="category-form">
-                <h1>Category Selection for Donation</h1>
-                
-                <div class="form-container">
-                    <form onsubmit="return redirectToCategory()">
-                        <label for="category">Select a category:</label>
-                        <select id="category" name="category">
-                            <option value="clothes">Clothes</option>
-                            <option value="toys">Toys</option>
-                            <option value="food">Food</option>
-                            <option value="medical-supplies">Medical Supplies</option>
-                            <option value="school-supplies">School Supplies</option>
-                            <option value="blood-donations">Blood Donations</option>
-                        </select>
-                        
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-                
-                <div class="category-display" id="categoryDisplay"></div>
             </div>
-        </div> -->
-        
-        <!-- <script>
-            function redirectToCategory() {
-                var category = document.getElementById("category").value;
-               
-                
-                switch (category) {
-                    case "clothes":
-                    
-                        window.location.href = "clothes.html";
-                        break;
-                    case "toys":
-                      
-                        window.location.href = "toys.html";
-                        break;
-                    case "food":
-                  
-                        window.location.href = "food.html";
-                        break;
-                    case "medical-supplies":
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="contact-title"><strong><u>My Profile:</u></strong></h1>
+
                      
-                        window.location.href = "MedicalSuppliesFilter.html";
-                        break;
-                    case "school-supplies":
-                      
-                        window.location.href = "schoolsupplies.html";
-                        break;
-                    case "blood-donations":
-               
-                        window.location.href = "BloodDonations.html";
-                        break;
-                    default:
-                        break;
-                }
-                
-                return false;
-            }
-        </script>  -->
-     </main>
+                    </div>
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Post submitted saved successfully!!!</strong> Thank you for your fulfillment.
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="d-none d-sm-block mb-5 pb-4">
+                </div>
+                <div class="row">
+                    
+                    
+
+                    <div class="col-lg-8">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="row">
+                               
+
+                                    
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <p>First name:</p>
+                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" value="Chris " readonly>
+                                        <span id="NameError" class="error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <p>Last name:</p>
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" value="Michaels" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p> Email address:</p>
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" value="Chrismicheals@gmail.com"readonly>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                    <p>Phone number:</p>
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" value="+33 5536645" readonly>
+
+                                    </div>
+                                </div>
+                                
+                                
+
+                                <div class="col-sm-6">
+                                    <p>Password:</p>
+                                    
+                                    <div class="form-group">
+                                       
+                                        <div class="password-input" style="margin-top: 10px;">
+                                            <input class="form-control" type="password" id="password" name="password" onfocus="this.placeholder = ''" value="password" readonly >
+                                            <label class="show-password-label" for="showPassword">Show Password</label><br>
+                                            <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                                        </div>
+                                        <span id="specialtyError" class="error"></span>
+                                    </div>
+                                </div>
+                                <style>.password-input {
+                                    position: relative;
+                                }
+                                
+                                .password-input label.show-password-label {
+                                    position: absolute;
+                                    top: 90%;
+                                    transform: translateY(-70%);
+                                    left: 5%;
+                                     /* Adjust this value as needed */
+                                }</style>
+                                 <script>
+                                    function togglePasswordVisibility() {
+                                        var passwordInput = document.getElementById("password");
+                                        var showPasswordCheckbox = document.getElementById("showPassword");
+                                
+                                        if (showPasswordCheckbox.checked) {
+                                            passwordInput.type = "text";
+                                        } else {
+                                            passwordInput.type = "password";
+                                        }
+                                    }
+                                </script>
+                                
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <p>Address:</p>
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''"  value="2335 Orchard View Lane, Escondido CA 92027" readonly>
+
+                                    </div>
+                                </div>
+
+                                
+                                
+                                
+
+                                
+
+                                
+
+
+                                
+
+                               
+                                
+                                
+
+                            
+                           
+                                
+
+                                
+
+                                <div class="col-12">
+                                    <div class="form-group mt-3">
+                                        <aside class="single_sidebar_widget search_widget">
+                                            <form action="#">
+                                                <input type="file" id="file-input" style="display: none;" onchange="showSelectedFile(event)">
+                                                
+                                                <p id="selected-file"></p>
+                                                <script>
+                                                    function selectFile() {
+                                                        var fileInput = document.getElementById("file-input");
+                                                        fileInput.click();
+                                                    }
+                                            
+                                                    function showSelectedFile(event) {
+                                                        var fileInput = event.target;
+                                                        var selectedFile = fileInput.files[0];
+                                                        var selectedFileName = selectedFile.name;
+                                                        
+                                                        var selectedFileElement = document.getElementById("selected-file");
+                                                        selectedFileElement.textContent = "file uploaded: " + selectedFileName;
+                                                    }
+                                                </script>
+                                                <div id="attach-message"></div>
+                                            </form>
+                                        </aside>
+                                        <div class="form-group mt-3">
+                                            <button class="button button-contactForm btn_1 boxed-btn left-btn" onclick="redirectToPage()">
+                                                <i class="fas fa-arrow-left"></i> Back
+                                            </button>
+                                            <div class="right-buttons">
+                                            <button type="submit" class="button button-contactForm boxed-btn" style="margin-right: 20px;" onclick="redirectPage()"> <i class="fas fa-pencil-alt"></i> Edit profile</button>
+                                            
+                                            <button type="submit" class="button button-contactForm boxed-btn"  onclick="displayNotification();">  <i class="fas fa-save"></i> Save changes</button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                    <style>.left-btn {
+                                        float: left;
+                                    }
+                                    
+                                    .right-buttons {
+                                        float: right;
+                                        margin-left: 20px;
+                                    }
+                                    </style>
+                                    <script>
+                                        function redirectToPage() {
+                                            // Replace 'path/to/destination.html' with the path to the HTML file you want to redirect to
+                                            window.location.href = 'index.html';
+                                        }
+                                        </script>
+                                    <script>function redirectPage() {
+                                        
+                                        var inputs = document.getElementsByTagName("input");
+                                        for (var i = 0; i < inputs.length; i++) {
+                                            inputs[i].removeAttribute("readonly");
+                                        }
+                                    
+                                    }
+
+                                    
+                                    </script>
+                                    <style> .alert {
+                                        display: none;
+                                        padding: 20px;
+                                        background-color: #09cc7f;
+                                        color: white;
+                                        
+                                
+                                    }
+                                    
+                                    .closebtn {
+                                        margin-left: 15px;
+                                        color: white;
+                                        font-weight: bold;
+                                        float: right;
+                                        font-size: 22px;
+                                        line-height: 20px;
+                                        cursor: pointer;
+                                        transition: 0.3s;
+                                    }
+                                    
+                                    .closebtn:hover {
+                                        color: black;
+                                    }
+                                </style>
+                          </style>
+                                    
+                                        
+                                        <script>
+
+                                            
+
+                                            function submitForm(event) {
+                                                event.preventDefault(); // Prevent the default form submission behavior
+                                                
+                                                setTimeout(function() {
+                                                    location.reload(); // Refresh the page
+                                                }, 500);
+                                            }
+                                            </script>
+
+
+                                            
+                                                            
+
+
+                                        </form>
+                                        </div>
+                  
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
             <!-- Footer Top-->
