@@ -37,6 +37,13 @@
     </div>
     <!-- Preloader Start -->
     <header>
+        <style>
+            .thicker-icon {
+                font-size: 30px;
+                padding-right:50px;
+                font-weight: bold;
+            }
+        </style>
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header ">
@@ -46,17 +53,11 @@
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left d-flex">
                                     <ul>     
-                                        <li>Phone: +99 (0) 101 0000 888</li>
-                                        <li>Email: noreply@yourdomain.com</li>
+
+                                            <a href="categories.html" class="back-link">
+                                                <span style="color: #2d2d2d;" class="back-icon thicker-icon">&larr;</span> Back
+                                            </a>     
                                     </ul>
-                                    <div class="header-social">    
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                        </ul>
-                                    </div>
                                 </div>
                                 <div class="header-info-right d-flex align-items-center">
                                     <div class="select-this">
@@ -69,12 +70,7 @@
                                                     <option value="">Hindi</option>
                                                 </select>
                                             </div>
-                                        </form>
-                                    </div>
-                                    <ul class="contact-now">     
-                                        <li><a href="#">Subscribe Now</a></li>
-                                    </ul>
-                                </div>
+                                      </form>
                             </div>
                         </div>
                     </div>
@@ -110,8 +106,6 @@
                                                         <li><a href="requestedblog.html">Requested Donations</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a>   
-                                                </li>
                                                 <li><a href="#">Settings</a>
                                                     <ul class="submenu">
                                                         <li><a href="upload.html">Upload Document</a></li>
@@ -122,6 +116,7 @@
                                             </ul>
                                         </nav>
                                     </div>
+
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
                                         <a href="categories.html" class="btn header-btn">Donate</a>
@@ -157,7 +152,6 @@
             </div>
         </div>
         <!-- Hero End -->
-<<<<<<< HEAD
         <script>
             function filterArticles() {
                 var age = document.getElementById("age").value;
@@ -189,9 +183,6 @@
             }
         </script>
 
-=======
-    
->>>>>>> 9c1acba1badabcad010fac02925dc036622b6c0d
         <!--? Blog Area Start-->
         
         <section class="blog_area section-padding">
@@ -254,7 +245,7 @@
                             </article>
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets\img\blog\baby shoes.jpg"alt="">
+                                    <img class="card-img rounded-0" src="assets\img\blog\babyy.png"alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>4</h3>
                                         <p>Apr</p>
@@ -266,16 +257,12 @@
                                     </a>
                                     <p>We're looking for baby shoes of any size so we can provide new born babies with what they need 
                                     </p>
-<<<<<<< HEAD
                                     <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
                                     <div class="additional-details" style="display: none;">
                                         <p>age : preschool</p>
-                                        <p>gender : female</p>
+                                        <p>gender : not specified</p>
                                         <p>season : spring</p>
                                     </div>
-=======
-
->>>>>>> 9c1acba1badabcad010fac02925dc036622b6c0d
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -297,16 +284,12 @@
                                     </a>
                                     <p>We're looking for jackets in any size/color so we can help keep those in need warm during cold times
                                     </p>
-<<<<<<< HEAD
                                     <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
                                     <div class="additional-details" style="display: none;">
                                         <p>age : primary</p>
                                         <p>gender : male</p>
                                         <p>season : winter</p>
                                     </div>
-=======
-
->>>>>>> 9c1acba1badabcad010fac02925dc036622b6c0d
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -329,16 +312,12 @@
                                     <p>we're looking for any winter assests such as beanies/scarves/gloves as it is very important to us 
                                         to keep those in need warm during very harsh winter times
                                     </p>
-<<<<<<< HEAD
                                     <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
                                     <div class="additional-details" style="display: none;">
                                         <p>age : secondary</p>
                                         <p>gender : male</p>
                                         <p>season : winter</p>
                                     </div>
-=======
-
->>>>>>> 9c1acba1badabcad010fac02925dc036622b6c0d
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
@@ -366,7 +345,7 @@
                                         initMap();
                                     } else {
                                         detailsDiv.style.display = "none";
-                                        button.textContent = "View Details";
+                                        button.textContent = "Quick View";
                                     }
                                 }
                             </script>
@@ -380,9 +359,6 @@
                                     </li>
                                     <li class="page-item">
                                         <a href="#" class="page-link">1</a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a href="#" class="page-link">2</a>
                                     </li>
                                     <li class="page-item">
                                         <a href="#" class="page-link" aria-label="Next">
@@ -449,7 +425,6 @@
                                         }
                                     }
                                 </script>
-<<<<<<< HEAD
                             </aside>
                             <aside class="single_sidebar_widget post_category_widget">
                                 <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
@@ -470,6 +445,7 @@
                                             <option value="All">All</option>
                                             <option value="female">female</option>
                                             <option value="male">male</option>
+                                            <option value="not specified">not specified</option>
                                         </select>
                                     </li>
                                     <li>
@@ -481,155 +457,6 @@
                                             <option value="spring">spring</option>
                                             <option value="autumn">autumn</option>
                                         </select>
-                                    </li>
-                                </ul>
-                            </aside>
-                            
-                            <aside class="single_sidebar_widget post_category_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
-                                <ul class="list cat-list">
-                                    <li>
-                                        <a href="MedicalSuppliesFilter.html" class="d-flex">
-                                            <p>Medical Supplies</p>
-                                            <p>(4)</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Travel news</p>
-                                            <p>(10)</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Modern technology</p>
-                                            <p>(03)</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Product</p>
-                                            <p>(11)</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Inspiration</p>
-                                            <p>21</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Health Care (21)</p>
-                                            <p>09</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </aside>
-=======
-                            </aside>                        
->>>>>>> 9c1acba1badabcad010fac02925dc036622b6c0d
-                            <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_1.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">From life was you fish...</h3>
-                                        </a>
-                                        <p>January 12, 2019</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_2.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
-                                        </a>
-                                        <p>02 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_3.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
-                                        </a>
-                                        <p>03 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_4.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
-                                        </a>
-                                        <p>01 Hours ago</p>
-                                    </div>
-                                </div>
-                            </aside>
-                            <aside class="single_sidebar_widget tag_cloud_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">project</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">love</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">technology</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">restaurant</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">life style</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">illustration</a>
-                                    </li>
-                                </ul>
-                            </aside>
-
-                            <aside class="single_sidebar_widget instagram_feeds">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Instagram Feeds</h4>
-                                <ul class="instagram_row flex-wrap">
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
-                                        </a>
                                     </li>
                                 </ul>
                             </aside>
@@ -673,10 +500,10 @@
                                     <h4>Contact Info</h4>
                                     <ul>
                                         <li>
-                                            <p>Address :Your address goes here, your demo address.</p>
+                                            <p>Address: 57357, Sekat Hadid Al Mahger, Zeinhom, El Sayeda Zeinab, Cairo Governorate 4260102</p>
                                         </li>
                                         <li><a href="#">Phone : +8880 44338899</a></li>
-                                        <li><a href="#">Email : info@colorlib.com</a></li>
+                                        <li><a href="https://mail.google.com/mail/u/0/">Email : info@charity.com</a></li>
                                     </ul>
                                 </div>
 
@@ -687,11 +514,10 @@
                                 <div class="footer-tittle">
                                     <h4>Important Link</h4>
                                     <ul>
-                                        <li><a href="#"> View Project</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Proparties</a></li>
-                                        <li><a href="#">Support</a></li>
+                                        <li><a href="index.html"> View Project</a></li>
+                                        <li><a href="Organization-posts.html">Organizations</a></li>
+                                        <li><a href="events.html">Volunteer Now</a></li>
+                                        <li><a href="categories.html">Support</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -701,7 +527,7 @@
                                 <div class="footer-tittle">
                                     <h4>Newsletter</h4>
                                     <div class="footer-pera footer-pera2">
-                                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+                                    <p>Write your email below if you want to know our latest news!</p>
                                 </div>
                                 <!-- Form -->
                                 <div class="footer-form" >
@@ -733,17 +559,20 @@
                             <div class="col-xl-10 col-lg-9 ">
                                 <div class="footer-copy-right">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>
                             <div class="col-xl-2 col-lg-3">
                                 <div class="footer-social f-right">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
+
+                                        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                                        <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                         <a href="https://mail.google.com/mail/u/0/"><i class="fab fa-google-plus-g"></i></a>
+
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
