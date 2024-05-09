@@ -46,15 +46,17 @@
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left d-flex">
                                     <ul>     
-                                        <li>Phone: +99 (0) 101 0000 888</li>
-                                        <li>Email: noreply@yourdomain.com</li>
+
+                                            <a href="index.html" class="back-link">
+                                                <span style="color: #2d2d2d;" class="back-icon">&larr;</span> Back
+                                            </a>     
                                     </ul>
                                     <div class="header-social">    
                                         <ul>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a></li>
                                             <li><a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                                            <li><a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a></li>
+                                            <li> <a href="https://mail.google.com/mail/u/0/"><i class="fab fa-google-plus-g"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -107,13 +109,22 @@
                                                     <ul class="submenu">
                                                         <li><a href="blog.html">Fullfilled donation posts</a></li>
                                                         <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="requestedblog.html">requested</a></li>
+                                                        <li><a href="requestedblog.html">Requested Donations</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="contact.html">Contact</a></li>
+                                                <li><a href="contact.html">Contact</a>   
+                                                </li>
+                                                <li><a href="#">Settings</a>
+                                                    <ul class="submenu">
+                                                        <li><a href="upload.html">Upload Document</a></li>
+                                                        <li><a href="location.html">Location</a></li>
+                                                        <li><a href="subject.html">Subject</a></li>
+                                                    </ul>
+                                                </li>   
                                             </ul>
                                         </nav>
                                     </div>
+
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
                                         <a href="categories.html" class="btn header-btn">Donate</a>
@@ -132,6 +143,95 @@
         <!-- Header End -->
     </header>
     <main>
+            <!-- Head content here -->
+            <style>
+                .categories-wrapper {
+                    display:-moz-grid-line;
+                    justify-content: center;
+                    align-items: center;
+                    height: 90vh;
+                }
+                
+                .category {
+                    margin-bottom: 20px;
+                    text-align: center;
+                }
+                
+                .category a {
+                    display: block;
+                    padding: 20px;
+                    font-size: 24px;
+                    background-color: #f0f0f0;
+                    color: #000000;
+                    text-decoration: none;
+                    transition: background-color 0.3s ease;
+                }
+                
+                .category a:hover {
+                    background-color: #dddddd;
+                }
+            </style>
+</head>
+<body>
+    <!-- Content -->
+    <div class="categories-wrapper">
+        
+        <div class="category">
+            
+            <a href="clothes.html">Clothes</a>
+        </div>
+        <div class="category">
+            <a href="toys.html">Toys</a>
+        </div>
+        <div class="category">
+            <a href="food.html">Food</a>
+        </div>
+        <div class="category">
+            <a href="MedicalSuppliesFilter.html">Medical Supplies</a>
+        </div>
+        <div class="category">
+            <a href="schoolsupplies.html">School Supplies</a>
+        </div>
+        <div class="category">
+            <a href="BloodDonations.html">Blood Donations</a>
+        </div>
+    </div>
+
+
+        <!-- <style>
+            .hero-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                text-align: center;
+            }
+            
+            .hero-links li {
+                margin-bottom: 10px;
+            }
+            
+            .hero-links li a {
+                color: #000000;
+                text-decoration: none;
+            }
+        </style>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="hero-cap hero-cap2 pt-70 text-center">
+
+                <ul class="hero-links">
+                    <li><a href="#">View Project</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Testimonial</a></li>
+                    <li><a href="#">Properties</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div> -->
+        
         
         <!-- <div class="service-area section-padding30">
             <div class="container">
@@ -158,7 +258,7 @@
                     </div>
                 </div>
             </div> -->
-        <title>Category Selection for Donation</title> 
+        <!-- <title>Category Selection for Donation</title> 
         <style>
             body {
                 margin: 0;
@@ -226,8 +326,8 @@
             }
         </style>
     </head>
-    <body>
-        <div class="container">
+    <body> -->
+        <!-- <div class="container">
             <div class="category-form">
                 <h1>Category Selection for Donation</h1>
                 
@@ -249,9 +349,9 @@
                 
                 <div class="category-display" id="categoryDisplay"></div>
             </div>
-        </div>
+        </div> -->
         
-        <script>
+        <!-- <script>
             function redirectToCategory() {
                 var category = document.getElementById("category").value;
                
@@ -287,7 +387,7 @@
                 
                 return false;
             }
-        </script> 
+        </script>  -->
      </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
