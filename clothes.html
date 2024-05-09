@@ -157,6 +157,37 @@
             </div>
         </div>
         <!-- Hero End -->
+        <script>
+            function filterArticles() {
+                var age = document.getElementById("age").value;
+                var gender = document.getElementById("gender").value;
+                var season = document.getElementById("season").value;
+
+        
+                var articles = document.getElementsByClassName("blog_item");
+        
+                for (var i = 0; i < articles.length; i++) {
+                    var article = articles[i];
+                    var additionalDetails = article.getElementsByClassName("additional-details")[0];
+        
+                    var age2 = additionalDetails.getElementsByTagName("p")[0].innerText; // corrected variable name
+                    var gender2 = additionalDetails.getElementsByTagName("p")[1].innerText;
+                    var season2 = additionalDetails.getElementsByTagName("p")[2].innerText;
+        
+                    var showArticle =
+                        (age === "All" || age2.includes(age)) &&
+                        (gender === "All" || gender2.includes(gender)) &&
+                        (season === "All" || season2.includes(season));
+        
+                    if (showArticle) {
+                        article.style.display = "block";
+                    } else {
+                        article.style.display = "none";
+                    }
+                }
+            }
+        </script>
+
         <!--? Blog Area Start-->
         <section class="blog_area section-padding">
             <div class="container">
@@ -177,6 +208,12 @@
                                     </a>
                                     <p>We're looking for T-shirts available in any sizes to provide those in need of new clothes
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : primary</p>
+                                        <p>gender : male</p>
+                                        <p>season : summer</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -197,6 +234,12 @@
                                     </a>
                                     <p>we're looking for pants of any sizes so we can provide those in need
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : primary</p>
+                                        <p>gender : male</p>
+                                        <p>season : winter</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -217,6 +260,12 @@
                                     </a>
                                     <p>We're looking for baby shoes of any size so we can provide new born babies with what they need 
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : preschool</p>
+                                        <p>gender : female</p>
+                                        <p>season : spring</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -237,6 +286,12 @@
                                     </a>
                                     <p>We're looking for jackets in any size/color so we can help keep those in need warm during cold times
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : primary</p>
+                                        <p>gender : male</p>
+                                        <p>season : winter</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -259,12 +314,43 @@
                                     <p>we're looking for any winter assests such as beanies/scarves/gloves as it is very important to us 
                                         to keep those in need warm during very harsh winter times
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : secondary</p>
+                                        <p>gender : male</p>
+                                        <p>season : winter</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
                             </article>
+                            <style>
+                                .view-details-btn {
+                                    text-align: right;
+                                     background-color: white;
+                                     border: none;
+                                     padding: 8px 16px;
+                                     color: #09cc7f;
+                                    cursor: pointer;
+                                }
+                            </style>
+                            <script>
+                                function toggleDetails(button) {
+                                    var detailsDiv = button.nextElementSibling;
+                            
+                                    if (detailsDiv.style.display === "none") {
+                                        detailsDiv.style.display = "block";
+                                        button.textContent = "Hide Details";
+                                        initMap();
+                                    } else {
+                                        detailsDiv.style.display = "none";
+                                        button.textContent = "View Details";
+                                    }
+                                }
+                            </script>
+                            
                             <nav class="blog-pagination justify-content-center d-flex">
                                 <ul class="pagination">
                                     <li class="page-item">
@@ -342,6 +428,39 @@
                                         }
                                     }
                                 </script>
+                            </aside>
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
+                                <ul class="list cat-list">
+
+                                    <li>
+                                        <label for="age">age</label>
+                                        <select id="age" name="age" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="preschool">preschool</option>
+                                            <option value="primary">primary</option>
+                                            <option value="secondary">secondary</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="gender">gender</label>
+                                        <select id="gender" name="gender" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="female">female</option>
+                                            <option value="male">male</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="season">season</label>
+                                        <select id="season" name="season" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="winter">winter</option>
+                                            <option value="summer">summer</option>
+                                            <option value="spring">spring</option>
+                                            <option value="autumn">autumn</option>
+                                        </select>
+                                    </li>
+                                </ul>
                             </aside>
                             
                             <aside class="single_sidebar_widget post_category_widget">
