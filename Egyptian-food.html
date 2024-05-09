@@ -93,7 +93,7 @@
                                   <div class="main-menu d-none d-lg-block">
                                       <nav>
                                        <ul id="navigation">                                                                                          
-                                          <li><a href="index.html">Home</a></li>
+                                          <li><a href="index-Org.html">Home</a></li>
                                           <li><a href="about.html">About</a></li>
                                           <li><a href="program.html">Organizations</a></li>
                                           <li><a href="#">Volunteer </a>
@@ -105,25 +105,17 @@
                                           <li><a href="#">Donation posts</a>
                                               <ul class="submenu">
                                                   <li><a href="blog.html">Fullfilled donation posts</a></li>
-                                                  <li><a href="blog_details.html">Blog Details</a></li>
-                                                  <li><a href="requestedblog.html">Requested Donations</a></li>
+                                                 
+                                                  <li><a href="Organization-posts.html">Requested Donations</a></li>
                                               </ul>
                                           </li>
-                                          <li><a href="contact.html">Contact</a>   
-                                          </li>
-                                          <li><a href="#">Settings</a>
-                                              <ul class="submenu">
-                                                  <li><a href="upload.html">Upload Document</a></li>
-                                                  <li><a href="location.html">Location</a></li>
-                                                  <li><a href="subject.html">Subject</a></li>
-                                              </ul>
-                                          </li>   
+                                           
                                       </ul>
                                       </nav>
                                   </div>
                                   <!-- Header-btn -->
                                   <div class="header-right-btn d-none d-lg-block ml-20">
-                                      <a href="categories.html" class="btn header-btn">Donate</a>
+                                      <a href="Createnewpost.html" class="btn header-btn">Create a new Post</a>
                                   </div>
                               </div>
                           </div> 
@@ -146,7 +138,7 @@
                   <div class="row">
                      <div class="col-xl-12">
                            <div class="hero-cap hero-cap2 pt-20 text-center">
-                              <h2>Fullfilled Donation Post Details</h2>
+                              <h2>Requested Donation Post Details</h2>
                            </div>
                      </div>
                   </div>
@@ -157,54 +149,57 @@
       <!--? Blog Area Start -->
       <section class="blog_area single-post-area section-padding">
          <div class="container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Changes saved successfully!!!</strong> Thank you .
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                <div class="col-lg-8 posts-list">
                   <div class="single-post">
                      <div class="feature-img">
-                        <img class="img-fluid" src="assets\img\blog\lappp.jpg" alt="">
+                        <img class="img-fluid" src="assets\img\blog\food2.jpg" alt="">
                      </div>
                      <div class="blog_details">
-                        <h2 style="color: #2d2d2d;">Laptop
+                        <h2 style="color: #2d2d2d;">In need of volunteers
                         </h2>
                         <ul class="blog-info-link mt-3 mb-4">
-                           <li><a href="#"><i class="fa fa-user"></i> School </a></li>
-                           <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                           <li><a href="#"><i class="fa fa-user"></i> Food </a></li>
+                           <li><a href="#"><i class="fa fa-comments"></i> 0 Comments</a></li>
                         </ul>
-                        <p class="excert">
-                            <h5>Details:</h5><br>
-                            <strong> Color: </strong> Black <br>
-                            <strong>Brand Name: </strong>	Dell<br>
-                            <strong>Model Name:</strong>	15GW3250U8G1T<br>
-                            <strong>Screen Size:</strong>	15.6 Inches<br>
-                            <strong>Hard Disk Size:</strong>	1 TB <br>
-                            <strong>CPU Model:</strong>	Ryzen 3 3250U <br>
-                            <strong>RAM Memory Installed:</strong>	8 GB <br>
+                        <p class="excert"  contenteditable="false">
+                            The Egyptian Food Bank, dedicated to combating hunger and food insecurity across Egypt,
+                             is urgently seeking volunteers to support its mission. Volunteers play a crucial role in the operations of the food bank, from collecting and sorting donations to distributing food parcels to those in need. 
+                             By volunteering their time and skills, individuals not only contribute directly to alleviating hunger but also foster a sense of community and solidarity among fellow citizens.
+                              Volunteering offers a unique opportunity to make a tangible difference in the lives of others, promoting empathy, compassion, and social responsibility. Moreover, volunteering can provide personal fulfillment and growth, allowing individuals to develop new skills, build meaningful connections, and gain a deeper understanding of social issues facing their communities. By answering the call to volunteer with the Egyptian Food Bank, individuals can actively contribute to creating a brighter and more equitable future for all Egyptians.
+                            
 
                         </p>
+                       
                         <p>
-                           Laptops are invaluable tools in both universities and schools, playing a crucial role in enhancing the educational experience.
-                           They grant students access to a wealth of information available on the internet, enabling them to conduct research, explore digital libraries, and access academic resources easily. Furthermore, laptops facilitate interactive and multimedia learning experiences, allowing students to engage with digital textbooks, videos, simulations, and other interactive content that deepen their understanding of complex subjects. Moreover, laptops foster collaborative learning environments, enabling students to work together on group projects, share documents, and communicate effectively through various online platforms. Additionally, the flexibility and mobility offered by laptops empower students to study and complete assignments from any location,
-                           accommodating their individual learning preferences and schedules. 
-                        </p>
-                        <div class="quote-wrapper">
-                           <div class="quotes">
-                              Overall, laptops have become indispensable tools in education, equipping students with the resources and skills they need to thrive in the modern world.
+                            <strong>   Requested by:  </strong> Egyptian food Bank 
 
-                           </div>
-                        </div>
-                        <p>
-                           Donated by : Mark 
-                           Date of the donation: 19 Dec 2022
+
                         </p>
-                        <p>
-                           Donation accepted by: Ahmed
-                           
-                        </p>
+                       
                      </div>
                   </div>
                   <div class="navigation-top">
                      <div class="d-sm-flex justify-content-between text-center">
-                        <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 2
+                        <p class="like-info"><span class="align-middle"><i class="fa fa-heart"></i></span> Lily and 4
                            people like this</p>
                         <div class="col-sm-4 text-center my-2 my-sm-0">
                            <!-- <p class="comment-count"><span class="align-middle"><i class="fa fa-comment"></i></span> 06 Comments</p> -->
@@ -213,136 +208,94 @@
                            <li><a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
                            <li><a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a></li>
                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-                          
                         </ul>
                      </div>
-                     <div class="navigation-area">
-                        <div class="row">
-                           <div
-                              class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-                              <div class="thumb">
-                                 <a href="blog_details2.html">
-                                    <img class="img-fluid" src="assets\img\blog\teach.jpg" alt="">
-                                    <a href="blog_details2.html"></a>
-                                 </a>
-                              </div>
-                              <div class="arrow">
-                                 <a href="blog_details2.html">
-                                    <span class="lnr text-white ti-arrow-left"></span>
-                                 </a>
-                              </div>
-                              <div class="detials">
-                                 <p>Prev Post</p>
-                                 <a href="blog_details2.html">
-                                    <h4 style="color: #2d2d2d;">Teaching</h4>
-                                 </a>
-                              </div>
-                           </div>
-                           <div
-                              class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-                              <div class="detials">
-                                 <p>Next Post</p>
-                                 <a href="blog_details.html">
-                                    <h4 style="color: #2d2d2d;">Hospital Bed</h4>
-                                 </a>
-                              </div>
-                              <div class="arrow">
-                                 <a href="blog_details.html">
-                                    <span class="lnr text-white ti-arrow-right"></span>
-                                 </a>
-                              </div>
-                              <div class="thumb">
-                                 <a href="blog_details.html">
-                                    <img class="img-fluid" src="assets\img\blog\Care_Sure_Bed_Room.jpg" alt="">
-                                    <a href="blog_details1.html"></a>
-                                 </a>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                     
                   <div class="blog-author">
                      <div class="media align-items-center">
-                        <img src="assets\img\blog\v.jpg" alt="">
+                        <img src= "assets\img\blog\Egyptian-Food-Bank.jpg" alt="" width="400px" height="500px">
                         <div class="media-body">
-                           <h4>Donor:</h4>
-                           <a href="Mark.html">
-                              <h4> Mark</h4>
-                           </a>
+                           <a href="Org1.html">
+                              <h4>Egyptian food Bank </h4>
+                              </a>
+                             
+                          
                         </div>
                      </div>
                   </div>
                   <div class="comments-area">
-                     <h4> Comments</h4>
+                    
+                   
                      
-                     <div class="comment-list" id="commentList" style="display: none;">
-                        <div class="single-comment justify-content-between d-flex">
-                           <div class="user justify-content-between d-flex">
-                              <div class="thumb">
-                                 <img src="assets\img\blog\mannn.png" alt="">
-                              </div>
-                              <div class="desc">
-                                 <p class="comment">
-                                    "thank you so much mark for helping me"
-                                 </p>
-                                 <div class="d-flex justify-content-between">
-                                    <div class="d-flex align-items-center">
-                                       <h5>
-                                          <a href="#">DEREK</a>
-                                       </h5>
-                                       <p class="date">jan 4, 2023 at 3:12 pm </p>
-                                    </div>
-                                    <div class="reply-btn">
-                                       <a href="#" class="btn-reply text-uppercase">reply</a>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                     
                   <div class="comment-form">
-                     <h4>Leave a Reply</h4>
-                     <form class="form-contact comment_form" action="#" id="commentForm">
-                        <div class="row">
-                           <div class="col-12">
-                              <div class="form-group">
-                                 <textarea class="form-control w-100" name="comment" id="comment" cols="30" rows="9"
-                                    placeholder="Write Comment"></textarea>
-                              </div>
-                           </div>
-                           <div class="col-sm-6">
-                              <div class="form-group">
-                                 <input class="form-control" name="name" id="name" type="text" placeholder="Name">
-                              </div>
-                           </div>
-                           
-                           
-                        </div>
-                        <div class="form-group">
-                           <button type="submit" class="button button-contactForm btn_1 boxed-btn" onclick="showComment()">Post Comment</button>
-
-                        </div>
-                        <script>
-
-                        function showComment() {
-                                 var commentList = document.getElementById('commentList');
-                                 if (commentList.style.display === 'none') {
-                                    commentList.style.display = 'block';
-                                 } else {
-                                    commentList.style.display = 'none';
-                                 }
-                              }
-                        </script>
+                    
                         
-                       
-                     </form>
+                    <div class="form-group">
+                        <button class="button button-contactForm btn_1 boxed-btn left-btn" onclick="redirectToPage()">
+                            <i class="fas fa-arrow-left"></i> Back
+                        </button>
+                        <div class="right-buttons">
+                            <button class="button button-contactForm btn_1 boxed-btn" onclick="enableEditing()">
+                                <i class="fas fa-pencil-alt"></i> Edit post
+                            </button>
+                            <button class="button button-contactForm btn_1 boxed-btn" onclick="displayNotification()">
+                                <i class="fas fa-save"></i> Save changes
+                            </button>
+                        </div>
+                    </div>
+                    <style>.left-btn {
+                        float: left;
+                    }
+                    
+                    .right-buttons {
+                        float: right;
+                        margin-left: 20px;
+                    }
+                    </style>
+                    
+                    
                   </div>
                </div>
+               <script>
+                function redirectToPage() {
+                    // Replace 'path/to/destination.html' with the path to the HTML file you want to redirect to
+                    window.location.href = 'Organization-posts.html';
+                }
+                </script>
+               <style> .alert {
+                display: none;
+                padding: 20px;
+                background-color: #09cc7f;
+                color: white;
+                
+        
+            }
+            
+            .closebtn {
+                margin-left: 15px;
+                color: white;
+                font-weight: bold;
+                float: right;
+                font-size: 22px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            
+            .closebtn:hover {
+                color: black;
+            }
+        </style>
+  </style>
+               <script> function enableEditing() {
+                var elements = document.querySelectorAll('[contenteditable="false"]');
+                for(var i = 0; i < elements.length; i++) {
+                    elements[i].setAttribute('contenteditable', 'true');
+                }
+            }
+            </script>
                
-            </div>
-         </div>
-      </section>
       <!-- Blog Area End -->
    </main>
    <footer>

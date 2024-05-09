@@ -172,38 +172,7 @@
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
-                                        <button class="delete-btn" onclick="deletePost(this)">Delete</button>
-                                    <style>
-                                        /* Define styles for the delete button */
-                                        .delete-btn {
-                                            /* Add your CSS styles here */
-                                            background-color: #09cc7f;
-                                            color: white;
-                                            border: none;
-                                            padding: 5px 10px;
-                                            border-radius: 5px;
-                                            cursor: pointer;
-                                            float:right;
-                                        }
-                                        .delete-btn:hover {
-                                                background-color: #0a9e64;
-                                            }
-                                    </style>
-                                     <script>
-                                        function deletePost(button) {
-                                            // Show confirmation dialog
-                                            var confirmDelete = confirm("Are you sure you want to delete it?");
-                                            
-                                            // If user confirms deletion, remove the post
-                                            if (confirmDelete) {
-                                                // Get the parent element of the post you want to delete
-                                                var postElement = button.closest('.blog_item');
-                                                
-                                                // Remove the post element from the DOM
-                                                postElement.remove();
-                                            }
-                                        }
-                                    </script>
+                                        
                                     </ul>
                                 </div>
                             </article>
