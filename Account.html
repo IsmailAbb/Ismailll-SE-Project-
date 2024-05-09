@@ -317,11 +317,31 @@
                                             </form>
                                         </aside>
                                         <div class="form-group mt-3">
-                                            <button type="submit" class="button button-contactForm boxed-btn" style="margin-right: 20px;" onclick="redirectPage()">Edit profile</button>
+                                            <button class="button button-contactForm btn_1 boxed-btn left-btn" onclick="redirectToPage()">
+                                                <i class="fas fa-arrow-left"></i> Back
+                                            </button>
+                                            <div class="right-buttons">
+                                            <button type="submit" class="button button-contactForm boxed-btn" style="margin-right: 20px;" onclick="redirectPage()"> <i class="fas fa-pencil-alt"></i> Edit profile</button>
                                             
-                                            <button type="submit" class="button button-contactForm boxed-btn"  onclick="displayNotification();">Save changes</button>
+                                            <button type="submit" class="button button-contactForm boxed-btn"  onclick="displayNotification();">  <i class="fas fa-save"></i> Save changes</button>
                                         </div>
+                                    </div>
                                     </form>
+                                    <style>.left-btn {
+                                        float: left;
+                                    }
+                                    
+                                    .right-buttons {
+                                        float: right;
+                                        margin-left: 20px;
+                                    }
+                                    </style>
+                                    <script>
+                                        function redirectToPage() {
+                                            // Replace 'path/to/destination.html' with the path to the HTML file you want to redirect to
+                                            window.location.href = 'index.html';
+                                        }
+                                        </script>
                                     <script>function redirectPage() {
                                         
                                         var inputs = document.getElementsByTagName("input");

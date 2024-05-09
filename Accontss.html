@@ -24,9 +24,6 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
 <body>
-   
-
-
     <!--? Preloader Start -->
     <div id="preloader-active">
         <div class="preloader d-flex align-items-center justify-content-center">
@@ -142,28 +139,9 @@
         </div>
         <!-- Header End -->
     </header>
- 
     <main>
-        <!--? Hero Start -->
-        <div class="slider-area2">
-            <div class="slider-height2 d-flex align-items-center">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="hero-cap hero-cap2 pt-70 text-center" id="BLA">
-                                <h2>My Profile</h2>
-                              
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-       
-             <div class="container">
+        <section class="contact-section">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mb-5 mb-lg-0">
                         <div class="alert" id="notification">
@@ -181,90 +159,85 @@
                     </div>
                 </div>
             </div>
-            
-            <style>
-                .edit-btn{
-                    top:50%;
-                }
-            </style>
-          
-        <!-- Hero End -->
-        <!--? Blog Area Start-->
-        <section class="blog_area section-padding">
             <div class="container">
                 <div class="row">
-                    
-                    <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="col-12">
+                        <h1 class="contact-title"><strong><u>My Profile:</u></strong></h1>
+
                      
-                        <div class="blog_left_sidebar">
-
-                           
-
-
-
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-                                <style>
-                                    .map-container {
-                                        height: 200px;
-                                        width: 300px;
-                                    }
-                                </style>
-                            </head>
-                            <body>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label for="address">Email:</label>
-                                        <input type="text" id="address" name="address" value="Chrismicheals@gmail.com"readonly>
-                                        <span id="addressError" class="error"></span>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="area">First name:</label>
-                                        <input type="text" id="area" name="area" value="Chris"readonly>
-                                        <span id="areaError" class="error"></span>
-                                    </div> </div>
+                    </div>
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="alert" id="notification">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Post submitted saved successfully!!!</strong> Thank you for your fulfillment.
+                        </div>
+                        <script>
+                            function displayNotification() {
+                                var notification = document.getElementById("notification");
+                                notification.style.display = "block"; // Show the alert
+                                var BLA = document.getElementById("BLA");
+                                BLA.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="d-none d-sm-block mb-5 pb-4">
+                </div>
+                <div class="row">
                     
-                                <div class="form-row">
-                                    
-                                    <div class="form-group">
-                                        <label for="governorate">Last name:</label>
-                                        <input type="text" id="governorate" name="governorate" value="Micheals" readonly>
-                                        <span id="governorateError" class="error"></span>
-                                    </div>
                     
-                                    <div class="form-group">
-                                        <label for="specialty">Phone number:</label>
-                                        <input type="text" id="PN" name="specialty" value="+33 5536645" readonly>
-                                        <span id="specialtyError" class="error"></span>
-                                    </div>
+
+                    <div class="col-lg-8">
+                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                            <div class="row">
+                               
+
                                     
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <p>First name:</p>
+                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" value="Chris " readonly>
+                                        <span id="NameError" class="error"></span>
+                                    </div>
                                 </div>
-                    
-                                <div class="form-row">
-                    
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <p>Last name:</p>
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" value="Michaels" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p> Email address:</p>
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" value="Chrismicheals@gmail.com"readonly>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                    <p>Phone number:</p>
+                                    <div class="form-group">
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" value="+33 5536645" readonly>
+
+                                    </div>
+                                </div>
+                                
+                                
+
+                                <div class="col-sm-6">
+                                    <p>Password:</p>
                                     
                                     <div class="form-group">
-                                        <label for="password">Password:</label>
-                                        <div class="password-input">
-                                            <input type="password" id="password" name="password" value="password" readonly>
-                                            <label class="show-password-label" for="showPassword">Show Password</label>
+                                       
+                                        <div class="password-input" style="margin-top: 10px;">
+                                            <input class="form-control" type="password" id="password" name="password" onfocus="this.placeholder = ''" value="password" readonly >
+                                            <label class="show-password-label" for="showPassword">Show Password</label><br>
                                             <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
                                         </div>
                                         <span id="specialtyError" class="error"></span>
                                     </div>
-                                    
-                    
-                                    
-                                    <div class="form-group">
-                                        <label for="address2">Address:</label>
-                                        <input type="text" id="address2" name="address2" value="2335 Orchard View Lane, Escondido CA 92027" readonly>
-                                        <span id="address2Error" class="error"></span>
-                                    </div>
                                 </div>
-                            
-                                <br>
-                            
                                 <style>.password-input {
                                     position: relative;
                                 }
@@ -272,34 +245,11 @@
                                 .password-input label.show-password-label {
                                     position: absolute;
                                     top: 90%;
-                                    transform: translateY(-80%);
-                                    left: 43%;
+                                    transform: translateY(-70%);
+                                    left: 5%;
                                      /* Adjust this value as needed */
-                                }
-                              
-            .form-row {
-                display: flex;
-                justify-content: space-between;
-                margin: 20px;
-            }
-    
-            .form-group {
-                flex-basis: 50%; /* Adjust as needed */
-            }
-    
-            label {
-                display: block;
-            }
-    
-            input {
-            width: 70%; /* Adjust width here */
-            margin-bottom: 5px;
-            text-align: left;
-            }
-       
-        
-                                </style>
-                                <script>
+                                }</style>
+                                 <script>
                                     function togglePasswordVisibility() {
                                         var passwordInput = document.getElementById("password");
                                         var showPasswordCheckbox = document.getElementById("showPassword");
@@ -311,92 +261,99 @@
                                         }
                                     }
                                 </script>
-                                <a href="Accontss2.html" class="edit-btn">Edit profile</a>
+                                
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <p>Address:</p>
+                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''"  value="2335 Orchard View Lane, Escondido CA 92027" readonly>
+
+                                    </div>
+                                </div>
+
+                                
+                                
                                 
 
-                                <style>
-                                    /* Define styles for the edit button */
-                                    .edit-btn {
-                                        background-color: #09cc7f;
-                                        color: white;
-                                        border: none;
-                                        padding: 10px 20px; /* Increase padding to make the button bigger */
-                                        border-radius: 10px;
-                                        cursor: pointer;
-                                        margin-right: 20px;
-                                        margin-left: 25px;
-                                    }
-                                </style>
-                    
-                                <script>
-                                    function redirectToPage() {
-                                        window.location.href = "Account2.html";
-                                    }
-                                </script>
                                 
-                                <style>
-                                    /* Define styles for the delete button */
-                                    .delete-btn {
-                                        /* Add your CSS styles here */
-                                        background-color: #09cc7f;
-                                    color: white;
-                                    border: none;
-                                    padding: 10px 20px; /* Increase padding to make the button bigger */
-                                    border-radius: 10px;
-                                    cursor: pointer;
-                                    margin-right: 20px;
-                                    margin-left: 25px;
-                                        
-                                    }
-                                </style>
+
                                 
-                                 </form>
-
-                    
 
 
+                                
 
+                               
+                                
+                                
 
-
-        
-                 
-                            <style>
-                                .view-details-btn {
-                                    text-align: right;
-                                     background-color: white;
-                                     border: none;
-                                     padding: 8px 16px;
-                                     color: #09cc7f;
-                                    cursor: pointer;
-                                }
-                            </style>
-                               <style>
-                                .Fulfill-btn {
-                                    text-align: right;
-                                    background-color: white;
-                                     border: none;
-                                     padding: 8px 16px;
-                                     color: #09cc7f;
-                                    cursor: pointer;
-                                }
-                            </style>
-                            <script>
-                                function toggleDetails(button) {
-                                    var detailsDiv = button.nextElementSibling;
                             
-                                    if (detailsDiv.style.display === "none") {
-                                        detailsDiv.style.display = "block";
-                                        button.textContent = "Hide Details";
-                                        initMap();
-                                    } else {
-                                        detailsDiv.style.display = "none";
-                                        button.textContent = "View Details";
-                                    }
-                                }
-                            </script>
                            
-                                <style>
-                                    .alert {
+                                
+
+                                
+
+                                <div class="col-12">
+                                    <div class="form-group mt-3">
+                                        <aside class="single_sidebar_widget search_widget">
+                                            <form action="#">
+                                                <input type="file" id="file-input" style="display: none;" onchange="showSelectedFile(event)">
+                                                
+                                                <p id="selected-file"></p>
+                                                <script>
+                                                    function selectFile() {
+                                                        var fileInput = document.getElementById("file-input");
+                                                        fileInput.click();
+                                                    }
+                                            
+                                                    function showSelectedFile(event) {
+                                                        var fileInput = event.target;
+                                                        var selectedFile = fileInput.files[0];
+                                                        var selectedFileName = selectedFile.name;
+                                                        
+                                                        var selectedFileElement = document.getElementById("selected-file");
+                                                        selectedFileElement.textContent = "file uploaded: " + selectedFileName;
+                                                    }
+                                                </script>
+                                                <div id="attach-message"></div>
+                                            </form>
+                                        </aside>
+                                        <div class="form-group mt-3">
+                                            <button class="button button-contactForm btn_1 boxed-btn left-btn" onclick="redirectToPage()">
+                                                <i class="fas fa-arrow-left"></i> Back
+                                            </button>
+                                            <div class="right-buttons">
+                                            <button type="submit" class="button button-contactForm boxed-btn" style="margin-right: 20px;" onclick="redirectPage()"> <i class="fas fa-pencil-alt"></i> Edit profile</button>
+                                            
+                                            <button type="submit" class="button button-contactForm boxed-btn"  onclick="displayNotification();">  <i class="fas fa-save"></i> Save changes</button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                    <style>.left-btn {
+                                        float: left;
+                                    }
+                                    
+                                    .right-buttons {
+                                        float: right;
+                                        margin-left: 20px;
+                                    }
+                                    </style>
+                                    <script>
+                                        function redirectToPage() {
+                                            // Replace 'path/to/destination.html' with the path to the HTML file you want to redirect to
+                                            window.location.href = 'index-Org.html';
+                                        }
+                                        </script>
+                                    <script>function redirectPage() {
+                                        
+                                        var inputs = document.getElementsByTagName("input");
+                                        for (var i = 0; i < inputs.length; i++) {
+                                            inputs[i].removeAttribute("readonly");
+                                        }
+                                    
+                                    }
+
+                                    
+                                    </script>
+                                    <style> .alert {
                                         display: none;
                                         padding: 20px;
                                         background-color: #09cc7f;
@@ -420,232 +377,33 @@
                                         color: black;
                                     }
                                 </style>
-                          
-                          <nav class="blog-pagination justify-content-center d-flex">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a href="#" class="page-link" aria-label="Previous">
-                                            <i class="ti-angle-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="#" class="page-link">1</a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a href="#" class="page-link">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="#" class="page-link" aria-label="Next">
-                                            <i class="ti-angle-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="blog_right_sidebar">
-                            <aside class="single_sidebar_widget search_widget">
-                                <form action="#">
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder='Search Keyword'
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Search Keyword'">
-                                            <div class="input-group-append">
-                                                <button class="btns" type="button"><i class="ti-search"></i></button>
-                                            </div>
+                          </style>
+                                    
+                                        
+                                        <script>
+
+                                            
+
+                                            function submitForm(event) {
+                                                event.preventDefault(); // Prevent the default form submission behavior
+                                                
+                                                setTimeout(function() {
+                                                    location.reload(); // Refresh the page
+                                                }, 500);
+                                            }
+                                            </script>
+
+
+                                            
+                                                            
+
+
+                                        </form>
                                         </div>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
-                                </form>
-                               
-                                
-                               
-                                 
-                                <!-- <script>
-                                    function redirectOnChange(select) {
-                                      var selectedValue = select.value;
-                                      var articles = document.getElementsByClassName("blog_item");
-                                      var cardiacSurgery = document.getElementById("Cardiac Surgery");
-                                  
-                                      if (selectedValue === "Cardiothoracic Surgeon") {
-                                        for (var i = 1; i < articles.length; i++) {
-                                          if (articles[i].id === "Cardiac Surgery") {
-                                            articles[i].style.display = "block";
-                                          } else {
-                                            articles[i].style.display = "none";
-                                          }
-                                        }
-                                      }
-                                      if(selectedValue === "Orthopedic Surgeon") {
-                                        for (var i = 1; i < articles.length; i++) {
-                                         if (articles[i].id === "Orthopedic Trauma") {
-                                           articles[i].style.display = "block";
-                                        } else {
-                                          articles[i].style.display = "none";
-                                        }
-                                         
-                                       
-                                      }
-                                      
-                                    } else {
-                                      for (var i = 1; i < articles.length; i++) {
-                                          articles[i].style.display = "block";
-                                       }
-                                    }
-                                    if (orthopedicSurgery) {
-                                       orthopedicSurgery.style.display = "block";
-                                    }
-                                }
-                                  </script>-->
-                                   <!--<script>
-                                    function redirectOnChange(select) {
-                                      var selectedValue = select.value;
-                                      var articless = document.getElementsByClassName("blog_item");
-                                      var orthopedicSurgery = document.getElementById("Orthopedic Trauma");
-                                  
-                                      if (selectedValue === "Orthopedic Surgeon") {
-                                        for (var i = 1; i < articless.length; i++) {
-                                         if (articless[i].id === "Orthopedic Trauma") {
-                                           articless[i].style.display = "block";
-                                        } else {
-                                          articless[i].style.display = "none";
-                                        }
-                                       }
-                                    } else {
-                                      for (var i = 1; i < articles.length; i++) {
-                                          articles[i].style.display = "block";
-                                       }
-                                    }
-                                    if (orthopedicSurgery) {
-                                       orthopedicSurgery.style.display = "block";
-                                    }
-
-                                 }
-                                </script>-->
-                           <!-- <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_1.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">From life was you fish...</h3>
-                                        </a>
-                                        <p>January 12, 2019</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_2.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
-                                        </a>
-                                        <p>02 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_3.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
-                                        </a>
-                                        <p>03 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_4.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
-                                        </a>
-                                        <p>01 Hours ago</p>
-                                    </div>
-                                </div>
-                            </aside>
-                            <aside class="single_sidebar_widget tag_cloud_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">project</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">love</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">technology</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">restaurant</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">life style</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">illustration</a>
-                                    </li>
-                                </ul>
-                            </aside>
-
-                            <aside class="single_sidebar_widget instagram_feeds">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Instagram Feeds</h4>
-                                <ul class="instagram_row flex-wrap">
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </aside>
-                            <aside class="single_sidebar_widget newsletter_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Newsletter</h4>
-                                <form action="#">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Subscribe</button>
-                                </form>
-                            </aside>
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
-        </section> -->
-        <!-- Blog Area End -->
+        </section>
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
@@ -730,7 +488,7 @@
                             <div class="col-xl-10 col-lg-9 ">
                                 <div class="footer-copy-right">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
- <!--  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>
