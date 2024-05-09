@@ -375,9 +375,14 @@
             if (userType === 'Admin' && username === 'username1' && enteredPassword === 'password1') {
                 // Redirect to the Admin Dashboard page
                 window.location.href = 'AdminDashBoard.html';
-            } else if ((userType === 'Organization Representative' || userType === 'Donor') && username === email && enteredPassword === password) {
+            } 
+            else if ((userType === 'Donor' ) && username === email && enteredPassword === password) {
                 // Redirect to the index.html page for Organization Representative or Donor
                 window.location.href = 'index.html';
+            }
+            else if ((userType === 'Organization Representative' ) && username === email && enteredPassword === password) {
+                // Redirect to the index.html page for Organization Representative or Donor
+                window.location.href = 'index-Org.html';
             } else {
                 // If credentials are incorrect, show an alert
                 alert('Incorrect username or password. Please try again.');

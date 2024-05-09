@@ -160,10 +160,37 @@
             </div>
         </div>
 
-
-
+        
        
-            
+        <script>
+            function filterArticles() {
+                var area = document.getElementById("area").value;
+                var governorate = document.getElementById("governorate").value;
+                var organizationtype = document.getElementById("organization-type").value;
+        
+                var articles = document.getElementsByClassName("blog_item");
+        
+                for (var i = 0; i < articles.length; i++) {
+                    var article = articles[i];
+                    var additionalDetails = article.getElementsByClassName("additional-details")[0];
+        
+                    var area2 = additionalDetails.getElementsByTagName("p")[0].innerText; // corrected variable name
+                    var governorate2 = additionalDetails.getElementsByTagName("p")[1].innerText;
+                    var organizationtype2 = additionalDetails.getElementsByTagName("p")[2].innerText;
+        
+                    var showArticle =
+                        (area === "All" || area2.includes(area)) &&
+                        (governorate === "All" || governorate2.includes(governorate)) &&
+                        (organizationtype === "All" || organizationtype2.includes(organizationtype));
+        
+                    if (showArticle) {
+                        article.style.display = "block";
+                    } else {
+                        article.style.display = "none";
+                    }
+                }
+            }
+        </script>
           
         <!-- Hero End -->
         <!--? Blog Area Start-->
@@ -177,6 +204,7 @@
 
                         </head>
                         <body>
+
                           <!--  <article class="blog_item" id="article1">
                                 <div class="blog_item_img">
                                     <a href="#" class="blog_item_date">
@@ -297,41 +325,54 @@
                              <a class="d-inline-block" href="#">
                                 <h2 class="blog-head" style="color: #2d2d2d;">Egyptian food bank</h2>
                              </a>
-                            <p>The Egyptian Food Bank (EFB) is a prominent non-profit organization dedicated to alleviating hunger and food insecurity across Egypt. Founded in 2006, the EFB operates on the principle of "collecting surplus food from individuals, companies, and farms, and redistributing it to those in need." Through its extensive network of volunteers, donors, and partnerships with local businesses, the EFB reaches out to marginalized communities, providing them with essential food supplies and meals. Beyond immediate food assistance, the organization also emphasizes sustainable solutions, such as education and vocational training programs, to empower individuals and families to break the cycle of poverty. With a mission to combat hunger and promote social justice, the Egyptian Food Bank plays a crucial role in addressing food insecurity and improving the well-being of vulnerable populations throughout Egypt.</p>
+                            <p>The Egyptian Food Bank (EFB) is a prominent non-profit organization dedicated to alleviating hunger and food insecurity across Egypt. Founded in 2006, the EFB operates on the principle of "collecting surplus food from individuals, companies, and farms, and redistributing it to those in need." </p>
                         <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+                        <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
                         <div class="additional-details" style="display: none;">
+                            <p>area: New cairo </p>
+                            <p>governorate: Cairo</p>
+                            <p>organization type:Food Banks</p>
+                        </div>
+                        <div class="additional-details" style="display: none;"><br>
+
             <!-- Additional details content -->
                         </div>
                       </div>
-                        </article>
+                        </article><br>
                        
                             <!-- Article 2 -->
                             <article class="blog_item" id="article2">
-                                <div class="blog_item_img">
+                                <div class="blog_item_img"><br>
                                     <a href="#" class="blog_item_date">
-                                        <h3>4</h3>
-                                        <p>May</p>
+                                        <h3>17</h3>
+                                        <p>Oct</p>
                                     </a>
                                 </div>
                                 <div class="blog_details">
                                     <div class="feature-img">
                                         <img src= "assets\img\blog\myf.png" alt="" width="90px" height="80px">
                                      </div>
-                                    <a class="d-inline-block" href="#">
+                                    <a class="d-inline-block" href="Org2.html">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Magdy yacoub foundation</h2>
                                     </a>
-                                    <p>The Magdi Yacoub Heart Foundation (MYF) was founded in 2008 by renowned Egyptian cardiac surgeon Sir Magdi Yacoub. The foundation's headquarters are located in Aswan, Egypt, with a focus on providing high-quality cardiovascular healthcare services, education, and research. MYF's primary mission is to improve cardiac care in Egypt and the wider region by offering advanced medical treatments, raising awareness about cardiovascular diseases, and conducting research to advance medical knowledge in the field. One of MYF's notable achievements is the establishment of the Aswan Heart Centre (AHC), a state-of-the-art medical facility dedicated to cardiac care. The AHC provides comprehensive services, including diagnosis, treatment, and rehabilitation, to patients with heart conditions, regardless of their ability to pay. Additionally, MYF is committed to training the next generation of healthcare professionals through its educational programs. It offers training opportunities for physicians, nurses, and other healthcare professionals to enhance their skills and expertise in cardiac care. Furthermore, MYF has played a significant role in changing the landscape of healthcare in Egypt by making advanced cardiac treatments accessible to a wider population. Through its initiatives, MYF has helped thousands of Egyptians receive life-saving treatments and improve their quality of life. Looking ahead, MYF continues to expand its efforts to reach more underserved communities in Egypt and the region. The foundation aims to further enhance its services, promote preventive measures against cardiovascular diseases, and contribute to medical research to find innovative solutions for heart-related conditions.</p>
+                                    <p>The Magdi Yacoub Heart Foundation (MYF) was founded in 2008 by renowned Egyptian cardiac surgeon Sir Magdi Yacoub. The foundation's headquarters are located in Aswan, Egypt, with a focus on providing high-quality cardiovascular healthcare services, education, and research. </p>
                                     <button class="view-details-btn" onclick="toggleDetails2(this)">View Details</button>
+                                    <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>area: Zamalek </p>
+                                        <p>governorate: Aswan</p>
+                                        <p>organization type: Healthcare organizations</p>
+                                    </div>
                                     <div class="additional-details" style="display: none;">
                                         <!-- Additional details content -->
                                     </div>
                                 </div>
-                            </article>
+                            </article><br>
                         
                             <!-- Article 3 -->
                           
                             <article class="blog_item" id="article3">
-                                <div class="blog_item_img">
+                                <div class="blog_item_img"><br>
                                     <a href="#" class="blog_item_date">
                                         <h3>21</h3>
                                         <p>Jul</p>
@@ -341,20 +382,26 @@
                                     <div class="feature-img">
                                         <img src= "assets\img\blog\download.png" alt="" width="110px" height="100px">
                                      </div>
-                                    <a class="d-inline-block" href="#">
+                                    <a class="d-inline-block" href="Org3.html">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Children's Cancer Hospital Egypt</h2>
                                     </a>
-                                    <p>The Children's Cancer Hospital Egypt 57357 (CCHE) is a renowned pediatric cancer hospital located in Cairo, Egypt. Founded in 2007, it is one of the largest specialized cancer hospitals for children in the world. CCHE is dedicated to providing comprehensive and holistic care to children battling cancer, regardless of their socioeconomic background. The hospital offers a wide range of services, including diagnosis, treatment, supportive care, and rehabilitation, all tailored to meet the unique needs of pediatric cancer patients. Its state-of-the-art facilities and multidisciplinary team of healthcare professionals work together to deliver the highest standard of care while prioritizing the well-being and comfort of the young patients and their families. In addition to its focus on patient care, CCHE is committed to advancing research in pediatric oncology and improving outcomes for children with cancer. It actively engages in clinical research, collaborates with international institutions, and participates in academic and scientific exchanges to stay at the forefront of cancer treatment and research. CCHE also plays a crucial role in raising awareness about childhood cancer and advocating for better access to care and resources for affected children and their families. Through its educational and outreach initiatives, the hospital strives to dispel myths, reduce stigma, and promote early detection and intervention for childhood cancer.</p>
+                                    <p>The Children's Cancer Hospital Egypt 57357 (CCHE) is a renowned pediatric cancer hospital located in Cairo, Egypt. Founded in 2007, it is one of the largest specialized cancer hospitals for children in the world. CCHE is dedicated to providing comprehensive and holistic care to children battling cancer, regardless of their socioeconomic background. </p>
                                     <button class="view-details-btn" onclick="toggleDetails3(this)">View Details</button>
+                                    <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>area: New Cairo </p>
+                                        <p>governorate: Cairo</p>
+                                        <p>organization type: Healthcare organizations</p>
+                                    </div>
                                     <div class="additional-details" style="display: none;">
                                        
                                     </div>
                                    
                                 </div>
-                            </article>
+                            </article><br>
 
                             <article class="blog_item" id="article4">
-                                <div class="blog_item_img">
+                                <div class="blog_item_img"><br>
                                     <a href="#" class="blog_item_date">
                                         <h3>19</h3>
                                         <p>Sep</p>
@@ -364,11 +411,17 @@
                                     <div class="feature-img">
                                         <img src= "assets\img\blog\Resala-logo.png "alt="" width="70px" height="60px">
                                      </div>
-                                    <a class="d-inline-block" href="#">
+                                    <a class="d-inline-block" href="Org4.html">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Resala Charity Organization</h2>
                                     </a>
-                                    <p>Resala Charity Organization is one of Egypt's largest and most prominent non-profit organizations. Founded in 1999, Resala is dedicated to providing various social services and assistance to underprivileged communities across Egypt. The organization operates through a network of volunteers and branches across the country, offering a wide range of programs and initiatives focused on education, healthcare, and social welfare. Resala's activities include providing food aid, clothing, and shelter to those in need, as well as organizing educational programs, vocational training, and healthcare services for marginalized individuals and families.</p>
+                                    <p>Resala Charity Organization is one of Egypt's largest and most prominent non-profit organizations. Founded in 1999, Resala is dedicated to providing various social services and assistance to underprivileged communities across Egypt. The organization operates through a network of volunteers and branches across the country, offering a wide range of programs and initiatives focused on education, healthcare, and social welfare. </p>
                                     <button class="view-details-btn" onclick="toggleDetails4(this)">View Details</button>
+                                    <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>area: Heliopolis </p>
+                                        <p>governorate: Cairo</p>
+                                        <p>organization type: non-profit organization</p>
+                                    </div>
                                     <div class="additional-details" style="display: none;">
                                        
                                     </div>
@@ -432,8 +485,22 @@
 
     }
 </script>
+<script>
+    function toggleDetails5(button) {
+        var detailsDiv = button.nextElementSibling;
 
-<nav class="blog-pagination justify-content-center d-flex">
+        if (detailsDiv.style.display === "none") {
+            detailsDiv.style.display = "block";
+            button.textContent = "Hide Quick View";
+            initMap();
+        } else {
+            detailsDiv.style.display = "none";
+            button.textContent = "Quick View";   
+        } 
+    }                  
+</script>
+<nav class="b
+log-pagination justify-content-center d-flex">
     <ul class="pagination">
         <li class="page-item">
             <a href="#" class="page-link" aria-label="Previous">
@@ -494,29 +561,38 @@
 }
       </script>-->
 
-    <aside class="single_sidebar_widget post_category_widget">
-        <li>
-         
-                <i class="fas fa-filter"></i> Filter the Organizations by:
-            
-            <ul class="submenu2">
-                <li><br>
-                    <a href="Area.html" class="green-link">Area</a>
-                    
-                </li><br>
-                <li><a href="Governorate.html" class="green-link">Governorate</a></li><br>
-                <li><a href="Org-Type.html" class="green-link">Organization Type</a></li>
-            </ul>
-        </li>
-        <style>
-           
-            .green-link {
-                                color: #09cc7f;
-                            }
-                            .green-link:hover {
-    color: black;
-}
-        </style>
+      <aside class="single_sidebar_widget post_category_widget">
+        <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
+        <ul class="list cat-list">
+            <li>
+                <label for="organization-type">organization type</label>
+                <select id="organization-type" name="organization-type" onchange="filterArticles()">
+                    <option value="All">All</option>
+                    <option value="Healthcare organizations">Healthcare organizations</option>
+                    <option value="non-profit organization">non-profit organization</option>
+                    <option value="Food banks">Food banks</option>
+                </select>
+            </li>
+            <li>
+                <label for="governorate">governorate</label>
+                <select id="governorate" name="governorate" onchange="filterArticles()">
+                    <option value="All">All</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alexandria">Alexandria</option>
+                    <option value="Aswan"> Aswan</option>
+                </select>
+            </li>
+            <li>
+                <label for="area">area</label>
+                <select id="area" name="area" onchange="filterArticles()">
+                    <option value="All">All</option>
+                    <option value="Heliopolis">Heliopolis</option>
+                    <option value="Zamalek">Zamalek</option>
+                    <option value="New Cairo">New Cairo</option>
+                </select>
+            </li>
+        </ul>
+    </aside>
                 
 
 

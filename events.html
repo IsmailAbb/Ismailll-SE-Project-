@@ -224,163 +224,187 @@
 
 
 
-        <section class="blog_area section-padding">
-            <div class="container">
-                <div class="row">
+<section class="blog_area section-padding">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-lg-8 mb-5 mb-lg-0">
+             
+                <div class="blog_left_sidebar">
+
+                   
+
+
+
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+                        <style>
+                            .map-container {
+                                height: 200px;
+                                width: 300px;
+                            }
+                        </style>
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                    </head>
+                    <body>
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <a href="#" class="blog_item_date">
+                                    <h3>4</h3>
+                                    <p>Apr</p>
+                                </a>
+                            </div>
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="#">
+                                    <h2 class="blog-head" style="color: #2d2d2d;">Cardiac Surgery</h2>
+                                </a>
+                                <p>Patient requires open-heart surgery to repair a damaged valve</p>
+                                <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+                                <div class="additional-details" style="display: none;">
+                                    <p>Patient Name: John Doe</p>
+                                    <p>Patient Age: 67 years</p>
+                                    <p>Gender: Male</p>
+                                    <p>Weight: 83kg</p>
+                                    <p>Medical Speciality: Cardiothoracic Surgeon</p>
+                                    <p>Organization: Hospital A</p>
+                                    <p>Address: Street 258, Maadi, Cairo</p>
+                                    <p>Location:</p>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map1" style="height: 200px; width: 250px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
+                            </div>
+                        </article>
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <a href="#" class="blog_item_date">
+                                    <h3>8</h3>
+                                    <p>Jun</p>
+                                </a>
+                            </div>
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="#">
+                                    <h2 class="blog-head" style="color: #2d2d2d;">Orthopedic Trauma</h2>
+                                </a>
+                                <p>Patient has sustained multiple fractures in an accident and needs surgical intervention</p>
+                                <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+                                <div class="additional-details" style="display: none;">
+                                    <p>Patient Name: Sandy Wilde</p>
+                                    <p>Patient Age: 21 years</p>
+                                    <p>Gender: Female</p>
+                                    <p>Weight: 61kg</p>
+                                    <p>Medical Speciality: Orthopedic Surgeon</p>
+                                    <p>Organization: Hospital B</p>
+                                    <p>Address: Street 106, Zamalek, Cairo</p>
+                                    <p>Location:</p>
+                                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map2" style="height: 200px; width: 250px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
+                            </div>
+                        </article>
                     
-                    <div class="col-lg-8 mb-5 mb-lg-0">
-                     
-                        <div class="blog_left_sidebar">
-
-                           
-
-
-
-                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-                                <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-                                <style>
-                                    .map-container {
-                                        height: 200px;
-                                        width: 300px;
-                                    }
-                                </style>
-                            </head>
-                            <body>
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>4</h3>
-                                            <p>Apr</p>
-                                        </a>
-                                    </div>
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="#">
-                                            <h2 class="blog-head" style="color: #2d2d2d;">Cardiac Surgery</h2>
-                                        </a>
-                                        <p>Patient requires open-heart surgery to repair a damaged valve</p>
-                                        <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                        <div class="additional-details" style="display: none;">
-                                            <p>Patient Name: John Doe</p>
-                                            <p>Patient Age: 67 years</p>
-                                            <p>Gender: Male</p>
-                                            <p>Weight: 83kg</p>
-                                            <p>Medical Speciality: Cardiothoracic Surgeon</p>
-                                            <p>Organization: Hospital A</p>
-                                            <p>Address: Street 258, Maadi, Cairo</p>
-                                            <p>Location:</p>
-                                            <div id="map1" class="map-container"></div>
+                        <article class="blog_item">
+                            <div class="blog_item_img">
+                                <a href="#" class="blog_item_date">
+                                    <h3>10</h3>
+                                    <p>Aug</p>
+                                </a>
+                            </div>
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="#">
+                                    <h2 class="blog-head" style="color: #2d2d2d;">Neurological Disorder</h2>
+                                </a>
+                                <p>Patient is experiencing symptoms of a neurological disorder and requires diagnostic evaluation</p>
+                                <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+                                <div class="additional-details" style="display: none;">
+                                    <p>Patient Name: Erik Peter</p>
+                                    <p>Patient Age: 35 years</p>
+                                    <p>Gender: Male</p>
+                                    <p>Weight: 75kg</p>
+                                    <p>Medical Speciality: Neurosurgeon</p>
+                                    <p>Organization: Hospital C</p>
+                                    <p>Address: Street 106, New Cairo, Cairo</p>
+                                    <p>Location:</p>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map3" style="height: 200px; width: 250px;"></div>
+                                            </div>
                                         </div>
-                                        <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
                                     </div>
-                                </article>
-                            
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>8</h3>
-                                            <p>Jun</p>
-                                        </a>
-                                    </div>
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="#">
-                                            <h2 class="blog-head" style="color: #2d2d2d;">Orthopedic Trauma</h2>
-                                        </a>
-                                        <p>Patient has sustained multiple fractures in an accident and needs surgical intervention</p>
-                                        <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                        <div class="additional-details" style="display: none;">
-                                            <p>Patient Name: Sandy Wilde</p>
-                                            <p>Patient Age: 21 years</p>
-                                            <p>Gender: Female</p>
-                                            <p>Weight: 61kg</p>
-                                            <p>Medical Speciality: Orthopedic Surgeon</p>
-                                            <p>Organization: Hospital B</p>
-                                            <p>Address: Street 106, Zamalek, Cairo</p>
-                                            <p>Location:</p>
-                                            <div id="map2" class="map-container"></div>
-                                        </div>
-                                        <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
-                                    </div>
-                                </article>
-                            
-                                <article class="blog_item">
-                                    <div class="blog_item_img">
-                                        <a href="#" class="blog_item_date">
-                                            <h3>10</h3>
-                                            <p>Aug</p>
-                                        </a>
-                                    </div>
-                                    <div class="blog_details">
-                                        <a class="d-inline-block" href="#">
-                                            <h2 class="blog-head" style="color: #2d2d2d;">Neurological Disorder</h2>
-                                        </a>
-                                        <p>Patient is experiencing symptoms of a neurological disorder and requires diagnostic evaluation</p>
-                                        <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                                        <div class="additional-details" style="display: none;">
-                                            <p>Patient Name: Erik Peter</p>
-                                            <p>Patient Age: 35 years</p>
-                                            <p>Gender: Male</p>
-                                            <p>Weight: 75kg</p>
-                                            <p>Medical Speciality: Neurosurgeon</p>
-                                            <p>Organization: Hospital C</p>
-                                            <p>Address: Street 106, New Cairo, Cairo</p>
-                                            <p>Location:</p>
-                                            <div id="map3" class="map-container"></div>
-                                        </div>
-                                        <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
-                                    </div>
-                                </article>
+                                </div>
+                                <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
+                            </div>
+                        </article>
 
 
 
-<script>
-    var mapInitialized = false;
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                        <script>
+                        // Initialize Google Maps
+                        function initMap() {
+            // Specify your map options
+            var mapOptions = {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            };
 
-    function initMap() {
-        if (!mapInitialized) {
-            var map1 = L.map('map1').setView([29.9793,31.2539],15);
-            var map2 = L.map('map2').setView([30.0559,31.2226],15);
-            var map3 = L.map('map3').setView([30.0251,31.4751],15);
+            // Create a new map instance for each map container
+            var map1 = new google.maps.Map(document.getElementById('map1'), mapOptions);
+            var map2 = new google.maps.Map(document.getElementById('map2'), mapOptions);
+            var map3 = new google.maps.Map(document.getElementById('map3'), mapOptions);
 
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-                maxZoom: 50,
-            }).addTo(map1);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-                maxZoom: 50,
-            }).addTo(map2);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-                maxZoom: 50,
-            }).addTo(map3);
-              
+            // Initialize marker variables
+            var marker1, marker2, marker3;
 
-            var marker1 = L.marker([29.9793,31.2539], 15).addTo(map1);
-            var marker2 = L.marker([30.0559,31.2226], 15).addTo(map2);
-            var marker3 = L.marker([30.0251,31.4751], 15).addTo(map3);
+            // Add event listeners for map clicks
+            google.maps.event.addListener(map1, 'click', function(event) {
+                handleMapClick(event, map1, marker1);
+            });
 
-            marker1.on('dragend', function(event) {
-                    var position = marker.getLatLng();
-                    document.getElementById('latitude').value = position.lat;
-                    document.getElementById('longitude').value = position.lng;
-                });
-                marker2.on('dragend', function(event) {
-                    var position = marker.getLatLng();
-                    document.getElementById('latitude').value = position.lat;
-                    document.getElementById('longitude').value = position.lng;
-                });
-                marker3.on('dragend', function(event) {
-                    var position = marker.getLatLng();
-                    document.getElementById('latitude').value = position.lat;
-                    document.getElementById('longitude').value = position.lng;
-                });
+            google.maps.event.addListener(map2, 'click', function(event) {
+                handleMapClick(event, map2, marker2);
+            });
 
-            mapInitialized = true;
+            google.maps.event.addListener(map3, 'click', function(event) {
+                handleMapClick(event, map3, marker3);
+            });
         }
 
-    }
-    
-</script>
+        // Handle map click event
+        function handleMapClick(event, map, marker) {
+            // Remove existing marker if any
+            if (marker) {
+                marker.setMap(null);
+            }
+
+            // Get latitude and longitude of clicked location
+            var latitude = event.latLng.lat();
+            var longitude = event.latLng.lng();
+
+            // Create a new marker at the clicked location
+            marker = new google.maps.Marker({
+                position: { lat: latitude, lng: longitude },
+                map: map
+            });
+
+            // Center the map on the clicked location
+            map.setCenter({ lat: latitude, lng: longitude });
+        }
+    </script>
 
 
 

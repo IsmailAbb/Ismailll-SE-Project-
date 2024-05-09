@@ -22,6 +22,25 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+      
+    <!-- Include Bootstrap Select CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+  
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+    <!-- Include Bootstrap Datepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  
+    <!-- Include Bootstrap Select JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+    
+   
 </head>
 <body>
     <!--? Preloader Start -->
@@ -145,60 +164,307 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xl-12">
-                            <div class="hero-cap hero-cap2 pt-70 text-center">
-                                <h2>Subject and Class Selection </h2>
+                            <div class="hero-cap hero-cap2 pt-70 text-center" id="BLA">
+                                <h2>Subject and Class Selection Form</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <h1>Selection Form</h1>
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+
+
+                           
+                                       <div class="alert" id="notification" style="display: none;">
+                                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                                            <strong>Form Submitted!</strong> 
+                                             Thank you for your pro-bono cases. 
+
+                                        </div>
+                                
+
+
+          <article class="blog_item">
+            <div class="blog_item_img">
+              <div class="form-popup" id="myForm">
+                <form onsubmit="event.preventDefault();  submitForm() ">
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="fname">First Name</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="lname">Last Name</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="prof">Proficiency</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="text" id="prof" name="proficiency" placeholder="Your proficiency.." required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="num-cases">No. of lessons you can teach</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="number" id="num-cases" name="num-lessons" min="0" max="1000" step="1">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="num-students">No. of students you can give private lessons to</label>
+                    </div>
+                    <div class="col-75">
+                      <input type="number" id="num-students" name="num-students" min="0" max="1000" step="1">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-25">
+                      <label for="subjects">Select the subjects you can teach</label>
+                    </div>
+                    <div class="col-75">
+                      <div class="row">
+                        <div class="col-100">
+                          <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="label-text">Math</span>
+                          </label>
+                          <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="label-text">Science</span>
+                          </label>
+                          <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <span class="label-text">English</span>
+                          </label>
+                          <label class="container">
+                            <input type="checkbox" onchange="showOtherBar(this)">
+                            <span class="checkmark"></span>
+                            <span class="label-text">Other</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div id="otherBar" style="display: none;">
+                        <label for="otherSubject">Other Subject</label>
+                        <input type="text" id="otherSubject" name="otherSubject" placeholder="Specify other subject">
+                      </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit" >
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </article>
           
-    <form>
-        <label for="subject">Select the subjects you can teach:</label><br>
-        <input type="checkbox" id="subject1" name="subject1" value="Math">
-        <label for="subject1">Math</label><br>
-        <input type="checkbox" id="subject2" name="subject2" value="Science">
-        <label for="subject2">Science</label><br>
-        <input type="checkbox" id="subject3" name="subject3" value="English">
-        <label for="subject3">English</label><br>
-        <input type="checkbox" id="subject4" name="subject4" value="Other">
-        <label for="subject4">Other</label><br>
-        <!-- Add more subjects as needed -->
-        
-        <br>
-        
-        <div id="other-subject-input" style="display: none;">
-            <label for="other-subject">Specify the subject you can teach:</label>
-            <input type="text" id="other-subject" name="other-subject"><br>
-        </div>
-        
-        <br>
-        
-        <label for="num-classes">Number of pro-bono classes you can teach:</label>
-        <input type="number" id="num-classes" name="num-classes" min="0" max="100" step="1"><br>
-        
-        <label for="num-students">Number of pro-bono students you can give private tutoring to:</label>
-        <input type="number" id="num-students" name="num-students" min="0" max="100" step="1"><br>
-        
-        <br>
-        
-        <input type="submit" value="Submit">
-    </form>
-    
-    <script>
-        var otherCheckbox = document.getElementById("subject4");
-        var otherSubjectInput = document.getElementById("other-subject-input");
-        
-        otherCheckbox.addEventListener("change", function() {
-            if (otherCheckbox.checked) {
-                otherSubjectInput.style.display = "block";
-            } else {
-                otherSubjectInput.style.display = "none";
+          <script>
+  
+          
+              function submitForm() {
+            // Show alert
+            displayNotification();
+          
+            // Delay redirect by 5 seconds
+            setTimeout(function() {
+              // Redirect to another page
+              window.location.href = "index.html";
+            }, 5000); // 5000 milliseconds = 5 seconds
+        }
+          
+          function displayNotification() {
+            var notification = document.getElementById("notification");
+            notification.style.display = "block"; // Show the alert
+            var BLA = document.getElementById("BLA");
+            BLA.scrollIntoView({ behavior: 'smooth' });
+          }
+          
+         
+          
+          
+          function showOtherBar(checkbox) {
+            var otherBar = document.getElementById("otherBar");
+            otherBar.style.display = checkbox.checked ? "block" : "none";
+          }
+          </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+          <style>
+            /* Style inputs, select elements and textareas */
+            input[type="text"],
+            input[type="date"],
+            input[type="time"],
+            input[type="number"],
+            select,
+            textarea {
+              width: 100%;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 4px;
+              box-sizing: border-box;
+              resize: vertical;
             }
-        });
-    </script>
+            
+            /* Style the label to display next to the inputs */
+            label {
+              padding: 12px 12px 12px 0;
+              display: inline-block;
+            }
+            
+            /* Style the time label */
+            .time-label {
+              margin-left: 10px;
+            }
+            
+            /* Style the submit button */
+            input[type="submit"] {
+              background-color: #09cc7f;
+              color: white;
+              padding: 12px 20px;
+              border: none;
+              border-radius: 4px;
+              cursor: pointer;
+              float: right;
+            }
+            
+            /* Floating column for labels: 25% width */
+            .col-25 {
+              float: left;
+              width: 25%;
+              margin-top: 6px;
+            }
+            
+            /* Floating column for inputs: 75% width */
+            .col-75 {
+              float: left;
+              width: 75%;
+              margin-top: 6px;
+            }
+            
+            /* Clear floats after the columns */
+            .row:after {
+              content: "";
+              display: table;
+              clear: both;
+            }
+            
+            /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+            @media screen and (max-width: 600px) {
+              .col-25,
+              .col-75,
+              input[type="submit"] {
+                width: 100%;
+                margin-top: 0;
+              }
+            }
+            
+            /* Increase the height of the input fields and textarea */
+            input[type="text"],
+            input[type="date"],
+            input[type="time"],
+            input[type="number"],
+            textarea {
+              height: 40px;
+            }
+            
+            textarea {
+              height: 200px;
+            }
+    
+            form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+ 
+   
+
+    </style>
+
+
+<style>
+
+.alert {
+    display: none;
+    padding: 20px;
+    background-color: #09cc7f;
+    color: white;
+    
+
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+</style>
+
+
+<style>
+    input[type="checkbox"] {
+      transform: scale(1.5); /* Adjust the value to make the checkbox bigger */
+      -webkit-transform: scale(1.5);
+      -moz-transform: scale(1.5);
+      -ms-transform: scale(1.5);
+      -o-transform: scale(1.5);
+     
+    }
+</style>
+<style>
+ 
+     
+     .label-text {
+       margin-left: 10px; /* Add desired space between checkbox and label text */
+       
+     }
+
+     
+   </style>
 
 
 

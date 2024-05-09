@@ -148,7 +148,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 pt-70 text-center">
-                                <h2>Fullfilled Donation posts</h2>
+                                <h2>Requested posts</h2>
                             </div>
                         </div>
                     </div>
@@ -164,23 +164,21 @@
                         <div class="blog_left_sidebar">
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets\img\blog\Care_Sure_Bed_Room.jpg"alt="">
+                                    <img class="card-img rounded-0" src="assets\img\blog\Prosthetic-Leg.png"alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>31</h3>
                                         <p>oct</p>
                                     </a>
                                 </div>
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Hospital bed </h2>
+                                    <a class="d-inline-block" href="Prosthetic.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Prosthetic Leg </h2>
                                     </a>
-                                    <p>Donations play a pivotal role in sustaining the vital operations of hospitals. 
-                                        Hospital beds are the foundation of patient care, providing comfort, support,
-                                         and a crucial environment for healing.
+                                    <p>A prosthetic leg is a custom-made device designed to replace a missing limb, providing mobility and support for individuals who have undergone amputation due to injury, disease, or congenital conditions. 
                                     </p>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Medical</a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 0 Comments</a></li>
                                     </ul>
                                     <button class="delete-btn" onclick="deletePost(this)">Delete</button>
                                     <style>
@@ -195,64 +193,44 @@
                                             cursor: pointer;
                                             float:right;
                                         }
+                                        .delete-btn:hover {
+                                                background-color: #0a9e64;
+                                            }
                                     </style>
+                                     <script>
+                                        function deletePost(button) {
+                                            // Show confirmation dialog
+                                            var confirmDelete = confirm("Are you sure you want to delete it?");
+                                            
+                                            // If user confirms deletion, remove the post
+                                            if (confirmDelete) {
+                                                // Get the parent element of the post you want to delete
+                                                var postElement = button.closest('.blog_item');
+                                                
+                                                // Remove the post element from the DOM
+                                                postElement.remove();
+                                            }
+                                        }
+                                    </script>
                                 </div>
 
                             </article>
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets\img\blog\teach.jpg" alt="">
+                                    <img class="card-img rounded-0" src="assets\img\blog\food2.jpg" alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>15</h3>
                                         <p>Jan</p>
                                     </a>
                                 </div>
                                 <div class="blog_details">
-                                    <a class="d-inline-block" href="blog_details2.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Teaching is the one profession that creates all other professions</h2>
+                                    <a class="d-inline-block" href="Egyptian-food.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">In need of volunteers</h2>
                                     </a>
-                                    <p>Education is the cornerstone of progress, unlocking doors to opportunities and empowering individuals to reach their full potential.
+                                    <p>The Egyptian Food Bank, dedicated to combating hunger and food insecurity across Egypt, is urgently seeking volunteers to support its mission
                                      </p>
                                     <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i> School </a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i> 0 Comments</a></li>
-                                    </ul>
-                                    <button class="delete-btn" onclick="deletePost(this)">Delete</button>
-                                    <style>
-                                        /* Define styles for the delete button */
-                                        .delete-btn {
-                                            /* Add your CSS styles here */
-                                            background-color: #09cc7f;
-                                            color: white;
-                                            border: none;
-                                            padding: 5px 10px;
-                                            border-radius: 10px;
-                                            cursor: pointer;
-                                            position: relative;
-                                            float:right;
-                                            
-                                        }
-                                    </style>
-                                </div>
-                            </article>
-
-
-                            <article class="blog_item">
-                                <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets\img\blog\lappp.jpg"alt="">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>19</h3>
-                                        <p>Dec</p>
-                                    </a>
-                                </div>
-                                <div class="blog_details">
-                                    <a class="d-inline-block" href="blog_details3.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Laptop </h2>
-                                    </a>
-                                    <p>Donating laptops to students in universities and schools holds immense importance in facilitating education 
-                                    </p>
-                                    <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i> School</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Food </a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 0 Comments</a></li>
                                     </ul>
                                     <button class="delete-btn" onclick="deletePost(this)">Delete</button>
@@ -268,19 +246,30 @@
                                             cursor: pointer;
                                             float:right;
                                         }
+                                        .delete-btn:hover {
+                                                background-color: #0a9e64;
+                                            }
                                     </style>
                                      <script>
                                         function deletePost(button) {
-                                            // Get the parent element of the post you want to delete
-                                            var postElement = button.closest('.blog_item');
+                                            // Show confirmation dialog
+                                            var confirmDelete = confirm("Are you sure you want to delete it?");
                                             
-                                            // Remove the post element from the DOM
-                                            postElement.remove();
+                                            // If user confirms deletion, remove the post
+                                            if (confirmDelete) {
+                                                // Get the parent element of the post you want to delete
+                                                var postElement = button.closest('.blog_item');
+                                                
+                                                // Remove the post element from the DOM
+                                                postElement.remove();
+                                            }
                                         }
                                     </script>
                                 </div>
-
                             </article>
+
+
+                            
                            
                             <nav class="blog-pagination justify-content-center d-flex">
                                 <ul class="pagination">
