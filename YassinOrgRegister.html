@@ -39,6 +39,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <style type="text/css">
         
+        /*#map {
+            width: 300px; 
+            height: 200px; 
+        }*/
+        
         .wrapper {
             border-radius: 10px;
             background-color: #f5f5f5; /* Choose your desired background color */
@@ -101,7 +106,10 @@
         background-color: grey !important;
         /* Add any other styles you want for the active button */
     }
-    
+    .underline {
+        text-decoration: underline;
+        color: black; /* Change the color to your desired value */
+    }
 
 
 
@@ -238,29 +246,91 @@
                             <!--<div class="login-wrapper" style="background-color: rgba(255, 255, 255, 0.4);">-->
                                 <!-- Header -->
                                 <div class="login-header text-center" style="margin-bottom: 20px;">
-                                    <h2 style="font-size: 35px; color: #07945c; font-weight: bold; margin-top: 10px;">Log In</h2>
-                                    <p style="font-weight: bold; margin-bottom: 10px;">Login as a(n) Admin, Organization Representative or Donor</p>
+                                    <h2 style="font-size: 35px; color: #07945c; font-weight: bold; margin-top: 10px;">Register</h2>
+                                    <p style="font-weight: bold; margin-bottom: 10px;">Register as a organizeation representative now!</p>
                                 </div>
                                 <!-- Login Box -->
                                 <div class="login-box">
                                     <form id="loginForm">
-                                        <div class="input-container">
-                                            <input type="email" id="username" placeholder="Enter your email">
+                                        <div class="input-container" >
+                                            <input type="text" id="firstname" placeholder="First Name" required>
                                         </div>
                                         <div class="input-container">
-                                            <input type="password" id="password" placeholder="Enter your password">
+                                            <input type="text" id="lastname" placeholder="Last Name" required>
                                         </div>
-                                        <button type="submit" class="btn btn-primary btn-block" style="border-radius: 10px;">Log In</button>
+                                        <!--<div class="form-group row">-->
+                                            <!--<label for="donor-gender" class="col-md-3 col-form-label">Gender</label>-->
+                                            <div class="col-md-9">
+                                                <select class="form-control form-control-lg" id="donor-gender" required style="width: 142.5%; border-radius: 5px; border: 1px solid #09cc7f; padding: 5px; margin: 5px; margin-left: -10px; background-color: transparent;">
+                                                    <option value="">Select Gender</option>
+                                                    <option value="male">Male</option>
+                                                    <option value="female">Female</option>
+                                                </select>
+                                            </div>
+                                        <!--</div>-->
+                                        <div class="input-container">
+                                            <input type="number" id="contactnumber" placeholder="Contact Number" required>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="email" id="email" placeholder="E-mail" required>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="password" id="password" placeholder="Choose your password" required>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" id="orgname" placeholder="Organization name" required>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" id="address" placeholder="Organization Address" required>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" id="area" placeholder="Area" required>
+                                        </div>
+                                        <div class="input-container">
+                                            <input type="text" id="governorate" placeholder="Governorate" required>
+                                        </div>
+                                        <!--<div class="form-group row" style="border-radius: 5px; border: 1px solid #09cc7f; padding: 5px; margin: 5px;">-->
+                                            <!--<label for="volunteer-role" class="col-md-3 col-form-label">Volunteer Role</label>-->
+                                            <div class="col-md-9">
+                                                <select class="form-control form-control-lg" id="volunteer-role" required style="width: 142.5%; border-radius: 5px; border: 1px solid #09cc7f; padding: 5px; margin: 5px; margin-left: -10px; background-color: transparent;">
+                                                    <option value="">Select Organization Type</option>
+                                                    <option value="regular-donor">Non-Profit</option>
+                                                    <option value="teacher">Governmetnal</option>
+                                                    <option value="doctor">Corporate</option>
+                                                </select>
+                                            </div>
+                                        <!--</div>-->
+                                        <!-- Google Maps API -->
+                                        <div class="container">
+                                            <div class="row justify-content-start">
+                                                <div class="col-md-6 order-md-2">
+                                                    <div id="map" style="padding-top: 5px; padding-bottom: 20px; height: 300px; width: 450px;"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="input-container" >
+                                            <div class="container file-upload-container">
+                                                <div class="row justify-content-start">
+                                                    <div class="col-md-6 order-md-2">
+                                                        <form id="file-upload-form" enctype="multipart/form-data">
+                                                            <div class="form-group">
+                                                                <label for="file">
+                                                                    <span class="underline">Upload Files (if applicable)</span>:
+                                                                </label>
+                                                                <input type="file" class="form-control-file" id="file" name="file" multiple required>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        
+                                        <button type="submit" class="btn btn-primary btn-block" style="border-radius: 10px;">Register</button>
                                     </form>
                                 </div>
                             </div>
                         <!--</div>-->
-                    </div>
-                    <div class="wrapper" style="background-color: rgba(255, 255, 255, 0.85);">
-                        <div style="text-align: center;">
-                            <p><strong>You're a donor without an account?</strong> <a href="YassinDonorRegister.html" style="color: #07945c; font-weight: bold; text-decoration: underline;">Register Here!</a></p>
-                            <p><strong>You're an Organization Representative without an account? </strong><a href="YassinOrgRegister.html" style="color: #07945c; font-weight: bold; text-decoration: underline;">Register Here!</a></p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -382,52 +452,54 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- script for login section -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+
     <script>
-        function toggleButtonColor(button) {
-            // Remove the active class from all buttons
-            document.querySelectorAll('.login-buttons button').forEach(function(btn) {
-                btn.classList.remove('active');
+        // Initialize Google Maps
+        function initMap() {
+            // Specify your map options
+            var mapOptions = {
+                center: { lat: -34.397, lng: 150.644 },
+                zoom: 8
+            };
+
+            // Create a new map instance
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+            // Initialize marker variable
+            var marker;
+
+            // Add event listener for map click
+            google.maps.event.addListener(map, 'click', function(event) {
+                // Remove existing marker if any
+                if (marker) {
+                    marker.setMap(null);
+                }
+
+                // Get latitude and longitude of clicked location
+                var latitude = event.latLng.lat();
+                var longitude = event.latLng.lng();
+
+                // Create a new marker at the clicked location
+                marker = new google.maps.Marker({
+                    position: { lat: latitude, lng: longitude },
+                    map: map
+                });
+
+                // Center the map on the clicked location
+                map.setCenter({ lat: latitude, lng: longitude });
             });
-            // Add active class to the clicked button
-            button.classList.add('active');
+        }
+        // Function to redirect to Registered.html
+        function redirectToRegisteredPage() {
+            window.location.href = "Registered.html";
         }
     
-        // Add event listener for form submission
-        document.getElementById('loginForm').addEventListener('submit', function(event) {
-            // Prevent the default form submission
-            event.preventDefault();
-    
-            // Get the selected user type
-            /*var userType = document.querySelector('.login-buttons button.active').textContent;*/
-    
-            // Set default email and password
-            /*var email = "";
-            var password = "";*/
-    
-            // Update email and password based on user type
-            /*if (userType === 'Organization Representative' || userType === 'Donor') {
-                email = "email@hotmail.com";
-                password = "password1";
-            }*/
-    
-            // Get the username and password values
-            var username = document.getElementById('username').value;
-            var enteredPassword = document.getElementById('password').value;
-    
-            // Check if username and password are correct
-            if (username === 'admin@hotmail.com' && enteredPassword === 'adminPassword') {
-                // Redirect to the Admin Dashboard page
-                window.location.href = 'AdminDashBoard.html';
-            } else if (username === 'orgRep@hotmail.com' && enteredPassword === 'orgPassword') {
-                // Redirect to the index.html page for Organization Representative or Donor
-                window.location.href = 'index.html';
-            }else if (username === 'donor@hotmail.com' && enteredPassword === 'donorPassword') {
-                // Redirect to the index.html page for Organization Representative or Donor
-                window.location.href = 'index.html';
-            } else {
-                // If credentials are incorrect, show an alert
-                alert('Incorrect username or password. Please try again.');
-            }
+        // Event listener to trigger redirection when the Register button is clicked
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            redirectToRegisteredPage(); // Call the function to redirect to Registered.html
         });
     </script>
     
