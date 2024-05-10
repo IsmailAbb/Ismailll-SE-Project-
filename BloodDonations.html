@@ -139,6 +139,8 @@
         </div>
         <!-- Header End -->
     </header>
+
+
     <main>
         <!--? Hero Start -->
         <div class="slider-area2">
@@ -147,7 +149,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 pt-70 text-center">
-                                <h2>Medical Cases</h2>
+                                <h2>Blood Donation Requests</h2>
                             </div>
                         </div>
                     </div>
@@ -156,11 +158,58 @@
         </div>
         <!-- Hero End -->
         <!--? Blog Area Start-->
+
+        
+        <script>
+            function filterArticles() {
+                
+                var hospital = document.getElementById("hospital").value;
+                var area = document.getElementById("area").value;
+                var governorate = document.getElementById("governorate").value;
+        
+                var articles = document.getElementsByClassName("blog_item");
+        
+                for (var i = 0; i < articles.length; i++) {
+                    var article = articles[i];
+                    var additionalDetails = article.getElementsByClassName("additional-details")[0];
+        
+                    var hospital2 = additionalDetails.getElementsByTagName("p")[2].innerText; // corrected variable name
+                    var area2 = additionalDetails.getElementsByTagName("p")[3].innerText;
+                    var governorate2 = additionalDetails.getElementsByTagName("p")[4].innerText;
+        
+                    var showArticle =
+                        (hospital === "All" || hospital2.includes(hospital)) &&
+                        
+                        (area === "All" || area2.includes(area)) &&
+                        (governorate === "All" || governorate2.includes(governorate));
+        
+                    if (showArticle) {
+                        article.style.display = "block";
+                    } else {
+                        article.style.display = "none";
+                    }
+                }
+            }
+        </script>
         <section class="blog_area section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 mb-5 mb-lg-0">
                         <div class="blog_left_sidebar">
+
+                            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+                            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+                            <style>
+                                .map-container {
+                                    height: 200px;
+                                    width: 300px;
+                                }
+                            </style>
+                             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                           
+                            </head>
+                            <body>
+
                             <article class="blog_item">
                                 <div class="blog_item_img">
                                     <a href="#" class="blog_item_date">
@@ -181,13 +230,22 @@
                                         <p>Hospital Area: ElNozha</p>
                                         <p>Hospital Governerate: Cairo</p>
                                         <p>Hospital Address: Taha Hussein Rd, Huckstep, El Nozha, Cairo </p>
-
+                                        <p>Location:</p>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map1" style="height: 200px; width: 250px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
                                         
                                     </div>
-                                    <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
+                                    
                                    
                                 </div>
                                 </article>
+
+                                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                                 <article class="blog_item">
                                     <div class="blog_item_img">
                                         <a href="#" class="blog_item_date">
@@ -208,13 +266,21 @@
                                             <p>Hospital Area: New Cairo</p>
                                             <p>Hospital Governerate: Cairo</p>
                                             <p>Hospital Address: Plot 65 Southern 90th Street, sixth floor, 5th Settlement, New Cairo, Cairo </p>
-                                          
+                                            <p>Location:</p>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map2" style="height: 200px; width: 250px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                             
                                         </div>
-                                        <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
+                                        
                                     </div>
                                     </article>
-
+                                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                                     <article class="blog_item">
                                         <div class="blog_item_img">
                                             <a href="#" class="blog_item_date">
@@ -235,13 +301,21 @@
                                                 <p>Hospital Area: ElNozha</p>
                                                 <p>Hospital Governerate: Cairo</p>
                                                 <p>Hospital Address: Taha Hussein Rd, Huckstep, El Nozha, Cairo </p>
-                                              
+                                                <p>Location:</p>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map11" style="height: 200px; width: 250px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                                 
                                             </div>
-                                            <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
+                                            
                                         </div>
                                         </article>
-
+                                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                                         <article class="blog_item">
                                             <div class="blog_item_img">
                                                 <a href="#" class="blog_item_date">
@@ -262,12 +336,21 @@
                                                     <p>Hospital Area: New Cairo</p>
                                                     <p>Hospital Governerate: Cairo</p>
                                                     <p>Hospital Address: Plot 65 Southern 90th Street, sixth floor, 5th Settlement, New Cairo, Cairo </p>
-                                                  
+                                                    <p>Location:</p>
+                                                    <div class="container">
+                                                        <div class="row justify-content-start">
+                                                            <div class="col-md-6 order-md-2">
+                                                                <div id="map22" style="height: 200px; width: 250px;"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
                                                     
                                                 </div>
-                                                <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
+                                               
                                             </div>
                                             </article>
+                                            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                                             <article class="blog_item">
                                                 <div class="blog_item_img">
                                                     <a href="#" class="blog_item_date">
@@ -285,15 +368,99 @@
                                                         <p>Patient Name: Farah</p>
                                                         <p>Blood Type: O-</p>
                                                         <p>Hospital Name: Elite Hospital</p>
-                                                        <p>Hospital Area: ElShorouk</p>
+                                                        <p>Hospital Area: Villas Neighborhood</p>
                                                         <p>Hospital Governerate: Alexandria</p>
                                                         <p>Hospital Address: Street 1, Villas Neighborhood, Ring Rd, Alexandria </p>
-                                                      
+                                                        <p>Location:</p>
+                                                        <div class="container">
+                                                            <div class="row justify-content-start">
+                                                                <div class="col-md-6 order-md-2">
+                                                                    <div id="map3" style="height: 200px; width: 250px;"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                    
                                                         
                                                     </div>
-                                                    <button class="view-details-btn" onclick="location.href='Hospital1.html'">Location</button>
+                                                    
                                                 </div>
                                                 </article>
+
+                                                
+                                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                                <script>
+                                    // Initialize Google Maps
+                                    function initMap() {
+                                        // Specify your map options
+                                        var mapOptions1 = {
+                                            center: { lat: 30.1328, lng: 31.3844 }, 
+                                            zoom: 8
+                                        };
+                                        var mapOptions11 = {
+                                            center: { lat: 30.1328, lng: 31.3844 }, 
+                                            zoom: 8
+                                        };
+                                        var mapOptions2 = {
+                                            center: { lat: 30.0931, lng: 31.3298 }, 
+                                            zoom: 8
+                                        };
+                                        var mapOptions22 = {
+                                            center: { lat: 30.0931, lng: 31.3298 }, 
+                                            zoom: 8
+                                        };
+                                        var mapOptions3 = {
+                                            center: { lat: 31.171515, lng: 29.943234 }, 
+                                            zoom: 8
+                                        };
+                                        
+                                        // Create a new map instance
+                                        var map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
+                                        var map11 = new google.maps.Map(document.getElementById('map11'), mapOptions1);
+                                        var map2 = new google.maps.Map(document.getElementById('map2'), mapOptions2);
+                                        var map22 = new google.maps.Map(document.getElementById('map22'), mapOptions2);
+                                        var map3 = new google.maps.Map(document.getElementById('map3'), mapOptions3);
+                                       
+                                
+                                        // Define the coordinates for the marker
+                                        var markerCoordinates1 = { lat: 30.1328, lng: 31.3844 }; 
+                                        var markerCoordinates11 = { lat: 30.1328, lng: 31.3844 }; 
+                                        var markerCoordinates2 = { lat: 30.0931, lng: 31.3298 };
+                                        var markerCoordinates22 = { lat: 30.0931, lng: 31.3298 };
+                                        var markerCoordinates3 = { lat: 31.171515, lng: 29.943234 };
+                                       
+                                
+                                        // Create a new marker at the specified coordinates
+                                        var marker1 = new google.maps.Marker({
+                                            position: markerCoordinates1,
+                                            map: map1
+                                        });
+                                        var marker11 = new google.maps.Marker({
+                                            position: markerCoordinates11,
+                                            map: map1
+                                        });
+                                        var marker2 = new google.maps.Marker({
+                                            position: markerCoordinates2,
+                                            map: map2
+                                        });
+                                        var marker22 = new google.maps.Marker({
+                                            position: markerCoordinates22,
+                                            map: map22
+                                        });
+                                        var marker3 = new google.maps.Marker({
+                                            position: markerCoordinates3,
+                                            map: map3
+                                        });
+                                        
+                                
+                                        // Center the map on the marker's coordinates
+                                        map1.setCenter(markerCoordinates1);
+                                        map11.setCenter(markerCoordinates11);
+                                        map2.setCenter(markerCoordinates2);
+                                        map22.setCenter(markerCoordinates22);
+                                        map3.setCenter(markerCoordinates3);
+                                        
+                                    }
+                                </script>
 
                             <style>
                                 .view-details-btn {
@@ -340,100 +507,47 @@
                                     alert(notification);
                                 }
                             </script>
-                            <nav class="blog-pagination justify-content-center d-flex">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a href="#" class="page-link" aria-label="Previous">
-                                            <i class="ti-angle-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="#" class="page-link">1</a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a href="#" class="page-link">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="#" class="page-link" aria-label="Next">
-                                            <i class="ti-angle-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                           
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
-                            <aside class="single_sidebar_widget search_widget">
-                                <form action="#">
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder='Search Keyword'
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Search Keyword'">
-                                            <div class="input-group-append">
-                                                <button class="btns" type="button"><i class="ti-search"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
-                                </form>
-                                <aside class="single_sidebar_widget post_category_widget">
-                                    <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
-                                    <ul class="list cat-list">
-                                        <li>
-                                            <p>Medical Specialist</p>
-                                            <select id="medical-specialist" name="medical-specialist" onchange="redirectOnChange(this)">
-                                                <option value="All">All</option>
-                                                <option value="Cardiothoracic Surgeon">Cardiothoracic Surgeon</option>
-                                                <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
-                                                <option value="Neurosurgeon">Neurosurgeon</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Organization</p>
-                                            <select id="Organization" name="Organization">
-                                                <option value="All">All</option>
-                                                <option value="Hospital A">Hospital A</option>
-                                                <option value="Hospital B">Hospital B</option>
-                                                <option value="Hospital C">Hospital C</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Area</p>
-                                            <select id="Area" name="Area">
-                                                <option value="All">All</option>
-                                                <option value="Maadi">Maadi</option>
-                                                <option value="New Cairo">New Cairo</option>
-                                                <option value="Zamalek">Zamalek</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Governate</p>
-                                            <select id="Governate" name="Governate">
-                                                <option value="All">All</option>
-                                                <option value="Cairo">Cairo</option>
-                                                <option value="Alexandria">Alexandria</option>
-                                            </select>
-                                        </li>
-                                    </ul>
-                                </aside>
+                           
                                 
-                               <script>
-                                    function redirectOnChange(select) {
-                                        var selectedValue = select.value;
-                                        if (selectedValue === "Cardiothoracic Surgeon") {
-                                            window.location.href = "CardiothoracicSurgeon.html";
-                                        }
-                                        if (selectedValue === "Orthopedic Surgeon") {
-                                            window.location.href = "OrthopedicSurgeon.html";
-                                        }
-                                        if (selectedValue === "Neurosurgeon") {
-                                            window.location.href = "Neurosurgeon.html";
-                                        }
-                                    }
-                                 </script>
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
+                                <ul class="list cat-list">
+                                    <li>
+                                        <label for="hospital">Hospital</label>
+                                        <select id="hospital" name="hospital" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="Saudi German Hospital">Saudi German Hospital</option>
+                                            <option value="Cleopatra Hospital">Cleopatra Hospital</option>
+                                            <option value="Elite Hospital">Elite Hospital</option>
+                                        </select>
+                                    </li>
+                                   
+                                    <li>
+                                        <label for="area">Area</label>
+                                        <select id="area" name="area" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="ElNozha">ElNozha</option>
+                                            <option value="Villas Neighborhood">Villas Neighborhood</option>
+                                            <option value="New Cairo">New Cairo</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="governorate">Governorate</label>
+                                        <select id="governorate" name="governorate" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="Cairo">Cairo</option>
+                                            <option value="Alexandria">Alexandria</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </aside>
+                                
+                              
                                  
                                 <!-- <script>
                                     function redirectOnChange(select) {
@@ -617,6 +731,7 @@
             </div>
         </section> -->
         <!-- Blog Area End -->
+    </section>
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
