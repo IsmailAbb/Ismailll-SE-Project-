@@ -185,6 +185,37 @@
           
         <!-- Hero End -->
         <!--? Blog Area Start-->
+
+        <script>
+            function filterArticles() {
+                
+                var subject = document.getElementById("subject").value;
+                var area = document.getElementById("area").value;
+                var governorate = document.getElementById("governorate").value;
+        
+                var articles = document.getElementsByClassName("blog_item");
+        
+                for (var i = 0; i < articles.length; i++) {
+                    var article = articles[i];
+                    var additionalDetails = article.getElementsByClassName("additional-details")[0];
+                
+                    var address = additionalDetails.getElementsByTagName("p")[1].innerText;
+                    var subject2 = additionalDetails.getElementsByTagName("p")[2].innerText; 
+        
+                    var showArticle =
+                        (subject === "All" || subject2.includes(subject)) &&
+                        (area === "All" || address.includes(area)) &&
+                        (governorate === "All" || address.includes(governorate));
+        
+                    if (showArticle) {
+                        article.style.display = "block";
+                    } else {
+                        article.style.display = "none";
+                    }
+                }
+            }
+        </script>
+
         <section class="blog_area section-padding">
             <div class="container">
                 <div class="row">
@@ -205,6 +236,7 @@
                                         width: 300px;
                                     }
                                 </style>
+                                 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                             </head>
                             <body>
                                 <article class="blog_item">
@@ -224,14 +256,21 @@
                                             <p>Number of Students: 15</p>
                                             <p>Address:El Obour Rd, Al Obour, Cairo</p>
                                             <p>Subjects to be taught: Arabic, Religion</p>
-                                            <button class="view-details-btn" onclick="location.href='ContiLoc.html'">Location</button>
+                                            <p>Location:</p>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map1" style="height: 200px; width: 250px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                         </div>
                                         <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
                                     </div>
                                 </article>
-                            
+                                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                                 <article class="blog_item">
                                     <div class="blog_item_img">
                                         <a href="#" class="blog_item_date">
@@ -243,21 +282,28 @@
                                         <a class="d-inline-block" href="#">
                                             <h2 class="blog-head" style="color: #2d2d2d;">Vision Academy</h2>
                                         </a>
-                                        <p>Seeking volunteer English tutor for improving language skills.
+                                        <p>Seeking volunteer English and Math tutor for improving skills.
                                          Flexible scheduling, open to virtual or in-person sessions.</p>
                                         <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
                                         <div class="additional-details" style="display: none;">
                                             <p>Number of Students: 20</p>
                                             <p>Address: Villa 93, New Cairo 1, Cairo</p>
-                                            <p>Subjects to be taught: English</p>
-                                            <button class="view-details-btn" onclick="location.href='VisionLoc.html'">Location</button>
+                                            <p>Subjects to be taught: English, Math</p>
+                                            <p>Location:</p>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map2" style="height: 200px; width: 250px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                         </div>
                                         <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
                                     </div>
                                 </article>
-                            
+                                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                                 <article class="blog_item">
                                     <div class="blog_item_img">
                                         <a href="#" class="blog_item_date">
@@ -269,18 +315,26 @@
                                         <a class="d-inline-block" href="#">
                                             <h2 class="blog-head" style="color: #2d2d2d;">Elite</h2>
                                         </a>
-                                        <p>Seeking volunteer math tutor to improve skills. Flexible scheduling, open to virtual or in-person sessions.</p>
+                                        <p>Seeking volunteer math and French tutors to improve skills. Flexible scheduling, open to virtual or in-person sessions.</p>
                                         <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
                                         <div class="additional-details" style="display: none;">
                                             <p>Number of Students: 30</p>
                                             <p>Address: Unnamed Rd, Sherouk 2, Cairo</p>
-                                            <p>Subjects to be taught: Math</p>
-                                            <button class="view-details-btn" onclick="location.href='EliteLoc.html'">Location</button>
+                                            <p>Subjects to be taught: Math, French</p>
+                                            <p>Location:</p>
+                                            <div class="container">
+                                                <div class="row justify-content-start">
+                                                    <div class="col-md-6 order-md-2">
+                                                        <div id="map3" style="height: 200px; width: 250px;"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                         </div>
                                         <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
                                     </div>
                                 </article>
+                                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                                 <article class="blog_item">
                                     <div class="blog_item_img">
                                         <a href="#" class="blog_item_date">
@@ -292,13 +346,20 @@
                                         <a class="d-inline-block" href="#">
                                             <h2 class="blog-head" style="color: #2d2d2d;">Allson International School</h2>
                                         </a>
-                                        <p>Seeking volunteer French tutor to enhance understanding. Flexible scheduling, open to virtual or in-person sessions. </p>
+                                        <p>Seeking volunteer French and Arabic tutors to enhance understanding. Flexible scheduling, open to virtual or in-person sessions. </p>
                                         <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
                                         <div class="additional-details" style="display: none;">
                                             <p>Number of Students: 18</p>
                                             <p>Address: Near Cataract Hotel, Harraniya, Saqqara, Rd, Giza</p>
-                                            <p>Subjects to be taught: French</p>
-                                            <button class="view-details-btn" onclick="location.href='AllsonLoc.html'">Location</button>
+                                            <p>Subjects to be taught: French , Arabic</p>
+                                            <p>Location:</p>
+                                    <div class="container">
+                                        <div class="row justify-content-start">
+                                            <div class="col-md-6 order-md-2">
+                                                <div id="map4" style="height: 200px; width: 250px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
                                                                    
 
@@ -308,7 +369,65 @@
                                 </article>
 
 
-
+                                <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                                <script>
+                                    // Initialize Google Maps
+                                    function initMap() {
+                                        // Specify your map options
+                                        var mapOptions1 = {
+                                            center: { lat: 30.194216, lng: 31.463450 }, 
+                                            zoom: 8
+                                        };
+                                        var mapOptions2 = {
+                                            center: { lat: 30.065559, lng: 31.469727 }, 
+                                            zoom: 8
+                                        };
+                                        var mapOptions3 = {
+                                            center: { lat: 30.1570, lng: 31.6461 }, 
+                                            zoom: 8
+                                        };
+                                        var mapOptions4 = { 
+                                            center: { lat: 29.967467, lng: 31.179728 }, 
+                                            zoom: 8
+                                        };
+                                
+                                        // Create a new map instance
+                                        var map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
+                                        var map2 = new google.maps.Map(document.getElementById('map2'), mapOptions2);
+                                        var map3 = new google.maps.Map(document.getElementById('map3'), mapOptions3);
+                                        var map4 = new google.maps.Map(document.getElementById('map4'), mapOptions4);
+                                
+                                        // Define the coordinates for the marker
+                                        var markerCoordinates1 = { lat: 30.194216, lng: 31.463450 }; 
+                                        var markerCoordinates2 = { lat: 30.065559, lng: 31.469727 };
+                                        var markerCoordinates3 = { lat: 30.1570, lng: 31.6461 };
+                                        var markerCoordinates4 = { lat: 29.967467, lng: 31.179728 };
+                                
+                                        // Create a new marker at the specified coordinates
+                                        var marker1 = new google.maps.Marker({
+                                            position: markerCoordinates1,
+                                            map: map1
+                                        });
+                                        var marker2 = new google.maps.Marker({
+                                            position: markerCoordinates2,
+                                            map: map2
+                                        });
+                                        var marker3 = new google.maps.Marker({
+                                            position: markerCoordinates3,
+                                            map: map3
+                                        });
+                                        var marker4 = new google.maps.Marker({
+                                            position: markerCoordinates4,
+                                            map: map4
+                                        });
+                                
+                                        // Center the map on the marker's coordinates
+                                        map1.setCenter(markerCoordinates1);
+                                        map2.setCenter(markerCoordinates2);
+                                        map3.setCenter(markerCoordinates3);
+                                        map4.setCenter(markerCoordinates4);
+                                    }
+                                </script>
 
 
         
@@ -388,102 +507,52 @@
                                     }
                                 </style>
                           
-                          <nav class="blog-pagination justify-content-center d-flex">
-                                <ul class="pagination">
-                                    <li class="page-item">
-                                        <a href="#" class="page-link" aria-label="Previous">
-                                            <i class="ti-angle-left"></i>
-                                        </a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="#" class="page-link">1</a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a href="#" class="page-link">2</a>
-                                    </li>
-                                    <li class="page-item">
-                                        <a href="#" class="page-link" aria-label="Next">
-                                            <i class="ti-angle-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                         
                         </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
-                            <aside class="single_sidebar_widget search_widget">
-                                <form action="#">
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder='Search Keyword'
-                                                onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Search Keyword'">
-                                            <div class="input-group-append">
-                                                <button class="btns" type="button"><i class="ti-search"></i></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Search</button>
-                                </form>
-                                <aside class="single_sidebar_widget post_category_widget">
-                                    <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
-                                    <ul class="list cat-list">
-                                        <li>
-                                            <p>Medical Specialist</p>
-                                            <select id="medical-specialist" name="medical-specialist" onchange="redirectOnChange(this)">
-                                                <option value="All">All</option>
-                                                <option value="Cardiothoracic Surgeon">Cardiothoracic Surgeon</option>
-                                                <option value="Orthopedic Surgeon">Orthopedic Surgeon</option>
-                                                <option value="Neurosurgeon">Neurosurgeon</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Organization</p>
-                                            <select id="Organization" name="Organization">
-                                                <option value="All">All</option>
-                                                <option value="Hospital A">Hospital A</option>
-                                                <option value="Hospital B">Hospital B</option>
-                                                <option value="Hospital C">Hospital C</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Area</p>
-                                            <select id="Area" name="Area">
-                                                <option value="All">All</option>
-                                                <option value="Maadi">Maadi</option>
-                                                <option value="New Cairo">New Cairo</option>
-                                                <option value="Zamalek">Zamalek</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <p>Governate</p>
-                                            <select id="Governate" name="Governate">
-                                                <option value="All">All</option>
-                                                <option value="Cairo">Cairo</option>
-                                                <option value="Alexandria">Alexandria</option>
-                                            </select>
-                                        </li>
-                                    </ul>
-                                </aside>
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
+                                <ul class="list cat-list">
+                                    <li>
+                                        <label for="subject">Subject</label>
+                                        <select id="subject" name="subject" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="Arabic">Arabic</option>
+                                            <option value="Religion">Religion</option>
+                                            <option value="English">English</option>
+                                            <option value="Math">Math</option>
+                                            <option value="French">French</option>
+                                        </select>
+                                    </li>
+                                   
+                                    <li>
+                                        <label for="area">Area</label>
+                                        <select id="area" name="area" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="Al Obour">Al Obour</option>
+                                            <option value="Sherouk">Sherouk</option>
+                                            <option value="New Cairo">New Cairo</option>
+                                            <option value="Saqqara">Saqqara</option>
+
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <label for="governorate">Governorate</label>
+                                        <select id="governorate" name="governorate" onchange="filterArticles()">
+                                            <option value="All">All</option>
+                                            <option value="Cairo">Cairo</option>
+                                            <option value="Giza">Giza</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </aside>
                                 
-                               <script>
-                                    function redirectOnChange(select) {
-                                        var selectedValue = select.value;
-                                        if (selectedValue === "Cardiothoracic Surgeon") {
-                                            window.location.href = "CardiothoracicSurgeon.html";
-                                        }
-                                        if (selectedValue === "Orthopedic Surgeon") {
-                                            window.location.href = "OrthopedicSurgeon.html";
-                                        }
-                                        if (selectedValue === "Neurosurgeon") {
-                                            window.location.href = "Neurosurgeon.html";
-                                        }
-                                    }
-                                 </script>
+                               
 
         <!-- Blog Area End -->
+     </section>
     </main>
     <footer>
         <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
