@@ -260,17 +260,42 @@
                                 <form id="searchForm" onsubmit="performSearch(event)">
                                     <div class="form-group">
                                         <div class="input-group mb-3">
-                                            <input type="text" id="searchKeyword" class="form-control" placeholder='Search Keyword'
+                                            <input type="text" id="searchKeyword" class="form-control" placeholder='Search by name'
                                                 onfocus="this.placeholder = ''"
-                                                onblur="this.placeholder = 'Search Keyword'">
+                                                onblur="this.placeholder = 'Search by name'">
                                             <div class="input-group-append">
-                                                <button class="btns" type="submit"><i class="ti-search" onclick="performSearch"></i></button>
+                                                <button class="btns" type="submit"><i class="ti-search"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                    
                                 </form>
                             </aside>
+                            <script>
+                                function performSearch(event) {
+                                  event.preventDefault(); // Prevent the default form submission behavior
+                              
+                                  // Get the search keyword
+                                  const searchKeyword = document.getElementById('searchKeyword').value.toLowerCase();
+                              
+                                  // Iterate over the articles and hide/show based on the search keyword
+                                  const articles = document.querySelectorAll('.blog_item');
+                                  articles.forEach(article => {
+                                    const articleHeader = article.querySelector('h2.blog-head').textContent.toLowerCase();
+                                    if (searchKeyword === '' || articleHeader.includes(searchKeyword)) {
+                                      article.style.display = 'block'; // Show the article
+                                    } else {
+                                      article.style.display = 'none'; // Hide the article
+                                    }
+                                  });
+                                }
+                              
+                                document.addEventListener('DOMContentLoaded', function () {
+                                  const searchInput = document.getElementById('searchKeyword');
+                                  searchInput.addEventListener('input', performSearch);
+                                });
+                              </script>
+                    
                             <aside class="single_sidebar_widget post_category_widget">
                                 <h4 class="widget_title" style="color: #2d2d2d;">Filter Medical Supplies by</h4>
                                 <ul class="list cat-list">
@@ -293,6 +318,41 @@
                                         </a>
                                     </li>
                 
+                                </ul>
+                            </aside>
+                            <aside class="single_sidebar_widget post_category_widget">
+                                <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
+                                <ul class="list cat-list">
+                                    <li>
+                                        <a href="MedicalSuppliesFilter.html" class="d-flex">
+                                            <p>Medical Supplies</p>
+                                            <p>(4)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="schoolsupplies.html" class="d-flex">
+                                            <p>School Supplies</p>
+                                            <p>(11)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="toys.html" class="d-flex">
+                                            <p>Toys</p>
+                                            <p>(4)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="FoodDonations.html" class="d-flex">
+                                            <p>Food Donations</p>
+                                            <p>(15)</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="BloodDonations.html" class="d-flex">
+                                            <p>Blood Donations</p>
+                                            <p>(5)</p>
+                                        </a>
+                                    </li>
                                 </ul>
                             </aside>
                             <script>
