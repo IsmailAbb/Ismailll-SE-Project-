@@ -24,6 +24,7 @@
 	<link rel="stylesheet" href="assets/css/slick.css">
 	<link rel="stylesheet" href="assets/css/nice-select.css">
 	<link rel="stylesheet" href="assets/css/style.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
     <!-- ? Preloader Start -->
@@ -124,11 +125,51 @@
                                         </nav>
                                     </div>
                                     <!-- Header-btn -->
+
+                                    <div class="schedule-icon" onclick="toggleSchedule()">
+                                        <i class="fas fa-truck"></i>
+                                        
+                                       
+                                          </li>
+                                        </ul>
+                                       
+                                        
+                                      </div>  
+                                    
                                     <div class="header-right-btn d-none d-lg-block ml-20">
                                         <a href="Categoriess.html" class="btn header-btn"> Create a new post</a>
                                     </div>
+                                   
                                 </div>
                             </div> 
+
+
+                            <style>.schedule-icon {
+                                position: relative;
+                                display: inline-block;
+                             
+                              }
+                              
+                              .schedule-icon i {
+                                font-size: 24px;
+                                margin-left: 10px; /* Adjust icon size as needed */
+                                top: 20px;
+                                right:  30px;
+                              }
+                              </style>
+
+
+<script>
+function toggleSchedule() {
+    window.location.href = "schedule.html";
+  }
+  
+ </script>
+
+
+
+
+
                             <!-- Mobile Menu -->
                             <div class="col-12">
                                 <div class="mobile_menu d-block d-lg-none"></div>
