@@ -22,6 +22,24 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+      
+    <!-- Include Bootstrap Select CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/css/bootstrap-select.min.css">
+  
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  
+    <!-- Include Bootstrap Datepicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  
+    <!-- Include Bootstrap Select JS -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.18/js/bootstrap-select.min.js"></script>
+    
 </head>
 <body>
     <!--? Preloader Start -->
@@ -37,6 +55,13 @@
     </div>
     <!-- Preloader Start -->
     <header>
+        <style>
+            .thicker-icon {
+                font-size: 30px;
+                padding-right:50px;
+                font-weight: bold;
+            }
+        </style>
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header ">
@@ -45,36 +70,15 @@
                         <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left d-flex">
-                                    <ul>     
-                                        <li>Phone: +99 (0) 101 0000 888</li>
-                                        <li>Email: noreply@yourdomain.com</li>
-                                    </ul>
-                                    <div class="header-social">    
-                                        <ul>
-                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                            <li><a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a></li>
-                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                                            <li> <a href="#"><i class="fab fa-google-plus-g"></i></a></li>
-                                        </ul>
-                                    </div>
+
                                 </div>
                                 <div class="header-info-right d-flex align-items-center">
                                     <div class="select-this">
                                         <form action="#">
                                             <div class="select-itms">
-                                                <select name="select" id="select1">
-                                                    <option value="">English</option>
-                                                    <option value="">Bangla</option>
-                                                    <option value="">Arabic</option>
-                                                    <option value="">Hindi</option>
-                                                </select>
+
                                             </div>
-                                        </form>
-                                    </div>
-                                    <ul class="contact-now">     
-                                        <li><a href="#">Subscribe Now</a></li>
-                                    </ul>
-                                </div>
+                                      </form>
                             </div>
                         </div>
                     </div>
@@ -95,7 +99,6 @@
                                         <nav>
                                             <ul id="navigation">                                                                                          
                                                 <li><a href="index.html">Home</a></li>
-                                                <li><a href="about.html">About</a></li>
                                                 <li><a href="program.html">Organizations</a></li>
                                                 <li><a href="#">Volunteer </a>
                                                     <ul class="submenu">
@@ -103,14 +106,7 @@
                                                         <li><a href="TEACH.html">Teaching Cases</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="#">Donation posts</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Fullfilled donation posts</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="requestedblog.html">Requested Donations</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a>   
+                                                <li><a href="requestedblog.html">Donation posts</a>
                                                 </li>
                                                 <li><a href="#">Settings</a>
                                                     <ul class="submenu">
@@ -122,6 +118,7 @@
                                             </ul>
                                         </nav>
                                     </div>
+
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
                                         <a href="categories.html" class="btn header-btn">Donate</a>
@@ -252,9 +249,92 @@
                                     </ul>
                                 </div>
                             </article>
+
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_4.png" alt="">
+                                    <img class="card-img rounded-0" src="assets\img\blog\teddy.png"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="#">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Teddy Bear</h2>
+                                    </a>
+                                    <p>We're looking for teddy bears to keep children company and make friendships
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\lego.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="blog_details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Lego</h2>
+                                    </a>
+                                    <p>we're looking for Lego to help improve children's thinking abilities 
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\tablet.webp"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="blog_details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Tablet</h2>
+                                    </a>
+                                    <p>We're looking for Tablets to help enhamce children's learning abilities 
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\car.png"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="blog_details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Mini toy car</h2>
+                                    </a>
+                                    <p>We're looking for Mini electric toy cars to give children some experience about how it's like to
+                                        drive something on their own 
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets/img/blog/cellphone.jpg" alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>15</h3>
                                         <p>Jan</p>
@@ -262,19 +342,21 @@
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Toy cellphone </h2>
                                     </a>
-                                    <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                        he earth it first without heaven in place seed it second morning saying.</p>
+                                    <p>we're looking for toy cell phones to give children a fun experience 
+                                        about owning adult stuff 
+
+                                    </p>
                                     <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
                             </article>
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="assets/img/blog/single_blog_5.png" alt="">
+                                    <img class="card-img rounded-0" src="assets/img/blog/barbie.webp" alt="">
                                     <a href="#" class="blog_item_date">
                                         <h3>15</h3>
                                         <p>Jan</p>
@@ -282,16 +364,561 @@
                                 </div>
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="blog_details.html">
-                                        <h2 class="blog-head" style="color: #2d2d2d;">Google inks pact for new 35-storey office</h2>
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Barbie Doll </h2>
                                     </a>
-                                    <p>That dominion stars lights dominion divide years for fourth have don't stars is that
-                                        he earth it first without heaven in place seed it second morning saying.</p>
+                                    <p>we're looking for old/new barbie dolls to give to young girls so they can the same experience
+                                        as every little girl who owned a barbie doll
+                                    </p>
                                     <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                        <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
                             </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\notebooks.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="NotebooksDetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Notebooks</h2>
+                                    </a>
+                                    <p>Notebooks for students to help them organise their notes while studying, 
+                                       or for journaling and jotting down important personal information.
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\pensandpencils.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>7</h3>
+                                        <p>June</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="PensAndPencilsDetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Pens And Pencils</h2>
+                                    </a>
+                                    <p>Students use may use these for taking notes, schoolwork or personal use. 
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comment</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\basiccalc.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>25</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="BasicCalculatorDetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Basic Calculator</h2>
+                                    </a>
+                                    <p>These basic calculators are mostly needed to assist students in primary 
+                                        and middle school to perform simple calculations efficiently and learn how 
+                                        to use the tool. 
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comment</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\scientificcalc.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="ScientificCalculatorDetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Scientific Calculators</h2>
+                                    </a>
+                                    <p>Your donation of scientific calculators can make a significant impact 
+                                        on highschool students, and undergraduates by enabling them to tackle complex 
+                                        mathematical problems and scientific calculations effectively. 
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 02 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\stickynotes.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="StickyNotesDetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Sticky Notes</h2>
+                                    </a>
+                                    <p>Your donation of sticky notes helps students in organizing their work/studies. 
+                                        They use them for; bookmarking pages, writing down reminders, adding notes onto 
+                                        pages, etc. 
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\binders.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="BindersAndFoldersDetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Binders and Folders</h2>
+                                    </a>
+                                    <p>Your donation of binders helps students in organizing their work/studies. 
+                                        They use them for separating their papers and studies for different subjects.
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book1.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book1Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Soul (Written by: Lisa Gardner)</h2>
+                                    </a>
+                                    <!--<p>Notebooks for students to help them organise their notes while studying, 
+                                       or for journaling and jotting down important personal information.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 02 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book2.png"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>7</h3>
+                                        <p>June</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book2Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Don't Look Back (Written by:  Jennifer L. Armentrout)</h2>
+                                    </a>
+                                    <!--<p>Students use may use these for taking notes, schoolwork or personal use. 
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comment</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book3.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>25</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book3Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Tides (Written by:  Anita Shreve)</h2>
+                                    </a>
+                                    <!--<p>These basic calculators are mostly needed to assist students in primary 
+                                        and middle school to perform simple calculations efficiently and learn how 
+                                        to use the tool. 
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comment</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book4.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book4Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Tess of the Road (Written by: Rachel Hartman)</h2>
+                                    </a>
+                                    <!--<p>Your donation of scientific calculators can make a significant impact 
+                                        on highschool students, and undergraduates by enabling them to tackle complex 
+                                        mathematical problems and scientific calculations effectively. 
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\book5.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Book5Details.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Maybe Now (Written by: Colleen Hoover)</h2>
+                                    </a>
+                                    <!--<p>Your donation of sticky notes helps students in organizing their work/studies. 
+                                        They use them for; bookmarking pages, writing down reminders, adding notes onto 
+                                        pages, etc. 
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>School Supplies</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\tshirt.webp"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>16</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="tshirtdetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">T-shirt</h2>
+                                    </a>
+                                 
+                                    <p>We're looking for T-shirts available in any sizes to provide those in need of new clothes
+                                    </p>
+                                  
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\pants.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>12</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="pantsdetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Pants</h2>
+                                    </a>
+                                    <p>we're looking for pants of any sizes so we can provide those in need
+                                    </p>
+                                    
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\babyy.png"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>10</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="babyshoesdetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Baby shoes</h2>
+                                    </a>
+                                    <p>We're looking for baby shoes of any size so we can provide new born babies with what they need 
+                                    </p>
+                                
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\jacket.webp"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>9</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="jacketdetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Jackets</h2>
+                                    </a>
+                                    <p>We're looking for jackets in any size/color so we can help keep those in need warm during cold times
+                                    </p>
+                        
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets/img/blog/b2.jpg" alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>15</h3>
+                                        <p>Jan</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="winterassetsdetails.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">winter assets </h2>
+                                    </a>
+                                    <p>we're looking for any winter assests such as beanies/scarves/gloves as it is very important to us 
+                                        to keep those in need warm during very harsh winter times
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> Clothes</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\apples.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Apples.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Apples</h2>
+                                    </a>
+                                    <!--<p>A selection of fresh fruits, such as ripe apples, juicy oranges, sweet strawberries, 
+                                       and crisp grapes. This donation provides recipients with a variety of vitamin-rich and 
+                                       refreshing fruits for a healthy snacking option.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 02 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\tomatoes.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>7</h3>
+                                        <p>Jun</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Tomatoes.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Tomatoes</h2>
+                                    </a>
+                                    <!--<p>A selection of fresh fruits, such as ripe apples, juicy oranges, sweet strawberries, 
+                                       and crisp grapes. This donation provides recipients with a variety of vitamin-rich and 
+                                       refreshing fruits for a healthy snacking option.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\peaches.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>13</h3>
+                                        <p>Oct</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Peaches.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Peaches</h2>
+                                    </a>
+                                    <!--<p>A selection of fresh fruits, such as ripe apples, juicy oranges, sweet strawberries, 
+                                       and crisp grapes. This donation provides recipients with a variety of vitamin-rich and 
+                                       refreshing fruits for a healthy snacking option.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\zucchini.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>23</h3>
+                                        <p>Feb</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Zucchini.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Zucchini</h2>
+                                    </a>
+                                    <!--<p>A selection of fresh fruits, such as ripe apples, juicy oranges, sweet strawberries, 
+                                       and crisp grapes. This donation provides recipients with a variety of vitamin-rich and 
+                                       refreshing fruits for a healthy snacking option.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\bellpeppers.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="BellPeppers.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">BellPeppers</h2>
+                                    </a>
+                                    <!--<p>A selection of fresh fruits, such as ripe apples, juicy oranges, sweet strawberries, 
+                                       and crisp grapes. This donation provides recipients with a variety of vitamin-rich and 
+                                       refreshing fruits for a healthy snacking option.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i> food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\bananas.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>13</h3>
+                                        <p>Jan</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Bananas.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Bananas</h2>
+                                    </a>
+                                    <!--<p>A selection of fresh fruits, such as ripe apples, juicy oranges, sweet strawberries, 
+                                       and crisp grapes. This donation provides recipients with a variety of vitamin-rich and 
+                                       refreshing fruits for a healthy snacking option.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\carrots.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>Mar</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="Carrots.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Carrots</h2>
+                                    </a>
+                                    <!--<p>A selection of fresh fruits, such as ripe apples, juicy oranges, sweet strawberries, 
+                                       and crisp grapes. This donation provides recipients with a variety of vitamin-rich and 
+                                       refreshing fruits for a healthy snacking option.
+                                    </p>-->
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 02 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\cannedbeans.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>25</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="CannedBeans.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Canned Beans</h2>
+                                    </a>
+                                    <p>A variety of canned beans and legumes, such as black beans, chickpeas, and lentils. 
+                                        These protein-rich donations are versatile ingredients that can be used in a 
+                                        variety of recipes, providing a valuable source of nutrition for those in need.
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 01 Comment</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="assets\img\blog\cannedsoup.jpg"alt="">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>July</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="CannedSoup.html">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Canned Soup</h2>
+                                    </a>
+                                    <p>A selection of canned soups including tomato soup, chicken noodle soup, 
+                                        and vegetable soup. These ready-to-eat canned soups provide convenience and 
+                                        nourishment for individuals in need of a quick and satisfying meal.
+                                    </p>
+                                    <ul class="blog-info-link">
+                                        <li><a href="#"><i class="fa fa-user"></i>food</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i> 00 Comments</a></li>
+                                    </ul>
+                                </div>
+                            </article>
+
+
                             <nav class="blog-pagination justify-content-center d-flex">
                                 <ul class="pagination">
                                     <li class="page-item">
@@ -301,9 +928,6 @@
                                     </li>
                                     <li class="page-item">
                                         <a href="#" class="page-link">1</a>
-                                    </li>
-                                    <li class="page-item active">
-                                        <a href="#" class="page-link">2</a>
                                     </li>
                                     <li class="page-item">
                                         <a href="#" class="page-link" aria-label="Next">
@@ -328,46 +952,47 @@
                                         cursor: pointer;
                                     }
                                 </style>
-                                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-                                <h1>Donation Items Search</h1>
-                            
-                                <label for="search-text">Search Text:</label>
-                                <br><br>
-                                
-                                <input type="text" id="search-text">
-                                <br><br>
-                                
-                                <button id="search-button" onclick="redirectToPage()">Search</button>
-                            
-                                <script>
-                                    function redirectToPage() {
-                                        var searchText = document.getElementById("search-text").value.toLowerCase(); // Convert the search text to lowercase for case-insensitive comparison
-                                        
-                                        switch (searchText) {
-                                            case "toys":
-                                                window.location.href = "toys.html";
-                                                break;
-                                            case "clothes":
-                                                window.location.href = "clothes.html";
-                                                break;
-                                            case "food":
-                                                window.location.href = "food.html";
-                                                break;
-                                            case "school supplies":
-                                                window.location.href = "schoolsupplies.html";
-                                                break;
-                                            case "blood donations":
-                                                window.location.href = "BloodDonations.html";
-                                                break;
-                                            case "medical supplies":
-                                                window.location.href = "MedicalSuppliesFilter.html";
-                                                break;
-                                            default:
-                                                alert("No matching category found for the search text: " + searchText);
-                                                break;
-                                        }
-                                    }
-                                </script>
+
+<aside class="single_sidebar_widget search_widget">
+    <form id="searchForm" onsubmit="performSearch(event)">
+        <div class="form-group">
+            <div class="input-group mb-3">
+                <input type="text" id="searchKeyword" class="form-control" placeholder='Search Keyword'
+                    onfocus="this.placeholder = ''"
+                    onblur="this.placeholder = 'Search Keyword'">
+                <div class="input-group-append">
+                    <button class="btns" type="submit"><i class="ti-search"></i></button>
+                </div>
+            </div>
+        </div>
+        <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+            type="submit">Search</button>
+    </form>
+</aside>
+<script>
+    function performSearch() {
+        // Get the search keyword
+        const searchKeyword = document.getElementById('searchKeyword').value.toLowerCase();
+
+        // Iterate over the articles and hide/show based on the search keyword
+        const articles = document.querySelectorAll('.blog_item');
+        articles.forEach(article => {
+            const categoryElement = article.querySelector('.blog-info-link li:nth-child(1) a');
+            const category = categoryElement.textContent.trim().toLowerCase();
+            if (searchKeyword === '' || category.includes(searchKeyword)) {
+                article.style.display = 'block'; // Show the article
+            } else {
+                article.style.display = 'none'; // Hide the article
+            }
+        });
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        const searchInput = document.getElementById('searchKeyword');
+        searchInput.addEventListener('input', performSearch);
+    });
+</script>
+
                             </aside>
                             <aside class="single_sidebar_widget post_category_widget">
                                 <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
@@ -379,15 +1004,15 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="StationaryItems.html" class="d-flex">
-                                            <p>Stationary Items</p>
-                                            <p>(6)</p>
+                                        <a href="schoolsupplies.html" class="d-flex">
+                                            <p>School Supplies</p>
+                                            <p>(11)</p>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="BookDonations.html" class="d-flex">
-                                            <p>Book Donations</p>
-                                            <p>(5)</p>
+                                        <a href="toys.html" class="d-flex">
+                                            <p>Toys</p>
+                                            <p>(4)</p>
                                         </a>
                                     </li>
                                     <li>
@@ -397,152 +1022,14 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Travel news</p>
-                                            <p>(10)</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Modern technology</p>
-                                            <p>(03)</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Product</p>
-                                            <p>(11)</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Inspiration</p>
-                                            <p>21</p>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="d-flex">
-                                            <p>Health Care (21)</p>
-                                            <p>09</p>
+                                        <a href="BloodDonations.html" class="d-flex">
+                                            <p>Blood Donations</p>
+                                            <p>(5)</p>
                                         </a>
                                     </li>
                                 </ul>
                             </aside>
-                            <aside class="single_sidebar_widget popular_post_widget">
-                                <h3 class="widget_title" style="color: #2d2d2d;">Recent Post</h3>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_1.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">From life was you fish...</h3>
-                                        </a>
-                                        <p>January 12, 2019</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_2.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">The Amazing Hubble</h3>
-                                        </a>
-                                        <p>02 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_3.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Astronomy Or Astrology</h3>
-                                        </a>
-                                        <p>03 Hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="media post_item">
-                                    <img src="assets/img/post/post_4.png" alt="post">
-                                    <div class="media-body">
-                                        <a href="blog_details.html">
-                                            <h3 style="color: #2d2d2d;">Asteroids telescope</h3>
-                                        </a>
-                                        <p>01 Hours ago</p>
-                                    </div>
-                                </div>
-                            </aside>
-                            <aside class="single_sidebar_widget tag_cloud_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Tag Clouds</h4>
-                                <ul class="list">
-                                    <li>
-                                        <a href="#">project</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">love</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">technology</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">travel</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">restaurant</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">life style</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">design</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">illustration</a>
-                                    </li>
-                                </ul>
-                            </aside>
-
-                            <aside class="single_sidebar_widget instagram_feeds">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Instagram Feeds</h4>
-                                <ul class="instagram_row flex-wrap">
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_5.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_6.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_7.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_8.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_9.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <img class="img-fluid" src="assets/img/post/post_10.png" alt="">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </aside>
-                            <aside class="single_sidebar_widget newsletter_widget">
-                                <h4 class="widget_title" style="color: #2d2d2d;">Newsletter</h4>
-                                <form action="#">
-                                    <div class="form-group">
-                                        <input type="email" class="form-control" onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = 'Enter email'" placeholder='Enter email' required>
-                                    </div>
-                                    <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-                                        type="submit">Subscribe</button>
-                                </form>
-                            </aside>
+                          
                         </div>
                     </div>
                 </div>
@@ -573,10 +1060,10 @@
                                     <h4>Contact Info</h4>
                                     <ul>
                                         <li>
-                                            <p>Address :Your address goes here, your demo address.</p>
+                                            <p>Address: 57357, Sekat Hadid Al Mahger, Zeinhom, El Sayeda Zeinab, Cairo Governorate 4260102</p>
                                         </li>
                                         <li><a href="#">Phone : +8880 44338899</a></li>
-                                        <li><a href="#">Email : info@colorlib.com</a></li>
+                                        <li><a href="https://mail.google.com/mail/u/0/">Email : info@charity.com</a></li>
                                     </ul>
                                 </div>
 
@@ -587,11 +1074,9 @@
                                 <div class="footer-tittle">
                                     <h4>Important Link</h4>
                                     <ul>
-                                        <li><a href="#"> View Project</a></li>
-                                        <li><a href="#">Contact Us</a></li>
-                                        <li><a href="#">Testimonial</a></li>
-                                        <li><a href="#">Proparties</a></li>
-                                        <li><a href="#">Support</a></li>
+
+                                        <li><a href="Organization-posts.html">Organizations</a></li>
+                                        <li><a href="events.html">Volunteer Now</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -601,7 +1086,7 @@
                                 <div class="footer-tittle">
                                     <h4>Newsletter</h4>
                                     <div class="footer-pera footer-pera2">
-                                    <p>Heaven fruitful doesn't over lesser in days. Appear creeping.</p>
+                                    <p>Write your email below if you want to know our latest news!</p>
                                 </div>
                                 <!-- Form -->
                                 <div class="footer-form" >
@@ -633,17 +1118,20 @@
                             <div class="col-xl-10 col-lg-9 ">
                                 <div class="footer-copy-right">
                                     <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                                 </div>
                             </div>
                             <div class="col-xl-2 col-lg-3">
                                 <div class="footer-social f-right">
-                                    <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fas fa-globe"></i></a>
-                                    <a href="#"><i class="fab fa-behance"></i></a>
+
+                                        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                                        <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                         <a href="https://mail.google.com/mail/u/0/"><i class="fab fa-google-plus-g"></i></a>
+
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
