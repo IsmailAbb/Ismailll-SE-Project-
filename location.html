@@ -70,13 +70,9 @@
                         <div class="col-xl-12">
                             <div class="row d-flex justify-content-between align-items-center">
                                 <div class="header-info-left d-flex">
-<<<<<<< HEAD
-
-=======
                                     <ul>     
  
                                     </ul>
->>>>>>> 7e161e2b1d86274f7535839813ea084fa34e4200
                                 </div>
                                 <div class="header-info-right d-flex align-items-center">
                                     <div class="select-this">
@@ -112,12 +108,8 @@
                                                         <li><a href="TEACH.html">Teaching Cases</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="#">Donation posts</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Fullfilled donation posts</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="requestedblog.html">Requested Donations</a></li>
-                                                    </ul>
+                                                <li><a href="requestedblog.html">Donation posts</a>
+                                            
                                                 </li>
                                                 <li><a href="#">Settings</a>
                                                     <ul class="submenu">
@@ -129,24 +121,7 @@
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div class="notification-icon" onclick="toggleNotification()">
-                                                <i class="fas fa-bell"></i>
-                                                <span class="notification-count">1</span>
-                                                <ul id="notification-dropdown" class="dropdown-content">
-                                                  <li>
-                                                    <ul class="submenu">
-                                                      <li><a href="upload.html"> <strong> Ahmed </strong> just posted a new post</a></li>
-                                                      
-                                                      
-                                                      
-                                                     
-                                                   
-                                                    </ul>
-                                                  </li>
-                                                </ul>
-                                               
-                                                
-                                              </div>   
+                                  
                                     
                                    
                                   
@@ -156,81 +131,8 @@
                                         <a href="categories.html" class="btn header-btn">Donate</a>
                                     </div>
                                    
-                                     
-                                      <style>.notification-icon {
-                                        position: relative;
-                                        display: inline-block;
-                                     
-                                      }
-                                      
-                                      .notification-icon i {
-                                        font-size: 24px;
-                                        margin-left: 10px; /* Adjust icon size as needed */
-                                        top: 20px;
-                                        right:  30px;
-                                      }
-                                      
-                                      .notification-count {
-                                        position: absolute;
-                                        top: -8px; /* Adjust the position of the count */
-                                        right: -8px; /* Adjust the position of the count */
-                                        background-color: #09cc7f; /* Background color of the count */
-                                        color: #ffffff; /* Text color of the count */
-                                        border-radius: 50%;
-                                        width: 20px;
-                                        height: 20px;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        font-size: 12px; /* Adjust font size as needed */
-                                        font-weight: bold;
-                                      }
-                                      
-                                      .dropdown-content {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-width: 300px;
-height: 50px;
-
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-bottom: -70px;
-
-}
-                                      
-                                      .dropdown-content li {
-                                        list-style-type: none;
-                                      }
-                                      
-                                      .dropdown-content a {
-display: block;
-padding: 8px 16px;
-text-decoration: none;
-color:#000; /* Set text color to white */
-}
-                                      
-                                      .dropdown-content a:hover {
-                                        background-color: #ddd;
-                                      }
-                                      
-                                      
-                                      
-                                      
-                                      </style>
-                                      <script>function toggleNotification() {
-                                        var dropdownContent = document.getElementById("notification-dropdown");
-                                        if (dropdownContent.style.display === "none") {
-                                          dropdownContent.style.display = "block";
-                                        } else {
-                                          dropdownContent.style.display = "none";
-                                        }
-                                      }
-                                      
-
-                                      
-                                      </script>
+                                    
+                                    
                                 </div>
                             </div> 
                             <!-- Mobile Menu -->
@@ -308,7 +210,7 @@ color:#000; /* Set text color to white */
                       <label for="num-students">No. of cases you can take</label>
                     </div>
                     <div class="col-75">
-                      <input type="number" id="num-students" name="num-students" min="0" max="1000" step="1">
+                      <input type="number" id="num-students" name="num-students" min="0" max="1000" step="1" placeholder="No. of cases.." required>
                     </div>
                   </div>
                   <div class="row">
