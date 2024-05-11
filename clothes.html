@@ -146,7 +146,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 pt-70 text-center">
-                                <h2>requested Donation posts</h2>
+                                <h2>Requested Clothes Donation posts</h2>
                             </div>
                         </div>
                     </div>
@@ -374,59 +374,45 @@
                     <div class="col-lg-4">
                         <div class="blog_right_sidebar">
                             <aside class="single_sidebar_widget search_widget">
-                                <title>Donation Items Search</title>
-                                <style>
-                                    #search-button {
-                                        background-color: lightgreen;
-                                        color: white;
-                                        padding: 10px 20px;
-                                        border: none;
-                                        cursor: pointer;
-                                    }
-                                </style>
-                                <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-                            </head>
-                            <body>
-                                
-                                <h1>Donation Items Search</h1>
-                            
-                                <label for="search-text">Search Text:</label>
-                                <br><br>
-                                
-                                <input type="text" id="search-text">
-                                <br><br>
-                                
-                                <button id="search-button" onclick="redirectToPage()">Search</button>
-                            
-                                <script>
-                                    function redirectToPage() {
-                                        var searchText = document.getElementById("search-text").value.toLowerCase(); // Convert the search text to lowercase for case-insensitive comparison
-                                        
-                                        switch (searchText) {
-                                            case "toys":
-                                                window.location.href = "toys.html";
-                                                break;
-                                            case "clothes":
-                                                window.location.href = "clothes.html";
-                                                break;
-                                            case "food":
-                                                window.location.href = "food.html";
-                                                break;
-                                            case "school supplies":
-                                                window.location.href = "schoolsupplies.html";
-                                                break;
-                                            case "blood donations":
-                                                window.location.href = "BloodDonations.html";
-                                                break;
-                                            case "medical supplies":
-                                                window.location.href = "MedicalSuppliesFilter.html";
-                                                break;
-                                            default:
-                                                alert("No matching category found for the search text: " + searchText);
-                                                break;
-                                        }
-                                    }
-                                </script>
+                                <form id="searchForm" onsubmit="performSearch(event)">
+                                  <div class="form-group">
+                                    <div class="input-group mb-3">
+                                      <input type="text" id="searchKeyword" class="form-control" placeholder='Search Keyword'
+                                        onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Search Keyword'">
+                                      <div class="input-group-append">
+                                        <button class="btns" type="submit"><i class="ti-search"></i></button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  
+                                </form>
+                              </aside>
+
+                                                           <script>
+                                                            function performSearch() {
+                                                                // Get the search keyword
+                                                                const searchKeyword = document.getElementById('searchKeyword').value.toLowerCase();
+                                                    
+                                                                // Iterate over the articles and hide/show based on the search keyword
+                                                                const articles = document.querySelectorAll('.blog_item');
+                                                                articles.forEach(article => {
+                                                                    const articleHeader = article.querySelector('h2.blog-head').textContent.toLowerCase();
+                                                                    if (searchKeyword === '' || articleHeader.includes(searchKeyword)) {
+                                                                        article.style.display = 'block'; // Show the article
+                                                                    } else {
+                                                                        article.style.display = 'none'; // Hide the article
+                                                                    }
+                                                                });
+                                                            }
+                                                            
+                                                            document.addEventListener('DOMContentLoaded', function() {
+                                                                const searchInput = document.getElementById('searchKeyword');
+                                                                searchInput.addEventListener('input', performSearch);
+                                                            });
+                                                        </script>
+                                                    </head>
+                                                    <body>
                             </aside>
                             <aside class="single_sidebar_widget post_category_widget">
                                 <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
