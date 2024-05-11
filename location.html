@@ -108,12 +108,8 @@
                                                         <li><a href="TEACH.html">Teaching Cases</a></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="#">Donation posts</a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Fullfilled donation posts</a></li>
-                                                        <li><a href="blog_details.html">Blog Details</a></li>
-                                                        <li><a href="requestedblog.html">Requested Donations</a></li>
-                                                    </ul>
+                                                <li><a href="requestedblog.html">Donation posts</a>
+                                            
                                                 </li>
                                                 <li><a href="#">Settings</a>
                                                     <ul class="submenu">
@@ -125,24 +121,7 @@
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div class="notification-icon" onclick="toggleNotification()">
-                                                <i class="fas fa-bell"></i>
-                                                <span class="notification-count">1</span>
-                                                <ul id="notification-dropdown" class="dropdown-content">
-                                                  <li>
-                                                    <ul class="submenu">
-                                                      <li><a href="upload.html"> <strong> Ahmed </strong> just posted a new post</a></li>
-                                                      
-                                                      
-                                                      
-                                                     
-                                                   
-                                                    </ul>
-                                                  </li>
-                                                </ul>
-                                               
-                                                
-                                              </div>   
+                                  
                                     
                                    
                                   
@@ -152,81 +131,8 @@
                                         <a href="categories.html" class="btn header-btn">Donate</a>
                                     </div>
                                    
-                                     
-                                      <style>.notification-icon {
-                                        position: relative;
-                                        display: inline-block;
-                                     
-                                      }
-                                      
-                                      .notification-icon i {
-                                        font-size: 24px;
-                                        margin-left: 10px; /* Adjust icon size as needed */
-                                        top: 20px;
-                                        right:  30px;
-                                      }
-                                      
-                                      .notification-count {
-                                        position: absolute;
-                                        top: -8px; /* Adjust the position of the count */
-                                        right: -8px; /* Adjust the position of the count */
-                                        background-color: #09cc7f; /* Background color of the count */
-                                        color: #ffffff; /* Text color of the count */
-                                        border-radius: 50%;
-                                        width: 20px;
-                                        height: 20px;
-                                        display: flex;
-                                        justify-content: center;
-                                        align-items: center;
-                                        font-size: 12px; /* Adjust font size as needed */
-                                        font-weight: bold;
-                                      }
-                                      
-                                      .dropdown-content {
-display: none;
-position: absolute;
-background-color: #f9f9f9;
-min-width: 160px;
-width: 300px;
-height: 50px;
-
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
-bottom: -70px;
-
-}
-                                      
-                                      .dropdown-content li {
-                                        list-style-type: none;
-                                      }
-                                      
-                                      .dropdown-content a {
-display: block;
-padding: 8px 16px;
-text-decoration: none;
-color:#000; /* Set text color to white */
-}
-                                      
-                                      .dropdown-content a:hover {
-                                        background-color: #ddd;
-                                      }
-                                      
-                                      
-                                      
-                                      
-                                      </style>
-                                      <script>function toggleNotification() {
-                                        var dropdownContent = document.getElementById("notification-dropdown");
-                                        if (dropdownContent.style.display === "none") {
-                                          dropdownContent.style.display = "block";
-                                        } else {
-                                          dropdownContent.style.display = "none";
-                                        }
-                                      }
-                                      
-
-                                      
-                                      </script>
+                                    
+                                    
                                 </div>
                             </div> 
                             <!-- Mobile Menu -->
@@ -304,7 +210,7 @@ color:#000; /* Set text color to white */
                       <label for="num-students">No. of cases you can take</label>
                     </div>
                     <div class="col-75">
-                      <input type="number" id="num-students" name="num-students" min="0" max="1000" step="1">
+                      <input type="number" id="num-students" name="num-students" min="0" max="1000" step="1" placeholder="No. of cases.." required>
                     </div>
                   </div>
                   <div class="row">
@@ -605,152 +511,151 @@ color:#000; /* Set text color to white */
 </section>
     </main>
     <footer>
-        <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
-            <!-- Footer Top-->
-            <div class="footer-area footer-padding">
-                <div class="container">
-                    <div class="row d-flex justify-content-between">
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
-                        <div class="single-footer-caption mb-50">
-                            <div class="single-footer-caption mb-30">
-                                <div class="footer-tittle">
-                                    <div class="footer-logo mb-20">
-                                        <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Contact Info</h4>
-                                    <ul>
-                                        <li>
-                                            <p>Address: 57357, Sekat Hadid Al Mahger, Zeinhom, El Sayeda Zeinab, Cairo Governorate 4260102</p>
-                                        </li>
-                                        <li><a href="#">Phone : +8880 44338899</a></li>
-                                        <li><a href="https://mail.google.com/mail/u/0/">Email : info@charity.com</a></li>
-                                    </ul>
-                                </div>
+      <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
+          <!-- Footer Top-->
+          <div class="footer-area footer-padding">
+              <div class="container">
+                  <div class="row d-flex justify-content-between">
+                      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                      <div class="single-footer-caption mb-50">
+                          <div class="single-footer-caption mb-30">
+                              <div class="footer-tittle">
+                                  <div class="footer-logo mb-20">
+                                      <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                          <div class="single-footer-caption mb-50">
+                              <div class="footer-tittle">
+                                  <h4>Contact Info</h4>
+                                  <ul>
+                                      <li>
+                                          <p>Address: 57357, Sekat Hadid Al Mahger, Zeinhom, El Sayeda Zeinab, Cairo Governorate 4260102</p>
+                                      </li>
+                                      <li><a href="#">Phone : +8880 44338899</a></li>
+                                      <li><a href="https://mail.google.com/mail/u/0/">Email : info@charity.com</a></li>
+                                  </ul>
+                              </div>
 
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Important Link</h4>
-                                    <ul>
-                                        <li><a href="index.html"> View Project</a></li>
-                                        <li><a href="Organization-posts.html">Organizations</a></li>
-                                        <li><a href="events.html">Volunteer Now</a></li>
-                                        <li><a href="categories.html">Support</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Newsletter</h4>
-                                    <div class="footer-pera footer-pera2">
-                                    <p>Write your email below if you want to know our latest news!</p>
-                                </div>
-                                <!-- Form -->
-                                <div class="footer-form" >
-                                    <div id="mc_embed_signup">
-                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                                        method="get" class="subscribe_form relative mail_part">
-                                            <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                                            class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
-                                            onblur="this.placeholder = ' Email Address '">
-                                            <div class="form-icon">
-                                                <button type="submit" name="submit" id="newsletter-submit"
-                                                class="email_icon newsletter-submit button-contactForm"><img src="assets/img/gallery/form.png" alt=""></button>
-                                            </div>
-                                            <div class="mt-10 info"></div>
-                                        </form>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- footer-bottom -->
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row d-flex justify-content-between align-items-center">
-                            <div class="col-xl-10 col-lg-9 ">
-                                <div class="footer-copy-right">
-                                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                          </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                          <div class="single-footer-caption mb-50">
+                              <div class="footer-tittle">
+                                  <h4>Important Link</h4>
+                                  <ul>
 
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                                </div>
-                            </div>
-                            <div class="col-xl-2 col-lg-3">
-                                <div class="footer-social f-right">
+                                      <li><a href="Organization-posts.html">Organizations</a></li>
+                                      <li><a href="events.html">Volunteer Now</a></li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                          <div class="single-footer-caption mb-50">
+                              <div class="footer-tittle">
+                                  <h4>Newsletter</h4>
+                                  <div class="footer-pera footer-pera2">
+                                  <p>Write your email below if you want to know our latest news!</p>
+                              </div>
+                              <!-- Form -->
+                              <div class="footer-form" >
+                                  <div id="mc_embed_signup">
+                                      <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                      method="get" class="subscribe_form relative mail_part">
+                                          <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                          class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                          onblur="this.placeholder = ' Email Address '">
+                                          <div class="form-icon">
+                                              <button type="submit" name="submit" id="newsletter-submit"
+                                              class="email_icon newsletter-submit button-contactForm"><img src="assets/img/gallery/form.png" alt=""></button>
+                                          </div>
+                                          <div class="mt-10 info"></div>
+                                      </form>
+                                  </div>
+                              </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- footer-bottom -->
+          <div class="footer-bottom-area">
+              <div class="container">
+                  <div class="footer-border">
+                      <div class="row d-flex justify-content-between align-items-center">
+                          <div class="col-xl-10 col-lg-9 ">
+                              <div class="footer-copy-right">
+                                  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
-                                        <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
-                                        <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                                         <a href="https://mail.google.com/mail/u/0/"><i class="fab fa-google-plus-g"></i></a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                              </div>
+                          </div>
+                          <div class="col-xl-2 col-lg-3">
+                              <div class="footer-social f-right">
 
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Scroll Up -->
-    <div id="back-top" >
-        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
-    </div>
-      <!-- JS here -->
+                                      <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                                      <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                      <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                       <a href="https://mail.google.com/mail/u/0/"><i class="fab fa-google-plus-g"></i></a>
 
-      <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-      <!-- Jquery, Popper, Bootstrap -->
-      <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-      <script src="./assets/js/popper.min.js"></script>
-      <script src="./assets/js/bootstrap.min.js"></script>
-      <!-- Jquery Mobile Menu -->
-      <script src="./assets/js/jquery.slicknav.min.js"></script>
+                              </div>
+                              
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- Scroll Up -->
+  <div id="back-top" >
+      <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+  </div>
+    <!-- JS here -->
 
-      <!-- Jquery Slick , Owl-Carousel Plugins -->
-      <script src="./assets/js/owl.carousel.min.js"></script>
-      <script src="./assets/js/slick.min.js"></script>
-      <!-- One Page, Animated-HeadLin -->
-      <script src="./assets/js/wow.min.js"></script>
-      <script src="./assets/js/animated.headline.js"></script>
-      <script src="./assets/js/jquery.magnific-popup.js"></script>
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-      <!-- Date Picker -->
-      <script src="./assets/js/gijgo.min.js"></script>
-      <!-- Nice-select, sticky -->
-      <script src="./assets/js/jquery.nice-select.min.js"></script>
-      <script src="./assets/js/jquery.sticky.js"></script>
-      
-      <!-- counter , waypoint,Hover Direction -->
-      <script src="./assets/js/jquery.counterup.min.js"></script>
-      <script src="./assets/js/waypoints.min.js"></script>
-      <script src="./assets/js/jquery.countdown.min.js"></script>
-      <script src="./assets/js/hover-direction-snake.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-      <!-- contact js -->
-      <script src="./assets/js/contact.js"></script>
-      <script src="./assets/js/jquery.form.js"></script>
-      <script src="./assets/js/jquery.validate.min.js"></script>
-      <script src="./assets/js/mail-script.js"></script>
-      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
-      
-      <!-- Jquery Plugins, main Jquery -->	
-      <script src="./assets/js/plugins.js"></script>
-      <script src="./assets/js/main.js"></script>
-     
-    </body>
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+   
+  </body>
 </html>
