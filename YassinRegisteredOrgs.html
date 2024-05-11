@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <script src="C:\Users\Ismail\Desktop\Example\Ismailll\JQuery.min.js"></script>
+    <script src="C:\Users\Ismail\Desktop\Example\Ismailll\bootstrap-5.1.3-dist\js\bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
 <body>
    
@@ -57,7 +61,9 @@
                             <div class="header-info-left d-flex">
                                 <ul>     
 
-   
+                                        <a href="index.html" class="back-link">
+                                            <span style="color: #2d2d2d;" class="back-icon thicker-icon">&larr;</span> 
+                                        </a>     
                                 </ul>
                             </div>
                             <div class="header-info-right d-flex align-items-center">
@@ -146,7 +152,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 pt-70 text-center" id="BLA">
-                                <h2>Organizations</h2>
+                                <h2>Registered Organizations</h2>
                               
                             </div>
                         </div>
@@ -308,52 +314,60 @@
                         <body>
                            
                             <!-- Article 1 -->
-                           <article class="blog_item" id="article1">
-                                <div class="blog_item_img">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>4</h3>
-                                        <p>May</p>
-                                    </a>
-                                </div>
-                                <div class="blog_details">
-                             <div class="feature-img">
-                                <img src="assets\img\blog\Egyptian-Food-Bank.jpg" alt="" width="110px" height="100px">
-                             </div>
-                             <a class="d-inline-block" href="#">
-                                <h2 class="blog-head" style="color: #2d2d2d;">Egyptian food bank</h2>
-                             </a>
-                            <p>The Egyptian Food Bank (EFB) is a prominent non-profit organization dedicated to alleviating hunger and food insecurity across Egypt. Founded in 2006, the EFB operates on the principle of "collecting surplus food from individuals, companies, and farms, and redistributing it to those in need." </p>
-                        <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
-                        <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
-                        <div class="additional-details" style="display: none;">
-                            <p>area: New cairo </p>
-                            <p>governorate: Cairo</p>
-                            <p>organization type: Food banks</p>
-                        </div>
-                        <div class="additional-details" style="display: none;"><br>
-
-            <!-- Additional details content -->
-                        </div>
-                      </div>
-                        </article><br>
+                            <div class="row">
+                                <article class="blog_item" id="article1">
+                                    <div class="blog_details">
+                                 <div class="feature-img">
+                                    <img src="assets\img\blog\Egyptian-Food-Bank.jpg" alt="" width="110px" height="100px">
+                                 </div>
+                                 <a class="d-inline-block" href="#">
+                                    <h2 class="blog-head" style="color: #2d2d2d;">Egyptian food bank</h2>
+                                 </a>
+                                <!--<p>The Egyptian Food Bank (EFB) is a prominent non-profit organization dedicated to alleviating hunger and food insecurity across Egypt. Founded in 2006, the EFB operates on the principle of "collecting surplus food from individuals, companies, and farms, and redistributing it to those in need." </p>-->
+                            <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
+                            <div class="additional-details" style="display: none;">
+                                <p>area: New cairo </p>
+                                <p>governorate: Cairo</p>
+                                <p>organization type: Food banks</p>
+                            </div>
+                            <div class="additional-details" style="display: none;"><br>
+    
+                <!-- Additional details content -->
+                            </div>
+                            <!-- View button -->
+                            <div class="col-auto" style="width: 720px;">
+                                <a href="Org1.html" onclick="redirectToDetailsPage(this)">
+                                    <i class="fas fa-info-circle" style="color: #09cc7f;"></i>
+                                </a>
+                            </div>
+                            <!-- View button -->
+                            <div class="col-auto">
+                                <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
+                            </div>
+                            <!-- Download button -->
+                            <div class="col-auto">
+                                <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
+                            </div>
+                            <!-- Delete button -->
+                            <div class="col-auto">
+                                <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                            </div>
+                            </div>
+                            </article><br>
+                            </div>
+                           
                        
                             <!-- Article 2 -->
+                            <div class="row">
                             <article class="blog_item" id="article2">
-                                <div class="blog_item_img"><br>
-                                    <a href="#" class="blog_item_date">
-                                        <h3>17</h3>
-                                        <p>Oct</p>
-                                    </a>
-                                </div>
                                 <div class="blog_details">
                                     <div class="feature-img">
                                         <img src= "assets\img\blog\myf.png" alt="" width="90px" height="80px">
                                      </div>
-                                    <a class="d-inline-block" href="Org2.html">
+                                    <a class="d-inline-block" href="#">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Magdy yacoub foundation</h2>
                                     </a>
-                                    <p>The Magdi Yacoub Heart Foundation (MYF) was founded in 2008 by renowned Egyptian cardiac surgeon Sir Magdi Yacoub. The foundation's headquarters are located in Aswan, Egypt, with a focus on providing high-quality cardiovascular healthcare services, education, and research. </p>
-                                    <button class="view-details-btn" onclick="toggleDetails2(this)">View Details</button>
+                                    <!--<p>The Magdi Yacoub Heart Foundation (MYF) was founded in 2008 by renowned Egyptian cardiac surgeon Sir Magdi Yacoub. The foundation's headquarters are located in Aswan, Egypt, with a focus on providing high-quality cardiovascular healthcare services, education, and research. </p>-->
                                     <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
                                     <div class="additional-details" style="display: none;">
                                         <p>area: Zamalek </p>
@@ -363,27 +377,40 @@
                                     <div class="additional-details" style="display: none;">
                                         <!-- Additional details content -->
                                     </div>
+                                    <!-- View button -->
+                                    <div class="col-auto" style="width: 720px;">
+                                        <a href="Org2.html" onclick="redirectToDetailsPage(this)">
+                                            <i class="fas fa-info-circle" style="color: #09cc7f;"></i>
+                                        </a>
+                                    </div>
+                                    <!-- View button -->
+                                    <div class="col-auto">
+                                        <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
+                                    </div>
+                                    <!-- Download button -->
+                                    <div class="col-auto">
+                                        <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
+                                    </div>
+                                    <!-- Delete button -->
+                                    <div class="col-auto">
+                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                    </div>
+                                    </div>
                                 </div>
                             </article><br>
+                        </div>
                         
                             <!-- Article 3 -->
-                          
+                            <div class="row">
                             <article class="blog_item" id="article3">
-                                <div class="blog_item_img"><br>
-                                    <a href="#" class="blog_item_date">
-                                        <h3>21</h3>
-                                        <p>Jul</p>
-                                    </a>
-                                </div>
                                 <div class="blog_details">
                                     <div class="feature-img">
                                         <img src= "assets\img\blog\download.png" alt="" width="110px" height="100px">
                                      </div>
-                                    <a class="d-inline-block" href="Org3.html">
+                                    <a class="d-inline-block" href="#">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Children's Cancer Hospital Egypt</h2>
                                     </a>
-                                    <p>The Children's Cancer Hospital Egypt 57357 (CCHE) is a renowned pediatric cancer hospital located in Cairo, Egypt. Founded in 2007, it is one of the largest specialized cancer hospitals for children in the world. CCHE is dedicated to providing comprehensive and holistic care to children battling cancer, regardless of their socioeconomic background. </p>
-                                    <button class="view-details-btn" onclick="toggleDetails3(this)">View Details</button>
+                                    <!--<p>The Children's Cancer Hospital Egypt 57357 (CCHE) is a renowned pediatric cancer hospital located in Cairo, Egypt. Founded in 2007, it is one of the largest specialized cancer hospitals for children in the world. CCHE is dedicated to providing comprehensive and holistic care to children battling cancer, regardless of their socioeconomic background. </p>-->
                                     <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
                                     <div class="additional-details" style="display: none;">
                                         <p>area: New Cairo </p>
@@ -391,19 +418,33 @@
                                         <p>organization type: Healthcare organizations</p>
                                     </div>
                                     <div class="additional-details" style="display: none;">
-                                       
+                                       <!-- Additional details content -->
+                                    </div>
+                                    <!-- View button -->
+                                    <div class="col-auto" style="width: 720px;">
+                                        <a href="Org3.html" onclick="redirectToDetailsPage(this)">
+                                            <i class="fas fa-info-circle" style="color: #09cc7f;"></i>
+                                        </a>
+                                    </div>
+                                    <!-- View button -->
+                                    <div class="col-auto">
+                                        <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
+                                    </div>
+                                    <!-- Download button -->
+                                    <div class="col-auto">
+                                        <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
+                                    </div>
+                                    <!-- Delete button -->
+                                    <div class="col-auto">
+                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                    </div>
                                     </div>
                                    
                                 </div>
                             </article><br>
+                        </div>
 
                             <article class="blog_item" id="article4">
-                                <div class="blog_item_img"><br>
-                                    <a href="#" class="blog_item_date">
-                                        <h3>19</h3>
-                                        <p>Sep</p>
-                                    </a>
-                                </div>
                                 <div class="blog_details">
                                     <div class="feature-img">
                                         <img src= "assets\img\blog\Resala-logo.png "alt="" width="70px" height="60px">
@@ -411,8 +452,7 @@
                                     <a class="d-inline-block" href="Org4.html">
                                         <h2 class="blog-head" style="color: #2d2d2d;">Resala Charity Organization</h2>
                                     </a>
-                                    <p>Resala Charity Organization is one of Egypt's largest and most prominent non-profit organizations. Founded in 1999, Resala is dedicated to providing various social services and assistance to underprivileged communities across Egypt. The organization operates through a network of volunteers and branches across the country, offering a wide range of programs and initiatives focused on education, healthcare, and social welfare. </p>
-                                    <button class="view-details-btn" onclick="toggleDetails4(this)">View Details</button>
+                                    <!--<p>Resala Charity Organization is one of Egypt's largest and most prominent non-profit organizations. Founded in 1999, Resala is dedicated to providing various social services and assistance to underprivileged communities across Egypt. The organization operates through a network of volunteers and branches across the country, offering a wide range of programs and initiatives focused on education, healthcare, and social welfare. </p>-->
                                     <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
                                     <div class="additional-details" style="display: none;">
                                         <p>area: Heliopolis </p>
@@ -425,7 +465,26 @@
                                    
                                 </div>
                             </article>
-
+                              
+                              <!-- Popup Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Popup Title</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>Popup content goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
 
                             <style>
                             
@@ -665,6 +724,46 @@
         </div>
     </div>
 </footer>
+<!-- Modals -->
+    <!-- PDF Viewer Modal -->
+    <div class="modal fade" id="pdfViewerModal" tabindex="-1" role="dialog" aria-labelledby="pdfViewerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfViewerModalLabel">PDF Viewer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- PDF content will be loaded here -->
+                    <embed id="pdfContent" src="" type="application/pdf" width="100%" height="600px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- HTML for delete confirmation modal -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Delete Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this account?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button id="deleteYesBtn" type="button" class="btn btn-danger">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Scroll Up -->
 <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
@@ -710,5 +809,74 @@
   <script src="./assets/js/plugins.js"></script>
   <script src="./assets/js/main.js"></script>
  
+  <script>
+    function redirectToDetailsPage(button) {
+           // Replace "your_details_page.html" with the actual URL of the details page
+           window.location.href = "Org1.html";
+       }
+       function redirectToDetailsPage2(button) {
+           // Replace "your_details_page.html" with the actual URL of the details page
+           window.location.href = "Org2.html";
+       }
+       function redirectToDetailsPage3(button) {
+           // Replace "your_details_page.html" with the actual URL of the details page
+           window.location.href = "Org3.html";
+       }
+       function redirectToDetailsPage4(button) {
+           // Replace "your_details_page.html" with the actual URL of the details page
+           window.location.href = "Org4.html";
+       }
+    // Function to handle view button click
+    function viewRow(button) {
+       // Show the PDF viewer modal
+       $('#pdfViewerModal').modal('show');
+       $('#pdfContent').attr('src', 'blank.pdf');
+   }
+   
+   // Function to handle download button click
+   function downloadRow(button) {
+       // Create a temporary anchor element
+       var downloadLink = document.createElement('a');
+       downloadLink.href = 'blank.pdf';
+   
+       // Set the download attribute to specify the filename
+       downloadLink.download = 'blank1.pdf';
+   
+       // Append the anchor element to the document body
+       document.body.appendChild(downloadLink);
+   
+       // Trigger a click event on the anchor element
+       downloadLink.click();
+   
+       // Remove the anchor element from the document body
+       document.body.removeChild(downloadLink);
+   }
+   // Function to confirm delete action
+   function confirmDelete(button) {
+       // Store a reference to the clicked button in a data attribute
+       $('#deleteYesBtn').data('target', button);
+       // Show the delete confirmation modal
+       $('#deleteConfirmationModal').modal('show');
+   }
+   
+   // Event listener for delete confirmation modal "Yes" button
+   $('#deleteYesBtn').on('click', function() {
+       // Retrieve the stored button reference
+       var button = $('#deleteYesBtn').data('target');
+       // Remove the row
+       var row = $(button).closest('.row');
+       row.remove();
+       // Close the modal
+       $('#deleteConfirmationModal').modal('hide');
+   });
+   
+   // Event listener for delete confirmation modal "No" button
+   $('#deleteConfirmationModal').on('hidden.bs.modal', function () {
+       // Clear the stored button reference
+       $('#deleteYesBtn').removeData('target');
+   });
+   
+       </script>
+
 </body>
 </html>
