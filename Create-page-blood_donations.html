@@ -81,31 +81,7 @@
                                     <div class="select-this">
                                         <form action="#">
                                            
-                                            <div class="notification-icon" onclick="toggleNotification()">
-                                                <i class="fas fa-bell"></i>
-                                                <span class="notification-count">1</span>
-                                                <ul id="notification-dropdown" class="dropdown-content">
-                                                  <li>
-                                                    <ul class="submenu">
-                                                      <li><a href="upload.html"> <strong> Ahmed </strong> just posted a new post</a></li>
-                                                      
-                                                      
-                                                      <style>.close-icon {
-                                                        position: absolute;
-                                                        top: 10px;
-                                                        right: 5px;
-                                                        cursor: pointer;
-                                                      }
-                                                      </style>
-                                                      
-                                                     
-                                                   
-                                                    </ul>
-                                                  </li>
-                                                </ul>
-                                               
-                                                
-                                              </div>
+                                           
                                              
                                               
                                               
@@ -145,6 +121,8 @@
   
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  bottom: -70px;
+
 }
                                               
                                               .dropdown-content li {
@@ -232,6 +210,31 @@
                                             </ul>
                                         </nav>
                                     </div>
+                                    <div class="notification-icon" onclick="toggleNotification()">
+                                        <i class="fas fa-bell"></i>
+                                        <span class="notification-count">1</span>
+                                        <ul id="notification-dropdown" class="dropdown-content">
+                                          <li>
+                                            <ul class="submenu">
+                                              <li><a href="upload.html"> <strong> Ahmed </strong> just posted a new post</a></li>
+                                              
+                                              
+                                              <style>.close-icon {
+                                                position: absolute;
+                                                top: 10px;
+                                                right: 5px;
+                                                cursor: pointer;
+                                              }
+                                              </style>
+                                              
+                                             
+                                           
+                                            </ul>
+                                          </li>
+                                        </ul>
+                                       
+                                        
+                                      </div>
                                     <!-- Header-btn -->
                                     <div class="header-right-btn d-none d-lg-block ml-20">
                                         <a href="categories.html" class="btn header-btn">Donate</a>
