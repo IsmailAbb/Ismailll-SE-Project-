@@ -965,12 +965,12 @@
                 </div>
             </div>
         </div>
-        <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
-            type="submit">Search</button>
+       
     </form>
 </aside>
 <script>
-    function performSearch() {
+    function performSearch(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
         // Get the search keyword
         const searchKeyword = document.getElementById('searchKeyword').value.toLowerCase();
 
@@ -992,6 +992,19 @@
         searchInput.addEventListener('input', performSearch);
     });
 </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                             </aside>
                             <aside class="single_sidebar_widget post_category_widget">
