@@ -149,8 +149,14 @@
                               <style>.notification-icon {
                                 position: relative;
                                 display: inline-block;
-                             
-                              }
+                                cursor: pointer;
+                                transition: filter 0.3s ease; /* Add transition effect */
+                            }
+                            
+                            .notification-icon:hover {
+                                filter: brightness(1.2); /* Increase brightness on hover */
+                            }
+
                               
                               .notification-icon i {
                                 font-size: 24px;

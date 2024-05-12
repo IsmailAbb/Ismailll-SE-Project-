@@ -146,7 +146,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Are you sure you want to delete this account?
+                        Are you sure you want to delete this post?
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
@@ -169,6 +169,25 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="alert" id="notification">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <strong>Post Fulfilled successfully!</strong> Thank you for your fulfillment.
+                    </div>
+                    <script>
+                        function displayNotification() {
+                            var notification = document.getElementById("notification");
+                            notification.style.display = "block"; // Show the alert
+                            var BLA = document.getElementById("BLA");
+                           
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    </script>
                 </div>
             </div>
         </div>
@@ -230,6 +249,31 @@
                                         .delete-btn:hover {
                                                 background-color: #0a9e64;
                                             }
+                                    </style>
+                                     <style>
+                                        .alert {
+                                            display: none;
+                                            padding: 20px;
+                                            background-color: #09cc7f;
+                                            color: white;
+                                            
+                                    
+                                        }
+                                        
+                                        .closebtn {
+                                            margin-left: 15px;
+                                            color: white;
+                                            font-weight: bold;
+                                            float: right;
+                                            font-size: 22px;
+                                            line-height: 20px;
+                                            cursor: pointer;
+                                            transition: 0.3s;
+                                        }
+                                        
+                                        .closebtn:hover {
+                                            color: black;
+                                        }
                                     </style>
                                      <script>
                                         function deletePost(button) {
