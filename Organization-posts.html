@@ -198,77 +198,7 @@
                                     <button class="Fulfill-btn" onclick="confirmDelete(this)">Delete</button>
                                     <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
                                     
-                                    <style>
-                                       .Fulfill-btn {
-    background-color: white;
-    border: none;
-    padding: 8px 16px;
-    color: #09cc7f;
-    cursor: pointer;
-    position: relative; /* Add position relative */
-    bottom: 20px; /* Adjust the vertical position */
-    float: right; /* Align buttons to the right */
-    margin-left: 10px; /* Add some space between the buttons */
-}
-
-
-                                    </style>
-                                    <style>
-                                        /* Define styles for the delete button */
-                                        .delete-btn {
-                                            /* Add your CSS styles here */
-                                            background-color: #09cc7f;
-                                            color: white;
-                                            border: none;
-                                            padding: 5px 10px;
-                                            border-radius: 5px;
-                                            cursor: pointer;
-                                            float:right;
-                                        }
-                                        .delete-btn:hover {
-                                                background-color: #0a9e64;
-                                            }
-                                    </style>
-                                     <style>
-                                        .alert {
-                                            display: none;
-                                            padding: 20px;
-                                            background-color: #09cc7f;
-                                            color: white;
-                                            
                                     
-                                        }
-                                        
-                                        .closebtn {
-                                            margin-left: 15px;
-                                            color: white;
-                                            font-weight: bold;
-                                            float: right;
-                                            font-size: 22px;
-                                            line-height: 20px;
-                                            cursor: pointer;
-                                            transition: 0.3s;
-                                        }
-                                        
-                                        .closebtn:hover {
-                                            color: black;
-                                        }
-                                    </style>
-                                     <script>
-                                        function deletePost(button) {
-                                            // Show confirmation dialog
-                                            var confirmDelete = confirm("Are you sure you want to delete it?");
-                                            
-                                            // If user confirms deletion, remove the post
-                                            if (confirmDelete) {
-                                                // Get the parent element of the post you want to delete
-                                                var postElement = button.closest('.blog_item');
-                                                
-                                                // Remove the post element from the DOM
-                                                postElement.remove();
-                                            }
-                                        }
-                                    </script>
                                 </div>
 
                             </article>
@@ -427,6 +357,77 @@
             </div>
         </div>
     </footer>
+    <style>
+        .Fulfill-btn {
+background-color: white;
+border: none;
+padding: 8px 16px;
+color: #09cc7f;
+cursor: pointer;
+position: relative; /* Add position relative */
+bottom: 20px; /* Adjust the vertical position */
+float: right; /* Align buttons to the right */
+margin-left: 10px; /* Add some space between the buttons */
+}
+
+
+     </style>
+     <style>
+         /* Define styles for the delete button */
+         .delete-btn {
+             /* Add your CSS styles here */
+             background-color: #09cc7f;
+             color: white;
+             border: none;
+             padding: 5px 10px;
+             border-radius: 5px;
+             cursor: pointer;
+             float:right;
+         }
+         .delete-btn:hover {
+                 background-color: #0a9e64;
+             }
+     </style>
+      <style>
+         .alert {
+             display: none;
+             padding: 20px;
+             background-color: #09cc7f;
+             color: white;
+             
+     
+         }
+         
+         .closebtn {
+             margin-left: 15px;
+             color: white;
+             font-weight: bold;
+             float: right;
+             font-size: 22px;
+             line-height: 20px;
+             cursor: pointer;
+             transition: 0.3s;
+         }
+         
+         .closebtn:hover {
+             color: black;
+         }
+     </style>
+      <script>
+         function deletePost(button) {
+             // Show confirmation dialog
+             var confirmDelete = confirm("Are you sure you want to delete it?");
+             
+             // If user confirms deletion, remove the post
+             if (confirmDelete) {
+                 // Get the parent element of the post you want to delete
+                 var postElement = button.closest('.blog_item');
+                 
+                 // Remove the post element from the DOM
+                 postElement.remove();
+             }
+         }
+     </script>
     <!-- Scroll Up -->
     <div id="back-top" >
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
