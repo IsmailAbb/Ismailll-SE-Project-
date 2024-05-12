@@ -83,7 +83,7 @@
                                       <nav>
                                           <ul id="navigation">                                                                                          
                                               <li><a href="index.html">Home</a></li>
-                                              <li><a href="about.html">About</a></li>
+                                              
                                               <li><a href="program.html">Organizations</a></li>
                                               <li><a href="#">Volunteer </a>
                                                   <ul class="submenu">
@@ -223,15 +223,16 @@
 
 
 
-                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
-                        <style>
-                            .map-container {
-                                height: 200px;
-                                width: 300px;
-                            }
-                        </style>
-                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+                    <style>
+                        .map-container {
+                            height: 200px;
+                            width: 300px;
+                        }
+                    </style>
+                   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+
                     </head>
                     <body>
                         <article class="blog_item">
@@ -263,9 +264,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
-                            </div>
+
+
+                                        </div>
+                                        <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
+                                    </div>
+                                </article>
                         </article>
                         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                         <article class="blog_item">
@@ -290,7 +294,8 @@
                                     <p>Organization: Hospital B</p>
                                     <p>Address: Street 106, Zamalek, Cairo</p>
                                     <p>Location:</p>
-                                    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                                    
+
                                     <div class="container">
                                         <div class="row justify-content-start">
                                             <div class="col-md-6 order-md-2">
@@ -302,7 +307,7 @@
                                 <button class="Fulfill-btn" onclick="displayNotification()">Fulfill</button>
                             </div>
                         </article>
-                    
+                        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
                         <article class="blog_item">
                             <div class="blog_item_img">
                                 <a href="#" class="blog_item_date">
@@ -325,6 +330,8 @@
                                     <p>Organization: Hospital C</p>
                                     <p>Address: Street 106, New Cairo, Cairo</p>
                                     <p>Location:</p>
+                                    
+
                                     <div class="container">
                                         <div class="row justify-content-start">
                                             <div class="col-md-6 order-md-2">
@@ -340,7 +347,76 @@
 
 
                         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLIqHPslHZNSrcvIPnMugZospzIX9prQ4&callback=initMap"></script>
+                       
                         <script>
+                            // Initialize Google Maps
+                            function initMap() {
+                                // Specify your map options
+                                var mapOptions1 = {
+                                    center: { lat: 29.972017632727212, lng: 31.27297715168245 }, 
+                                    zoom: 8
+                                };
+                                var mapOptions2 = {
+                                    center: { lat: 30.06092899939315  , lng: 31.21972173780534 }, 
+                                    zoom: 8
+                                };
+                                var mapOptions3 = {
+                                    center: { lat: 30.040677899013772 , lng: 31.474848873366366 }, 
+                                    zoom: 8
+                                };
+                               
+                        
+                                // Create a new map instance
+                                var map1 = new google.maps.Map(document.getElementById('map1'), mapOptions1);
+                                var map2 = new google.maps.Map(document.getElementById('map2'), mapOptions2);
+                                var map3 = new google.maps.Map(document.getElementById('map3'), mapOptions3);
+                                
+                        
+                                // Define the coordinates for the marker
+                                var markerCoordinates1 = { lat: 29.972017632727212, lng: 31.27297715168245 }; 
+                                var markerCoordinates2 = { lat: 30.06092899939315, lng: 31.21972173780534 };
+                                var markerCoordinates3 = { lat: 30.040677899013772, lng: 31.474848873366366 };
+                                
+                        
+                                // Create a new marker at the specified coordinates
+                                var marker1 = new google.maps.Marker({
+                                    position: markerCoordinates1,
+                                    map: map1
+                                });
+                                var marker2 = new google.maps.Marker({
+                                    position: markerCoordinates2,
+                                    map: map2
+                                });
+                                var marker3 = new google.maps.Marker({
+                                    position: markerCoordinates3,
+                                    map: map3
+                                });
+                               
+                        
+                                // Center the map on the marker's coordinates
+                                map1.setCenter(markerCoordinates1);
+                                map2.setCenter(markerCoordinates2);
+                                map3.setCenter(markerCoordinates3);
+                               
+                            }
+                        </script>    
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                       
+                        <!-- <script>
                         // Initialize Google Maps
                         function initMap() {
             // Specify your map options
@@ -391,7 +467,7 @@
             // Center the map on the clicked location
             map.setCenter({ lat: latitude, lng: longitude });
         }
-    </script>
+    </script> -->
 
 
 
