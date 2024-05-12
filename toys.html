@@ -154,6 +154,36 @@
             </div>
         </div>
         <!-- Hero End -->
+        <script>
+            function filterArticles() {
+                var age = document.getElementById("age").value;
+                var gender = document.getElementById("gender").value;
+                var category = document.getElementById("season").value;
+
+        
+                var articles = document.getElementsByClassName("blog_item");
+        
+                for (var i = 0; i < articles.length; i++) {
+                    var article = articles[i];
+                    var additionalDetails = article.getElementsByClassName("additional-details")[0];
+        
+                    var age2 = additionalDetails.getElementsByTagName("p")[0].innerText; // corrected variable name
+                    var gender2 = additionalDetails.getElementsByTagName("p")[1].innerText;
+                    var category2 = additionalDetails.getElementsByTagName("p")[2].innerText;
+        
+                    var showArticle =
+                        (age === "All" || age2.includes(age)) &&
+                        (gender === "All" || gender2.includes(gender)) &&
+                        (category === "All" || category2.includes(category));
+        
+                    if (showArticle) {
+                        article.style.display = "block";
+                    } else {
+                        article.style.display = "none";
+                    }
+                }
+            }
+        </script>
         <!--? Blog Area Start-->
         <section class="blog_area section-padding">
             <div class="container">
@@ -175,6 +205,12 @@
                                     </a>
                                     <p>we're looking for Lego to help improve children's thinking abilities 
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : primary</p>
+                                        <p>gender : Both</p>
+                                        <p>category : board games</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -196,6 +232,12 @@
                                     <p>Requesting a chess board donation to enrich our community activities. 
                                        Your support would make a significant impact. Thank you! 
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : secondary</p>
+                                        <p>gender : both</p>
+                                        <p>season : board games</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -217,6 +259,12 @@
                                     <p>Seeking a trampoline donation to add excitement to our community events. 
                                        Your contribution would bring joy and fun to all. Thank you for your consideration! 
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : primary</p>
+                                        <p>gender : Both</p>
+                                        <p>category : outdoor</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -238,6 +286,12 @@
                                     <p>Requesting a football donation to ignite passion in our community sports programs.
                                          Your support would kickstart unforgettable moments. 
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : All </p>
+                                        <p>gender : male</p>
+                                        <p>season : Sports</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -259,6 +313,12 @@
                                     <p>Seeking teddy bear donations to comfort children in need. 
                                         Your generosity would bring warmth and solace to young hearts. 
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : preschool</p>
+                                        <p>gender : female</p>
+                                        <p>category : stuffed toys</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -280,6 +340,12 @@
                                     <p>We're looking for Mini electric toy cars to give children some experience about how it's like to
                                         drive something on their own 
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : preschool</p>
+                                        <p>gender : male</p>
+                                        <p>category : cars</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 01 Comments</a></li>
@@ -302,13 +368,65 @@
                                     <p>we're looking for old/new barbie dolls to give to young girls so they can the same experience
                                         as every little girl who owned a barbie doll
                                     </p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">Quick View</button>
+                                    <div class="additional-details" style="display: none;">
+                                        <p>age : primary</p>
+                                        <p>gender :not specified</p>
+                                        <p>category : summer</p>
+                                    </div>
                                     <ul class="blog-info-link">
                                         <li><a href="#"><i class="fa fa-user"></i> Toys</a></li>
                                         <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
                                     </ul>
                                 </div>
                             </article>
+<<<<<<< HEAD
+                            <style>
+                                .view-details-btn {
+                                    text-align: right;
+                                     background-color: white;
+                                     border: none;
+                                     padding: 8px 16px;
+                                     color: #09cc7f;
+                                    cursor: pointer;
+                                }
+                            </style>
+                            <script>
+                                function toggleDetails(button) {
+                                    var detailsDiv = button.nextElementSibling;
                             
+                                    if (detailsDiv.style.display === "none") {
+                                        detailsDiv.style.display = "block";
+                                        button.textContent = "Hide Details";
+                                        initMap();
+                                    } else {
+                                        detailsDiv.style.display = "none";
+                                        button.textContent = "Quick View";
+                                    }
+                                }
+                            </script>
+                            <nav class="blog-pagination justify-content-center d-flex">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" aria-label="Previous">
+                                            <i class="ti-angle-left"></i>
+                                        </a>
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link">1</a>
+                                    </li>
+                                    <li class="page-item active">
+                                    </li>
+                                    <li class="page-item">
+                                        <a href="#" class="page-link" aria-label="Next">
+                                            <i class="ti-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+=======
+                            
+>>>>>>> 6847d3d50417c5c218d7306976b5b67d0984a2fc
                         </div>
                     </div>
                     <div class="col-lg-4">
@@ -353,6 +471,84 @@
                                   searchInput.addEventListener('input', performSearch);
                                 });
                               </script>
+                                                          </aside>
+                                                          <aside class="single_sidebar_widget post_category_widget">
+                                                              <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
+                                                              <ul class="list cat-list">
+                              
+                                                                  <li>
+                                                                      <label for="age">age</label>
+                                                                      <select id="age" name="age" onchange="filterArticles()">
+                                                                          <option value="All">All</option>
+                                                                          <option value="preschool">preschool</option>
+                                                                          <option value="primary">primary</option>
+                                                                          <option value="secondary">secondary</option>
+                                                                      </select>
+                                                                  </li>
+                                                                  <li>
+                                                                      <label for="gender">gender</label>
+                                                                      <select id="gender" name="gender" onchange="filterArticles()">
+                                                                          <option value="All">All</option>
+                                                                          <option value="female">female</option>
+                                                                          <option value="male">male</option>
+                                                                          <option value="not specified">not specified</option>
+                                                                      </select>
+                                                                  </li>
+                                                                  <li>
+                                                                      <label for="season">category</label>
+                                                                      <select id="season" name="season" onchange="filterArticles()">
+                                                                          <option value="All">All</option>
+                                                                          <option value="winter">board games</option>
+                                                                          <option value="summer">stuffed toys</option>
+                                                                          <option value="spring">dolls</option>
+                                                                          <option value="autumn">sports</option>
+                                                                          <option value="autumn">cars</option>
+                                                                          <option value="autumn">outdoor</option>
+                                                                      </select>
+                                                                  </li>
+                                                              </ul>
+                                                          </aside>
+                                                          <aside class="single_sidebar_widget post_category_widget">
+                                                            <h4 class="widget_title" style="color: #2d2d2d;">Category</h4>
+                                                            <ul class="list cat-list">
+                                                                <li>
+                                                                    <a href="MedicalSuppliesFilter.html" class="d-flex">
+                                                                        <p>Medical Supplies</p>
+                                                                        <p>(4)</p>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="clothes.html" class="d-flex">
+                                                                        <p>Clothes</p>
+                                                                        <p>(5)</p>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="schoolsupplies.html" class="d-flex">
+                                                                        <p>School Supplies</p>
+                                                                        <p>(11)</p>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="toys.html" class="d-flex">
+                                                                        <p>Toys</p>
+                                                                        <p>(4)</p>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="FoodDonations.html" class="d-flex">
+                                                                        <p>Food Donations</p>
+                                                                        <p>(15)</p>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="BloodDonations.html" class="d-flex">
+                                                                        <p>Blood Donations</p>
+                                                                        <p>(5)</p>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </aside>
                         </div>
                     </div>
                 </div>
