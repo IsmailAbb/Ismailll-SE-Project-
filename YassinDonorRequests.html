@@ -117,7 +117,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="hero-cap hero-cap2 pt-70 text-center" id="BLA">
-                                <h2>Registered Organizations</h2>
+                                <h2>Donor Requests</h2>
                               
                             </div>
                         </div>
@@ -339,29 +339,14 @@
                                 <article class="blog_item" id="article1">
                                   <div class="blog_details">
                                     <div class="feature-img">
-                                      <img src="assets/img/blog/Egyptian-Food-Bank.jpg" alt="" width="110px" height="100px">
-                                    </div>
+                                        <img src="assets/img/blog/aminapic.jpg" alt="" width="90px" height="90px" style="border-radius: 50%;">
+                                      </div>
                                     <a class="d-inline-block" href="#">
-                                      <h2 class="blog-head" style="color: #2d2d2d;">Egyptian Food Bank</h2>
-                                    </a>
-                                    
-                                    <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
-                                    <div class="additional-details" style="display: none;">
-                                      <p>area: New Cairo</p>
-                                      <p>governorate: Cairo</p>
-                                      <p>organization type: Food banks</p>
-                                    </div>
-                                    <!-- Additional details content -->
-                                    
+                                      <h2 class="blog-head" style="color: #2d2d2d;">Amina Tamer Ghoneim</h2>
+                                    </a>                               
                                     <!-- Icon container -->
                                     <div class="icon-container">
-                                      <!-- View button -->
-                                      <div class="col-auto">
-                                        <a href="Org1.html" onclick="redirectToDetailsPage(this)">
-                                          <i class="fas fa-info-circle" style="color: #09cc7f;"></i>
-                                        </a>
-                                      </div>
-                                      <!-- View button -->
+                                        <!-- View button -->
                                       <div class="col-auto">
                                         <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
                                       </div>
@@ -369,9 +354,13 @@
                                       <div class="col-auto">
                                         <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
                                       </div>
-                                      <!-- Delete button -->
+                                      <!-- Accept button -->
                                       <div class="col-auto">
-                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                        <i class="fas fa-check" style="color: #09cc7f;" onclick="accept(this)"></i>
+                                      </div>
+                                      <!-- Accept button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-times" style="color: #09cc7f;" onclick="rejectRow(this)"></i>
                                       </div>
                                     </div>
                                   </div>
@@ -379,30 +368,17 @@
                               </div>
                        
                               <div class="row">
-                                <article class="blog_item" id="article2">
+                                <article class="blog_item" id="article1" >
                                   <div class="blog_details">
                                     <div class="feature-img">
-                                      <img src="assets/img/blog/myf.png" alt="" width="90px" height="80px">
-                                    </div>
+                                        <img src="assets/img/blog/ismailpic.jpg" alt="" width="90px" height="90px" style="border-radius: 50%;">
+                                      </div>
                                     <a class="d-inline-block" href="#">
-                                      <h2 class="blog-head" style="color: #2d2d2d;">Magdy Yacoub Foundation</h2>
-                                    </a>
-                                    <!--<p>The Magdi Yacoub Heart Foundation (MYF) was founded in 2008 by renowned Egyptian cardiac surgeon Sir Magdi Yacoub. The foundation's headquarters are located in Aswan, Egypt, with a focus on providing high-quality cardiovascular healthcare services, education, and research. </p>-->
-                                    <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
-                                    <div class="additional-details" style="display: none;">
-                                      <p>area: Zamalek</p>
-                                      <p>governorate: Aswan</p>
-                                      <p>organization type: Healthcare organizations</p>
-                                    </div>
+                                      <h2 class="blog-head" style="color: #2d2d2d;">Ismail Ahmed Abbass</h2>
+                                    </a>                            
                                     <!-- Icon container -->
                                     <div class="icon-container">
-                                      <!-- View button -->
-                                      <div class="col-auto">
-                                        <a href="Org2.html" onclick="redirectToDetailsPage(this)">
-                                          <i class="fas fa-info-circle" style="color: #09cc7f;"></i>
-                                        </a>
-                                      </div>
-                                      <!-- View button -->
+                                        <!-- View button -->
                                       <div class="col-auto">
                                         <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
                                       </div>
@@ -410,102 +386,19 @@
                                       <div class="col-auto">
                                         <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
                                       </div>
-                                      <!-- Delete button -->
+                                      <!-- Accept button -->
                                       <div class="col-auto">
-                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                        <i class="fas fa-check" style="color: #09cc7f;" onclick="accept(this)"></i>
                                       </div>
-                                    </div>
-                                  </div>
-                                </article>
-                              </div>
-                        
-                            <!-- Article 3 -->
-                            <div class="row">
-                                <article class="blog_item" id="article3">
-                                  <div class="blog_details">
-                                    <div class="feature-img">
-                                      <img src="assets/img/blog/download.png" alt="" width="110px" height="100px">
-                                    </div>
-                                    <a class="d-inline-block" href="#">
-                                      <h2 class="blog-head" style="color: #2d2d2d;">Children's Cancer Hospital Egypt</h2>
-                                    </a>
-                                    <!--<p>The Children's Cancer Hospital Egypt 57357 (CCHE) is a renowned pediatric cancer hospital located in Cairo, Egypt. Founded in 2007, it is one of the largest specialized cancer hospitals for children in the world. CCHE is dedicated to providing comprehensive and holistic care to children battling cancer, regardless of their socioeconomic background. </p>-->
-                                    <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
-                                    <div class="additional-details" style="display: none;">
-                                      <p>area: New Cairo </p>
-                                      <p>governorate: Cairo</p>
-                                      <p>organization type: Healthcare organizations</p>
-                                    </div>
-                                    <!-- Additional details content -->
-                                    
-                                    <!-- Icon container -->
-                                    <div class="icon-container">
-                                      <!-- View button -->
+                                      <!-- Accept button -->
                                       <div class="col-auto">
-                                        <a href="Org3.html" onclick="redirectToDetailsPage(this)">
-                                          <i class="fas fa-info-circle" style="color: #09cc7f;"></i>
-                                        </a>
-                                      </div>
-                                      <!-- View button -->
-                                      <div class="col-auto">
-                                        <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
-                                      </div>
-                                      <!-- Download button -->
-                                      <div class="col-auto">
-                                        <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
-                                      </div>
-                                      <!-- Delete button -->
-                                      <div class="col-auto">
-                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                        <i class="fas fa-times" style="color: #09cc7f;" onclick="rejectRow(this)"></i>
                                       </div>
                                     </div>
                                   </div>
                                 </article>
                               </div>
 
-                              <div class="row">
-                              <article class="blog_item" id="article4">
-                                <div class="blog_details">
-                                  <div class="feature-img">
-                                    <img src="assets/img/blog/Resala-logo.png" alt="" width="70px" height="60px">
-                                  </div>
-                                  <a class="d-inline-block" href="#">
-                                    <h2 class="blog-head" style="color: #2d2d2d;">Resala Charity Organization</h2>
-                                  </a>
-                                  <!--<p>Resala Charity Organization is one of Egypt's largest and most prominent non-profit organizations. Founded in 1999, Resala is dedicated to providing various social services and assistance to underprivileged communities across Egypt. The organization operates through a network of volunteers and branches across the country, offering a wide range of programs and initiatives focused on education, healthcare, and social welfare. </p>-->
-                                  <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
-                                  <div class="additional-details" style="display: none;">
-                                    <p>area: Heliopolis </p>
-                                    <p>governorate: Cairo</p>
-                                    <p>organization type: non-profit organization</p>
-                                  </div>
-                                  <!-- Additional details content -->
-                                  
-                                  <!-- Icon container -->
-                                  <div class="icon-container">
-                                    <!-- View button -->
-                                    <div class="col-auto">
-                                      <a href="Org4.html" onclick="redirectToDetailsPage(this)">
-                                        <i class="fas fa-info-circle" style="color: #09cc7f;"></i>
-                                      </a>
-                                    </div>
-                                    <!-- View button -->
-                                    <div class="col-auto">
-                                      <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
-                                    </div>
-                                    <!-- Download button -->
-                                    <div class="col-auto">
-                                      <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
-                                    </div>
-                                    <!-- Delete button -->
-                                    <div class="col-auto">
-                                      <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
-                                    </div>
-                                  </div>
-                                </div>
-                              </article>
-                            </div>
-                              
                               <!-- Popup Modal -->
                               <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
@@ -600,7 +493,7 @@
 </div>
 <div class="col-lg-4">
 <div class="blog_right_sidebar">
-    <aside class="single_sidebar_widget search_widget">
+    <!--<aside class="single_sidebar_widget search_widget">
         <form id="searchForm" onsubmit="performSearch(event)">
           <div class="form-group">
             <div class="input-group mb-3">
@@ -614,11 +507,11 @@
           </div>
           
         </form>
-      </aside>
+      </aside>-->
     
  
 
-      <aside class="single_sidebar_widget post_category_widget">
+      <!--<aside class="single_sidebar_widget post_category_widget">
         <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
         <ul class="list cat-list">
             <li>
@@ -649,7 +542,7 @@
                 </select>
             </li>
         </ul>
-    </aside>
+    </aside>-->
                 
 
 
@@ -803,6 +696,48 @@
     </div>
 </div>
 
+<!-- Accept Modal -->
+<div class="modal fade" id="acceptModal" tabindex="-1" role="dialog" aria-labelledby="acceptModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="acceptModalLabel">Accept Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to accept?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button id="acceptYesBtn" type="button" class="btn btn-success">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Reject Modal -->
+<div class="modal fade" id="rejectModal" tabindex="-1" role="dialog" aria-labelledby="rejectModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="rejectModalLabel">Reject Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to reject?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button id="rejectYesBtn" type="button" class="btn btn-danger">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Scroll Up -->
 <div id="back-top" >
     <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
@@ -914,6 +849,56 @@
        // Clear the stored button reference
        $('#deleteYesBtn').removeData('target');
    });
+
+   // Function to confirm accept action
+function accept(button) {
+    // Store a reference to the clicked button in a data attribute
+    $('#acceptYesBtn').data('target', button);
+    // Show the accept confirmation modal
+    $('#acceptModal').modal('show');
+}
+
+// Event listener for accept confirmation modal "Yes" button
+$('#acceptYesBtn').on('click', function() {
+    // Retrieve the stored button reference
+    var button = $('#acceptYesBtn').data('target');
+    // Remove the row
+    var row = $(button).closest('.row');
+    row.remove();
+    // Close the modal
+    $('#acceptModal').modal('hide');
+});
+
+// Event listener for accept confirmation modal "No" button
+$('#acceptModal').on('hidden.bs.modal', function () {
+    // Clear the stored button reference
+    $('#acceptYesBtn').removeData('target');
+});  
+
+// Function to confirm reject action
+function rejectRow(button) {
+    // Store a reference to the clicked button in a data attribute
+    $('#rejectYesBtn').data('target', button);
+    // Show the reject confirmation modal
+    $('#rejectModal').modal('show');
+}
+
+// Event listener for reject confirmation modal "Yes" button
+$('#rejectYesBtn').on('click', function() {
+    // Retrieve the stored button reference
+    var button = $('#rejectYesBtn').data('target');
+    // Remove the row
+    var row = $(button).closest('.row');
+    row.remove();
+    // Close the modal
+    $('#rejectModal').modal('hide');
+});
+
+// Event listener for reject confirmation modal "No" button
+$('#rejectModal').on('hidden.bs.modal', function () {
+    // Clear the stored button reference
+    $('#rejectYesBtn').removeData('target');
+});  
    
        </script>
 
