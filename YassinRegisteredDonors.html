@@ -1,0 +1,862 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Charity | Teamplate</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+    <script src="C:\Users\Ismail\Desktop\Example\Ismailll\JQuery.min.js"></script>
+    <script src="C:\Users\Ismail\Desktop\Example\Ismailll\bootstrap-5.1.3-dist\js\bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+   
+
+
+   <!--? Preloader Start -->
+   <div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="assets/img/logo/loder.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+<header>
+    <style>
+        .thicker-icon {
+            font-size: 30px;
+            padding-right:50px;
+            font-weight: bold;
+        }
+    </style>
+    <!-- Header Start -->
+    <div class="header-area">
+        <div class="main-header">
+            <div class="header-bottom header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10">
+                            <div class="menu-wrapper d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="#">Manage Organizations </a>
+                                                <ul class="submenu">
+                                                    <li><a href="YassinRegisteredOrgs.html">View Registered List</a></li>
+                                                    <li><a href="YassinOrgSubmissions.html">View Submissions</a></li>
+                                                    <li><a href="YassinOrgRequests.html">View Requests</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#">Manage Donors</a>
+                                                <ul class="submenu">
+                                                    <li><a href="YassinRegisteredDonors.html">View Registered List</a></li>
+                                                    <li><a href="YassinDonorSubmissions.html">View Submissions</a></li>
+                                                    <li><a href="YassinDonorRequests.html">View Requests</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="YassinPasswordManager.html" id="account-info">Password Manager</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <!-- Header-btn -->
+                                <div class="header-right-btn d-none d-lg-block ml-20">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none">
+                                <div class="slicknav_menu">
+                                    <!-- Mobile Menu Content Here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- Header End -->
+</header>
+ 
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70 text-center" id="BLA">
+                                <h2>Registered Donors</h2>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+       
+        <script>
+            function filterArticles() {
+                var area = document.getElementById("area").value;
+                var governorate = document.getElementById("governorate").value;
+                var organizationtype = document.getElementById("organization-type").value;
+        
+                var articles = document.getElementsByClassName("blog_item");
+        
+                for (var i = 0; i < articles.length; i++) {
+                    var article = articles[i];
+                    var additionalDetails = article.getElementsByClassName("additional-details")[0];
+        
+                    var area2 = additionalDetails.getElementsByTagName("p")[0].innerText; // corrected variable name
+                    var governorate2 = additionalDetails.getElementsByTagName("p")[1].innerText;
+                    var organizationtype2 = additionalDetails.getElementsByTagName("p")[2].innerText;
+        
+                    var showArticle =
+                        (area === "All" || area2.includes(area)) &&
+                        (governorate === "All" || governorate2.includes(governorate)) &&
+                        (organizationtype === "All" || organizationtype2.includes(organizationtype));
+        
+                    if (showArticle) {
+                        article.style.display = "block";
+                    } else {
+                        article.style.display = "none";
+                    }
+                }
+            }
+        </script>
+          
+        <!-- Hero End -->
+        <!--? Blog Area Start-->
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                     
+                        <div class="blog_left_sidebar">
+
+                        </head>
+                        <body>
+
+                          <!--  <article class="blog_item" id="article1">
+                                <div class="blog_item_img">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>10</h3>
+                                        <p>Apr</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="#">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Egyptian food bank</h2>
+                                    </a>
+                                    <p>The Egyptian Food Bank (EFB) is a prominent non-profit organization dedicated to alleviating hunger and food insecurity across Egypt. Founded in 2006, the EFB operates on the principle of "collecting surplus food from individuals, companies, and farms, and redistributing it to those in need." Through its extensive network of volunteers, donors, and partnerships with local businesses, the EFB reaches out to marginalized communities, providing them with essential food supplies and meals. Beyond immediate food assistance, the organization also emphasizes sustainable solutions, such as education and vocational training programs, to empower individuals and families to break the cycle of poverty. With a mission to combat hunger and promote social justice, the Egyptian Food Bank plays a crucial role in addressing food insecurity and improving the well-being of vulnerable populations throughout Egypt.</p>
+                                    <button class="view-details-btn" onclick="toggleDetails(this)">View Details</button>
+                                    <div class="additional-details" style="display: none;">
+                                       
+                                    </div>
+                                   
+                                </div>
+                            </article>
+                        
+                            <article class="blog_item"id="article2">
+                                <div class="blog_item_img">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>4</h3>
+                                        <p>May</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="#">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Magdy yacoub foundation</h2>
+                                    </a>
+                                    <p>The Magdi Yacoub Heart Foundation (MYF) was founded in 2008 by renowned Egyptian cardiac surgeon Sir Magdi Yacoub. The foundation's headquarters are located in Aswan, Egypt, with a focus on providing high-quality cardiovascular healthcare services, education, and research. MYF's primary mission is to improve cardiac care in Egypt and the wider region by offering advanced medical treatments, raising awareness about cardiovascular diseases, and conducting research to advance medical knowledge in the field. One of MYF's notable achievements is the establishment of the Aswan Heart Centre (AHC), a state-of-the-art medical facility dedicated to cardiac care. The AHC provides comprehensive services, including diagnosis, treatment, and rehabilitation, to patients with heart conditions, regardless of their ability to pay. Additionally, MYF is committed to training the next generation of healthcare professionals through its educational programs. It offers training opportunities for physicians, nurses, and other healthcare professionals to enhance their skills and expertise in cardiac care. Furthermore, MYF has played a significant role in changing the landscape of healthcare in Egypt by making advanced cardiac treatments accessible to a wider population. Through its initiatives, MYF has helped thousands of Egyptians receive life-saving treatments and improve their quality of life. Looking ahead, MYF continues to expand its efforts to reach more underserved communities in Egypt and the region. The foundation aims to further enhance its services, promote preventive measures against cardiovascular diseases, and contribute to medical research to find innovative solutions for heart-related conditions.</p>
+                                    <button class="view-details-btn" onclick="toggleDetails2(this)">View Details</button>
+                                    <div class="additional-details" style="display: none;">
+                                       
+                                    </div>
+                                   
+                                </div>
+                            </article>
+                        
+                            <article class="blog_item"id="article3">
+                                <div class="blog_item_img">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>21</h3>
+                                        <p>Jul</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="#">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Children's Cancer Hospital Egypt</h2>
+                                    </a>
+                                    <p>The Children's Cancer Hospital Egypt 57357 (CCHE) is a renowned pediatric cancer hospital located in Cairo, Egypt. Founded in 2007, it is one of the largest specialized cancer hospitals for children in the world. CCHE is dedicated to providing comprehensive and holistic care to children battling cancer, regardless of their socioeconomic background. The hospital offers a wide range of services, including diagnosis, treatment, supportive care, and rehabilitation, all tailored to meet the unique needs of pediatric cancer patients. Its state-of-the-art facilities and multidisciplinary team of healthcare professionals work together to deliver the highest standard of care while prioritizing the well-being and comfort of the young patients and their families. In addition to its focus on patient care, CCHE is committed to advancing research in pediatric oncology and improving outcomes for children with cancer. It actively engages in clinical research, collaborates with international institutions, and participates in academic and scientific exchanges to stay at the forefront of cancer treatment and research. CCHE also plays a crucial role in raising awareness about childhood cancer and advocating for better access to care and resources for affected children and their families. Through its educational and outreach initiatives, the hospital strives to dispel myths, reduce stigma, and promote early detection and intervention for childhood cancer.</p>
+                                    <button class="view-details-btn" onclick="toggleDetails3(this)">View Details</button>
+                                    <div class="additional-details" style="display: none;">
+                                       
+                                    </div>
+                                   
+                                </div>
+                            </article>
+
+                            <article class="blog_item"id="article4">
+                                <div class="blog_item_img">
+                                    <a href="#" class="blog_item_date">
+                                        <h3>19</h3>
+                                        <p>Sep</p>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="#">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">Resala Charity Organization</h2>
+                                    </a>
+                                    <p>Resala Charity Organization is one of Egypt's largest and most prominent non-profit organizations. Founded in 1999, Resala is dedicated to providing various social services and assistance to underprivileged communities across Egypt. The organization operates through a network of volunteers and branches across the country, offering a wide range of programs and initiatives focused on education, healthcare, and social welfare. Resala's activities include providing food aid, clothing, and shelter to those in need, as well as organizing educational programs, vocational training, and healthcare services for marginalized individuals and families.</p>
+                                    <button class="view-details-btn" onclick="toggleDetails4(this)">View Details</button>
+                                    <div class="additional-details" style="display: none;">
+                                       
+                                    </div>
+                                   
+                                </div>
+                            </article>-->
+
+                            <script>
+                                function performSearch(event) {
+                                  event.preventDefault(); // Prevent the default form submission behavior
+                              
+                                  // Get the search keyword
+                                  const searchKeyword = document.getElementById('searchKeyword').value.toLowerCase();
+                              
+                                  // Iterate over the articles and hide/show based on the search keyword
+                                  const articles = document.querySelectorAll('.blog_item');
+                                  articles.forEach(article => {
+                                    const articleHeader = article.querySelector('h2.blog-head').textContent.toLowerCase();
+                                    if (searchKeyword === '' || articleHeader.includes(searchKeyword)) {
+                                      article.style.display = 'block'; // Show the article
+                                    } else {
+                                      article.style.display = 'none'; // Hide the article
+                                    }
+                                  });
+                                }
+                              
+                                document.addEventListener('DOMContentLoaded', function () {
+                                  const searchInput = document.getElementById('searchKeyword');
+                                  searchInput.addEventListener('input', performSearch);
+                                });
+                              </script>
+                        </head>
+                        <body>
+                           
+                            <!-- Article 1 -->
+                            <!-- <div class="row">
+                                <article class="blog_item" id="article1">
+                                    <div class="blog_details">
+                                 <div class="feature-img">
+                                    <img src="assets\img\blog\Egyptian-Food-Bank.jpg" alt="" width="110px" height="100px">
+                                 </div>
+                                 <a class="d-inline-block" href="#">
+                                    <h2 class="blog-head" style="color: #2d2d2d;">Egyptian food bank</h2>
+                                 </a>
+                              
+                            <button class="view-details-btn" onclick="toggleDetails5(this)">Quick View</button>
+                            <div class="additional-details" style="display: none;">
+                                <p>area: New cairo </p>
+                                <p>governorate: Cairo</p>
+                                <p>organization type: Food banks</p>
+                            </div>
+                            <div class="additional-details" style="display: none;"><br>
+    
+                Additional details content 
+                            </div> -->
+                            <!-- View button 
+                            <div class="col-auto" style="width: 720px;">
+                                <a href="Org1.html" onclick="redirectToDetailsPage(this)">
+                                    <i class="fas fa-info-circle" style="color: #09cc7f;"></i>
+                                </a>
+                            </div>-->
+                            <!-- View button 
+                            <div class="col-auto">
+                                <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
+                            </div>-->
+                            <!-- Download button 
+                            <div class="col-auto">
+                                <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
+                            </div>-->
+                            <!-- Delete button 
+                            <div class="col-auto">
+                                <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                            </div>
+                            </div>
+                            </article><br>
+                            </div>-->
+                            <style>
+                                .icon-container {
+                                  display: flex;
+                                }
+                              
+                                .icon-container .col-auto {
+                                  margin-right: 10px;
+                                }
+                                
+                                .blog_item {
+                                  width: 100%;
+                                  height: 100%;
+                                }
+                              </style>
+                              
+                              <div class="row">
+                                <article class="blog_item" id="article1">
+                                  <div class="blog_details">
+                                    <div class="feature-img">
+                                        <img src="assets/img/blog/aminapic.jpg" alt="" width="90px" height="90px" style="border-radius: 50%;">
+                                      </div>
+                                    <a class="d-inline-block" href="#">
+                                      <h2 class="blog-head" style="color: #2d2d2d;">Amina Tamer Ghoneim</h2>
+                                    </a>
+                                    <!-- Icon container -->
+                                    <div class="icon-container">
+                                      <!-- View button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
+                                      </div>
+                                      <!-- Download button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
+                                      </div>
+                                      <!-- Delete button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </article>
+                              </div>
+                       
+                              <div class="row">
+                                <article class="blog_item" id="article1">
+                                  <div class="blog_details">
+                                    <div class="feature-img">
+                                        <img src="assets/img/blog/ismailpic.jpg" alt="" width="90px" height="90px" style="border-radius: 50%;">
+                                      </div>
+                                    <a class="d-inline-block" href="#">
+                                      <h2 class="blog-head" style="color: #2d2d2d;">Ismail Ahmed Abbass</h2>
+                                    </a>
+                                    <!-- Icon container -->
+                                    <div class="icon-container">
+                                      <!-- View button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
+                                      </div>
+                                      <!-- Download button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
+                                      </div>
+                                      <!-- Delete button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </article>
+                              </div>
+                        
+                              <div class="row">
+                                <article class="blog_item" id="article1">
+                                  <div class="blog_details">
+                                    <div class="feature-img">
+                                        <img src="assets/img/blog/malakpic.jpg" alt="" width="90px" height="90px" style="border-radius: 50%;">
+                                      </div>
+                                    <a class="d-inline-block" href="#">
+                                      <h2 class="blog-head" style="color: #2d2d2d;">Malak Waleed ElMasry</h2>
+                                    </a>
+                                    <!-- Icon container -->
+                                    <div class="icon-container">
+                                      <!-- View button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
+                                      </div>
+                                      <!-- Download button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
+                                      </div>
+                                      <!-- Delete button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </article>
+                              </div>
+
+                              <div class="row">
+                                <article class="blog_item" id="article1">
+                                  <div class="blog_details">
+                                    <div class="feature-img">
+                                        <img src="assets/img/blog/yassinpic.jpg" alt="" width="90px" height="90px" style="border-radius: 50%;">
+                                      </div>
+                                    <a class="d-inline-block" href="#">
+                                      <h2 class="blog-head" style="color: #2d2d2d;">Yassin Tarek Otifa</h2>
+                                    </a>
+                                    <!-- Icon container -->
+                                    <div class="icon-container">
+                                      <!-- View button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-file" style="color: #09cc7f;" onclick="viewRow(this)"></i>
+                                      </div>
+                                      <!-- Download button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-download" style="color: #09cc7f;" onclick="downloadRow(this)"></i>
+                                      </div>
+                                      <!-- Delete button -->
+                                      <div class="col-auto">
+                                        <i class="fas fa-trash" style="color: #09cc7f;" onclick="confirmDelete(this)"></i>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </article>
+                              </div>
+                              
+                              <!-- Popup Modal -->
+                              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Popup Title</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <p>Popup content goes here.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            <style>
+                            
+                        
+                                .feature-img {
+                                    margin-left: 20px; /* Adjust the margin as needed */
+                                    float: right;
+                                }
+                            
+                                
+                            </style>
+
+
+                        <style>
+                                .view-details-btn {
+                                    text-align: right;
+                                     background-color: white;
+                                     border: none;
+                                     padding: 8px 16px;
+                                     color: #09cc7f;
+                                    cursor: pointer;
+                                }
+                            </style>    
+
+<script>
+    function toggleDetails(button) {
+      
+      window.location.href = "Org1.html";
+   
+
+    }
+</script>
+<script>
+    function toggleDetails2(button) {
+      
+      window.location.href = "Org2.html";
+   
+
+    }
+</script>
+<script>
+    function toggleDetails3(button) {
+      
+      window.location.href = "Org3.html";
+   
+
+    }
+</script>
+<script>
+    function toggleDetails4(button) {
+      
+      window.location.href = "Org4.html";
+   
+
+    }
+</script>
+<script>
+    function toggleDetails5(button) {
+        var detailsDiv = button.nextElementSibling;
+
+        if (detailsDiv.style.display === "none") {
+            detailsDiv.style.display = "block";
+            button.textContent = "Hide Quick View";
+            initMap();
+        } else {
+            detailsDiv.style.display = "none";
+            button.textContent = "Quick View";   
+        } 
+    }                  
+</script>
+
+</div>
+</div>
+<div class="col-lg-4">
+<div class="blog_right_sidebar">
+    <!-- <aside class="single_sidebar_widget search_widget">
+        <form id="searchForm" onsubmit="performSearch(event)">
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <input type="text" id="searchKeyword" class="form-control" placeholder='Search Keyword'
+                onfocus="this.placeholder = ''"
+                onblur="this.placeholder = 'Search Keyword'">
+              <div class="input-group-append">
+                <button class="btns" type="submit"><i class="ti-search"></i></button>
+              </div>
+            </div>
+          </div>
+          
+        </form>
+      </aside>
+    
+ 
+
+      <aside class="single_sidebar_widget post_category_widget">
+        <h4 class="widget_title" style="color: #2d2d2d;">Filter</h4>
+        <ul class="list cat-list">
+            <li>
+                <label for="organization-type">organization type</label>
+                <select id="organization-type" name="organization-type" onchange="filterArticles()">
+                    <option value="All">All</option>
+                    <option value="Healthcare organizations">Healthcare organizations</option>
+                    <option value="non-profit organization">non-profit organization</option>
+                    <option value="Food banks">Food banks</option>
+                </select>
+            </li>
+            <li>
+                <label for="governorate">governorate</label>
+                <select id="governorate" name="governorate" onchange="filterArticles()">
+                    <option value="All">All</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Alexandria">Alexandria</option>
+                    <option value="Aswan"> Aswan</option>
+                </select>
+            </li>
+            <li>
+                <label for="area">area</label>
+                <select id="area" name="area" onchange="filterArticles()">
+                    <option value="All">All</option>
+                    <option value="Heliopolis">Heliopolis</option>
+                    <option value="Zamalek">Zamalek</option>
+                    <option value="New Cairo">New Cairo</option>
+                </select>
+            </li>
+        </ul>
+    </aside> -->
+                
+
+
+
+
+
+
+
+
+</section>
+</main>
+<footer>
+    <div class="footer-wrapper section-bg2" data-background="assets/img/gallery/footer_bg.png">
+        <!-- Footer Top-->
+        <div class="footer-area footer-padding">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                    <div class="single-footer-caption mb-50">
+                        <div class="single-footer-caption mb-30">
+                            <div class="footer-tittle">
+                                <div class="footer-logo mb-20">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Contact Info</h4>
+                                <ul>
+                                    <li>
+                                        <p>Address: 57357, Sekat Hadid Al Mahger, Zeinhom, El Sayeda Zeinab, Cairo Governorate 4260102</p>
+                                    </li>
+                                    <li><a href="#">Phone : +8880 44338899</a></li>
+                                    <li><a href="https://mail.google.com/mail/u/0/">Email : info@charity.com</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <!--<div class="footer-tittle">
+                                <h4>Important Link</h4>
+                                <ul>
+
+                                    <li><a href="Organization-posts.html">Organizations</a></li>
+                                    <li><a href="events.html">Volunteer Now</a></li>
+                                </ul>
+                            </div>-->
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-5">
+                        <div class="single-footer-caption mb-50">
+                            <div class="footer-tittle">
+                                <h4>Newsletter</h4>
+                                <div class="footer-pera footer-pera2">
+                                <p>Write your email below if you want to know our latest news!</p>
+                            </div>
+                            <!-- Form -->
+                            <div class="footer-form" >
+                                <div id="mc_embed_signup">
+                                    <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+                                    method="get" class="subscribe_form relative mail_part">
+                                        <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
+                                        class="placeholder hide-on-focus" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = ' Email Address '">
+                                        <div class="form-icon">
+                                            <button type="submit" name="submit" id="newsletter-submit"
+                                            class="email_icon newsletter-submit button-contactForm"><img src="assets/img/gallery/form.png" alt=""></button>
+                                        </div>
+                                        <div class="mt-10 info"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer-bottom -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-10 col-lg-9 ">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3">
+                            <div class="footer-social f-right">
+
+                                    <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+                                    <a  href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                                     <a href="https://mail.google.com/mail/u/0/"><i class="fab fa-google-plus-g"></i></a>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- Modals -->
+    <!-- PDF Viewer Modal -->
+    <div class="modal fade" id="pdfViewerModal" tabindex="-1" role="dialog" aria-labelledby="pdfViewerModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pdfViewerModalLabel">PDF Viewer</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- PDF content will be loaded here -->
+                    <embed id="pdfContent" src="" type="application/pdf" width="100%" height="600px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- HTML for delete confirmation modal -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Delete Confirmation</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete this account?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button id="deleteYesBtn" type="button" class="btn btn-danger">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scroll Up -->
+<div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+  <!-- JS here -->
+
+  <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+  <!-- Jquery, Popper, Bootstrap -->
+  <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <!-- Jquery Mobile Menu -->
+  <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+  <!-- Jquery Slick , Owl-Carousel Plugins -->
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="./assets/js/slick.min.js"></script>
+  <!-- One Page, Animated-HeadLin -->
+  <script src="./assets/js/wow.min.js"></script>
+  <script src="./assets/js/animated.headline.js"></script>
+  <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+  <!-- Date Picker -->
+  <script src="./assets/js/gijgo.min.js"></script>
+  <!-- Nice-select, sticky -->
+  <script src="./assets/js/jquery.nice-select.min.js"></script>
+  <script src="./assets/js/jquery.sticky.js"></script>
+  
+  <!-- counter , waypoint,Hover Direction -->
+  <script src="./assets/js/jquery.counterup.min.js"></script>
+  <script src="./assets/js/waypoints.min.js"></script>
+  <script src="./assets/js/jquery.countdown.min.js"></script>
+  <script src="./assets/js/hover-direction-snake.min.js"></script>
+
+  <!-- contact js -->
+  <script src="./assets/js/contact.js"></script>
+  <script src="./assets/js/jquery.form.js"></script>
+  <script src="./assets/js/jquery.validate.min.js"></script>
+  <script src="./assets/js/mail-script.js"></script>
+  <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+  
+  <!-- Jquery Plugins, main Jquery -->	
+  <script src="./assets/js/plugins.js"></script>
+  <script src="./assets/js/main.js"></script>
+ 
+  <script>
+    function redirectToDetailsPage(button) {
+           // Replace "your_details_page.html" with the actual URL of the details page
+           window.location.href = "Org1.html";
+       }
+       function redirectToDetailsPage2(button) {
+           // Replace "your_details_page.html" with the actual URL of the details page
+           window.location.href = "Org2.html";
+       }
+       function redirectToDetailsPage3(button) {
+           // Replace "your_details_page.html" with the actual URL of the details page
+           window.location.href = "Org3.html";
+       }
+       function redirectToDetailsPage4(button) {
+           // Replace "your_details_page.html" with the actual URL of the details page
+           window.location.href = "Org4.html";
+       }
+    // Function to handle view button click
+    function viewRow(button) {
+       // Show the PDF viewer modal
+       $('#pdfViewerModal').modal('show');
+       $('#pdfContent').attr('src', 'blank.pdf');
+   }
+   
+   // Function to handle download button click
+   function downloadRow(button) {
+       // Create a temporary anchor element
+       var downloadLink = document.createElement('a');
+       downloadLink.href = 'blank.pdf';
+   
+       // Set the download attribute to specify the filename
+       downloadLink.download = 'blank1.pdf';
+   
+       // Append the anchor element to the document body
+       document.body.appendChild(downloadLink);
+   
+       // Trigger a click event on the anchor element
+       downloadLink.click();
+   
+       // Remove the anchor element from the document body
+       document.body.removeChild(downloadLink);
+   }
+   // Function to confirm delete action
+   function confirmDelete(button) {
+       // Store a reference to the clicked button in a data attribute
+       $('#deleteYesBtn').data('target', button);
+       // Show the delete confirmation modal
+       $('#deleteConfirmationModal').modal('show');
+   }
+   
+   // Event listener for delete confirmation modal "Yes" button
+   $('#deleteYesBtn').on('click', function() {
+       // Retrieve the stored button reference
+       var button = $('#deleteYesBtn').data('target');
+       // Remove the row
+       var row = $(button).closest('.row');
+       row.remove();
+       // Close the modal
+       $('#deleteConfirmationModal').modal('hide');
+   });
+   
+   // Event listener for delete confirmation modal "No" button
+   $('#deleteConfirmationModal').on('hidden.bs.modal', function () {
+       // Clear the stored button reference
+       $('#deleteYesBtn').removeData('target');
+   });
+   
+       </script>
+
+</body>
+</html>
